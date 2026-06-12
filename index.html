@@ -200,6 +200,24 @@
 
   <hr class="fancy">
 
+  <!-- TOOZE -->
+  <section id="tooze" class="prose col">
+    <h2>The Tooze Standard</h2>
+    <p>The rating holds Zitron to a Levine and Tooze read, so it is worth checking what Tooze actually says. On the <a href="https://foreignpolicy.com/podcasts/ones-and-tooze/what-ai-means-for-the-economy-and-for-politics/" target="_blank" rel="noopener">Ones and Tooze</a> podcast he works through AI as a technology and a political economy (<a href="#" onclick="openToozeTx();return false;">click for the annotated transcript</a>). The economic historian benchmarked in the rating reaches the opposite of Zitron's conclusion, for the same reason Bruenig does: he keeps the layers separate.</p>
+    <h4>Is it real?</h4>
+    <p>Settled, in Tooze's telling. "Practically everyone agrees that AI clearly is of the type of general purpose technologies," in the lineage of steam, electrification, and semiconductors. The only live debate is whether it is a normal general-purpose technology or something hyper, an R&D-enhancing one that could lift growth permanently, because "we are not just getting smarter, we are getting smarter at getting smarter." Zitron is litigating a question the standard analyst treats as closed: not how big AI is, but whether it is real at all.</p>
+    <h4>The wall</h4>
+    <p>Tooze takes the diminishing-returns debate seriously. The 2020 scaling-laws paper, the constraints senior researchers like Meta's chief AI officer flag, text-only training, weak memory, the push toward world-models, DeepSeek doing more with less. But he frames it as a live corporate-strategy question, how a real technology grows, that is "shaping billions of dollars of investment." Zitron takes the same wall as proof the technology is finished. Same fact, a strategy debate versus a fraud verdict.</p>
+    <h4>The real critiques, done rigorously</h4>
+    <p>Tooze makes the critiques Zitron only gestures at, and makes them better. The hidden human labor that anchors the models in "ground truth," millions of underpaid labelers, plus alignment as crude human moderation. The intellectual-property extraction, the lawsuits, one firm stripping the pages out of millions of books to feed the scanners, courts so far calling it fair use. These are, for Tooze, the political-economy costs of a real and powerful technology, not evidence that it is fake. The layers stay separate. Zitron folds them into the con.</p>
+    <h4>What kind of technology</h4>
+    <p>Tooze, with Henry Farrell, takes the sci-fi anthropomorphic nonsense off the table, and the it-is-fake nonsense with it. Not a human mind, not a fraud, but "an amazing statistical indexing, search, generative, symbol-generating mechanism," more powerful than any before, in the class of print, bureaucracy, and markets, reordering symbolic and white-collar work. That measured middle, world-changing but not apocalyptic and not fake, is exactly where this audit lands.</p>
+    <p class="pull">The economic historian the rating measures Zitron against calls AI a real, print-class technology and treats the bubble as a separate, open question. Zitron fuses them into fraud. Held to the Tooze standard, the analyst D stands.</p>
+    <p>One more contrast. Tooze even entertains the bull case Zitron never engages, a sustained 20-percent growth regime if AI compounds innovation, and he treats the bubble honestly: the $400 billion of annual spend and the $3 trillion projected by 2028 are a real and open risk, deferred to a separate episode, never confused with whether the technology works. That separation is the whole skill. It is what the rating means by a Tooze standard, and it is the move Zitron does not make.</p>
+  </section>
+
+  <hr class="fancy">
+
   <!-- BRUENIG -->
   <section id="bruenig" class="prose col">
     <h2>The S-Tier Benchmark: Matt Bruenig</h2>
@@ -316,6 +334,7 @@
       <h4>Measured analysis</h4>
       <ul>
         <li><a href="https://www.ben-evans.com/presentations" target="_blank" rel="noopener">Benedict Evans, AI Eats the World (deck, May 2026)</a></li>
+        <li><a href="https://foreignpolicy.com/podcasts/ones-and-tooze/what-ai-means-for-the-economy-and-for-politics/" target="_blank" rel="noopener">Adam Tooze, What AI Means for the Economy and for Politics (Ones and Tooze, Foreign Policy)</a></li>
       </ul>
       <h4>Reliability and hallucination</h4>
       <ul>
@@ -386,6 +405,7 @@
 <script src="assets/comparisons.js"></script>
 <script src="assets/citations.js"></script>
 <script src="assets/bruenig-transcript.js"></script>
+<script src="assets/tooze-transcript.js"></script>
 <script src="assets/hayes.js"></script>
 <script>
 (function(){
@@ -419,6 +439,7 @@
   window.openPanel=openPanel;
   // ---- Bruenig podcast transcript in the side drawer ----
   window.openBruenigTx=function(){const t=window.BRUENIG_TX;if(t)openPanel(t.title,t.sub,t.body);};
+  window.openToozeTx=function(){const t=window.TOOZE_TX;if(t)openPanel(t.title,t.sub,t.body);};
   // ---- Hayes annotated transcript in the side drawer ----
   window.openHayesTx=function(){
     const VC={'Correct':'#1a7f37','Fair':'#1a7f37','Mostly correct':'#2da44e','Mixed':'#bf8700','Overstated':'#d4691e','Mostly wrong':'#cf4a1a','Wrong':'#c1121f','Too early to tell':'#57606a'};
@@ -808,7 +829,7 @@
 
   // ---- floating TOC + scroll-spy ----
   (function(){
-    const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['rwindex','Right/Wrong'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['evans','Evans'],['bruenig','Bruenig'],['ownership','Ownership'],['reliability','Reliability'],['shift','The Shift'],['database','Database'],['sources','Sources']];
+    const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['rwindex','Right/Wrong'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['evans','Evans'],['tooze','Tooze'],['bruenig','Bruenig'],['ownership','Ownership'],['reliability','Reliability'],['shift','The Shift'],['database','Database'],['sources','Sources']];
     const toc=document.getElementById('toc');
     if(toc) toc.innerHTML=SEC.map(([id,label])=>'<a href="#'+id+'" data-spy="'+id+'">'+label+'</a>').join('');
     const topLinks=[...document.querySelectorAll('.topnav a')];
