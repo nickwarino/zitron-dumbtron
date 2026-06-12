@@ -485,6 +485,17 @@
   const STLAB={S1:'Foundational tech',S2:'Work & science',S3:'Political economy',S4:'Markets & finance',S5:'Sector economics',S6:'Companies',S7:'Products / ops'};
   const STORD=['S1','S2','S3','S4','S5','S6','S7'];
   const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  // link the first mention of each panel analyst in an (already-escaped) assessment to their AI source
+  const PANEL_SRC=[
+    [/\b(Adam Tooze|Tooze)\b/,'https://adamtooze.substack.com/p/chartbook-341-on-thinking-in-medias'],
+    [/\b(Carlota Perez|Perez)\b/,'https://www.project-syndicate.org/magazine/ai-is-part-of-larger-technological-revolution-by-carlota-perez-1-2024-03'],
+    [/\b(J\. Bradford DeLong|Brad DeLong|DeLong)\b/,'https://braddelong.substack.com/p/the-roi-problem-of-ai-dazzling-capabilities'],
+    [/\b(Matt Levine|Levine)\b/,'https://news.bloomberglaw.com/mergers-and-acquisitions/matt-levines-money-stuff-put-the-data-center-in-the-box'],
+    [/\b(Mariana Mazzucato|Mazzucato)\b/,'https://marianamazzucato.substack.com/p/ai-for-what'],
+    [/\b(Matt Bruenig|Bruenig)\b/,'https://mattbruenig.com/2026/01/19/some-thoughts-on-ai/'],
+    [/\b(Daron Acemoglu|Acemoglu)\b/,'https://www.socialsciencespace.com/2024/09/daron-acemoglu-on-artificial-intelligence/']
+  ];
+  function linkAnalysts(s){PANEL_SRC.forEach(([re,url])=>{s=s.replace(re,m=>'<a href="'+url+'" target="_blank" rel="noopener">'+m+'</a>');});return s;}
 
   // hero stats
   document.getElementById('heroStats').innerHTML=
@@ -666,7 +677,7 @@
         (c.quote&&c.quote!==c.claim?'<p class="sans" style="font-size:13.5px;color:var(--ink-soft);margin:0 0 16px"><strong>In plain terms.</strong> '+esc(c.claim)+'</p>':'')+
         '<div style="border:1px solid var(--hair);border-left:4px solid '+rwcol(s)+';border-radius:10px;padding:14px 16px;background:var(--paper-2);margin:0 0 4px">'+
           '<div class="sans" style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:'+rwcol(s)+';margin-bottom:7px">'+evLab+'</div>'+
-          '<p style="margin:0;font-size:15.5px;line-height:1.6">'+esc(c.assessment)+'</p>'+
+          '<p style="margin:0;font-size:15.5px;line-height:1.6">'+linkAnalysts(esc(c.assessment))+'</p>'+
           ((c.srcs||[]).length?'<div class="sans" style="font-size:12.5px;margin-top:11px;color:var(--muted)"><strong style="color:var(--ink)">Receipts:</strong> '+(c.srcs||[]).map(z=>'<a href="'+z[1]+'" target="_blank" rel="noopener">'+esc(z[0])+' ↗</a>').join(' &nbsp;&middot;&nbsp; ')+'</div>':'')+
         '</div>'+
         '<div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><button id="rwShareBtn" class="rwshare">Share card</button><button id="rwCopyImgBtn" class="rwshare rwshare-2">Copy image</button><button id="rwCopyBtn" class="rwshare rwshare-2">Copy link</button></div>';
@@ -843,7 +854,7 @@
         <span class="distbadge ${c.distinct==='distinctive'?'d-distinct':'d-table'}">${c.distinct}</span>
         <span class="scopebadge sc-other">${esc(c.qgroup)}</span>
       </div>
-      <details><summary>The check</summary><p class="catanalysis" style="margin-top:8px">${esc(c.assessment)}</p>
+      <details><summary>The check</summary><p class="catanalysis" style="margin-top:8px">${linkAnalysts(esc(c.assessment))}</p>
         <div class="srcs">${(c.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div></details>
     </article>`;}
   function renderDB(){
