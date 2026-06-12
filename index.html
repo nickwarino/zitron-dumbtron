@@ -762,9 +762,9 @@
       <p class="q">${esc(l.title)}</p>
       <span class="rel ${l.relcls}">${esc(l.net)}</span>
       <h4>The bottom line</h4><p>${l.bottom_line}</p>
-      <h4>Steelman for Zitron</h4><p>${esc(l.steelman)}</p>
-      <h4>Where it breaks</h4><ul>${l.counterpoints.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
-      ${l.caveat?`<h4>Adversarial caveat</h4><p>${esc(l.caveat)}</p>`:''}
+      <h4>Steelman for Zitron</h4><p>${l.steelman}</p>
+      <h4>Where it breaks</h4><ul>${l.counterpoints.map(p=>`<li>${p}</li>`).join('')}</ul>
+      ${l.caveat?`<h4>Adversarial caveat</h4><p>${l.caveat}</p>`:''}
       <div class="srcs">${(l.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div>
     </div>`).join('');
 
