@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zitron Dumbtron · A Scored Audit of Ed Zitron on AI</title>
 <meta name="description" content="A comprehensive, source-heavy audit of Ed Zitron's AI writing, 2020 to 2026. Every claim scored by correctness and stakes, with recurring-claim timelines and adversarially-checked analysis.">
-<meta name="author" content="Claude Opus 4.8">
+<meta name="author" content="Claude Opus 4.8, Fable 5.0, and Nick Warino">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,8 +60,8 @@
   <section id="rating" class="prose col">
     <h2>The Rating</h2>
     <p>Ed Zitron is one of the most prominent AI critics writing, a confident truth-teller with a large audience, most recently making his case on Chris Hayes' podcast (<a href="hayes.html" onclick="openHayesTx();return false;">click for the annotated transcript</a>). He pitches himself less as a careful analyst than a brave one. But the volume and the certainty stake a claim to the authority of a Matt Levine or an Adam Tooze. Hold him to <a href="#standard">that bar</a>. Two skills, two grades.</p>
-    <p>As a <strong>finance and company reporter, B</strong>. The scoops on token billing and inference costs are real, unprofitability is his best-supported theme, and on company and sector finance only 21 percent of his scored claims are wrong.</p>
-    <p>As an <strong>analyst, D</strong>. An analyst's job is the foundational call. On the two questions that matter most, is the tech real and does it deliver value, he is more wrong than right: across about 144 capability-and-utility claims, 83 wrong, 47 right. His distinctive version, useless, a con, hit a wall, not getting cheaper, is the wrong half. And he does not update. He made the crypto comparison in 2023 and still makes it in 2026, after agentic coding shipped.</p>
+    <p>As a <strong>finance and company reporter, B</strong>. The scoops on token billing and inference costs are real, unprofitability is his best-supported theme, and on company and sector finance his wrong rate is 30 percent, barely half his rate on the foundational questions.</p>
+    <p>As an <strong>analyst, D</strong>. An analyst's job is the foundational call. On the two questions that matter most, is the tech real and does it deliver value, he is more wrong than right: across 143 scored capability-and-utility claims, 82 wrong, 45 right. His distinctive version, useless, a con, hit a wall, not getting cheaper, is the wrong half. And he does not update. He made the crypto comparison in 2023 and still makes it in 2026, after agentic coding shipped.</p>
     <div class="tierlist">
       <div class="tierrow"><div class="tierbadge t-s">S</div><div class="tierbody"><span class="lab">Bruenig-level cohesion and logic</span></div></div>
       <div class="tierrow"><div class="tierbadge t-a">A</div><div class="tierbody"><span class="lab">Great job</span></div></div>
@@ -73,7 +73,7 @@
     <p>Billed as an analyst, the headline is <strong>D</strong>. What keeps him out of F: the reporting is real, the bubble is a live risk, and unproven enterprise ROI is a fair point. He is a good reporter whose load-bearing thesis is more wrong than right, sold as an oracle. An earlier draft said C. Weighted by what he claims to be, that was too generous.</p>
     <h3>What the foundational errors mean</h3>
     <p id="nar_foundational">Claims are not independent points to average. They are marshaled toward a conclusion. The accurate finance claims, OpenAI loses money, the financing is circular, are bricks in an argument whose foundation is that the technology is fake and finished. If the foundation is more wrong than right, the argument fails, however good the bricks. "Amazon loses money" was true every year of the late 1990s and useless to anyone arguing the internet was a fraud. An analysis is only as good as its load-bearing claim. His load-bearing claim is the one he gets wrong.</p>
-    <p class="sans" style="font-size:14px;color:var(--muted)">Four of six core arguments below land at "largely undercuts Zitron," two at "genuinely mixed," one at "partly supports." His distinctive claims score 3.02 out of 5; the consensus claims everyone makes score 3.58. He was more right about crypto (3.73) than about AI (3.06).</p>
+    <p class="sans" style="font-size:14px;color:var(--muted)">Three of six core arguments below land at "largely undercuts Zitron," two at "genuinely mixed," one at "partly supports." His distinctive AI claims score 3.02 out of 5; the consensus claims everyone makes score 3.56. He was more right about crypto (3.73) than about AI (3.06).</p>
   </section>
 
   <section id="vindication" class="prose col">
@@ -99,7 +99,7 @@
     <h2>Right Where It Matters Least</h2>
     <p>Average correctness of his AI claims by what is at stake. Higher tiers are more consequential. The pattern is the indictment: strong on knowable, lower-stakes finance and company claims, weakest on whether AI delivers value and transforms work, the question his worldview rests on. Click a tier to see its claims on a timeline.</p>
     <div class="matrix" id="matrix-rows"></div>
-    <p class="sans" style="font-size:13.5px;color:var(--muted)">Score is mean correctness (1 to 5) of scored claims in each tier. Unverifiable and not-yet-resolved predictions are excluded from the mean. Small-n tiers (S4, S7) are noisier. Stakes here are hand-judged per claim, so this is a judgment layer, not the reproducible scope-mapping; the hand pass moved about a quarter of claims by a tier and the two methods agree on the shape. Stakes-weighted overall correctness is 2.83, below his unweighted 3.06, because weighting the foundational claims more heavily pulls him down past the midpoint. On the combined foundational question, is it real and is it useful (S1 plus S2), he is well more wrong than right: 83 wrong to 47 right. He is strongest at the bottom of the ladder (S7 operational detail, 4.03) and weakest at the top (S1 at 2.51, S2 at 2.28, and S4).</p>
+    <p class="sans" style="font-size:13.5px;color:var(--muted)">Score is mean correctness (1 to 5) of scored claims in each tier. Unverifiable and not-yet-resolved predictions are excluded from the mean. Small-n tiers (S4, S7) are noisier. Stakes here are hand-judged per claim, so this is a judgment layer, not the reproducible scope-mapping; the hand pass moved 89 of 610 claims by at least a tier (15 percent) and the two methods agree on the shape. Stakes-weighted overall correctness is 2.82, below his unweighted 3.06, because weighting the foundational claims more heavily pulls him down past the midpoint. On the combined foundational question, is it real and is it useful (S1 plus S2), he is well more wrong than right: 82 wrong to 45 right. He is strongest at the bottom of the ladder (S7 operational detail, 4.07) and weakest at the top (S1 at 2.50, S2 at 2.27, and S4).</p>
     <div class="dash" id="splitStats" style="margin-top:18px"></div>
   </section>
 
@@ -461,8 +461,8 @@
 </div>
 
 <footer><div class="wrap"><div class="col">
-  <p><span class="tag">Zitron Dumbtron</span> 610 claims · 110 posts · 12 recurring theses · 6 stress-tested arguments. Scored as of 2026-06-11.</p>
-  <p style="margin-top:8px">Author: <strong>Claude Opus 4.8</strong>. Commissioned and directed by Nick Warino.</p>
+  <p><span class="tag">Zitron Dumbtron</span> 610 claims · 110 posts · 12 recurring theses · 6 stress-tested arguments. Scored as of 2026-06-12.</p>
+  <p style="margin-top:8px">Author: <strong>Claude Opus 4.8, Fable 5.0, and Nick Warino</strong>.</p>
 </div></div></footer>
 
 <script src="assets/claims-full.js"></script>
@@ -499,7 +499,7 @@
 
   // hero stats
   document.getElementById('heroStats').innerHTML=
-    `<span>Author: <strong>Claude Opus 4.8</strong></span><span class="rule"></span><span><strong>${claims.length}</strong> claims scored</span><span class="rule"></span><span><strong>110</strong> posts</span><span class="rule"></span><span>2020 to 2026</span>`;
+    `<span>Author: <strong>Claude Opus 4.8, Fable 5.0, and Nick Warino</strong></span><span class="rule"></span><span><strong>${claims.length}</strong> claims scored</span><span class="rule"></span><span><strong>110</strong> posts</span><span class="rule"></span><span>2020 to 2026</span>`;
 
   // ---- shared rich-hover map + side drawer ----
   const TIPS={};
@@ -642,7 +642,7 @@
         al.forEach(ln=>{g.fillText(ln,P,y);y+=lh;});
         g.strokeStyle='#e2ddd1';g.lineWidth=1.5;g.beginPath();g.moveTo(P,H-76);g.lineTo(W-P,H-76);g.stroke();
         g.font='700 22px "Spline Sans",sans-serif';g.fillStyle='#7a1c1c';g.textAlign='left';g.fillText(shareDom(),P,H-42);
-        g.font='400 19px "Spline Sans",sans-serif';g.fillStyle='#6c6358';g.textAlign='right';g.fillText('Audit by Claude Opus 4.8',W-P,H-42);g.textAlign='left';
+        g.font='400 19px "Spline Sans",sans-serif';g.fillStyle='#6c6358';g.textAlign='right';g.fillText('Audit by Claude Opus 4.8, Fable 5.0, and Nick Warino',W-P,H-42);g.textAlign='left';
         return new Promise(res=>cv.toBlob(b=>res(b),'image/png'));
       };
       const fontsReady=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
