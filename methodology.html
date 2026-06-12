@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology · Zitron Dumbtron</title>
+<meta name="description" content="How the Zitron Dumbtron audit was built: sources, extraction, scoring, recurring-claim scan, the six lenses, and the limits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
+    <nav class="topnav">
+      <a href="index.html">The Audit</a>
+      <a href="methodology.html" class="active">Method</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="col">
+      <div class="kicker">How This Was Built</div>
+      <h1>Methodology</h1>
+      <p class="dek">Short version. What was read, how it was scored, and where to distrust it.</p>
+    </div>
+  </header>
+
+  <section class="prose col" style="padding-top:30px">
+    <h3>Sources</h3>
+    <p>Every public post on wheresyoured.at was enumerated from the site's own sitemap, 457 posts back to 2019. Each post was pulled in full via its machine-readable .md version, which carries the real publish date. 110 posts were AI-relevant. Premium posts returned full text, so coverage includes paywalled work.</p>
+
+    <h3>Extraction</h3>
+    <p>Agents read all 110 posts and pulled 610 dated, falsifiable claims. Each claim was tagged by domain, by scope, and by whether it is a distinctive claim or a table-stakes one that nearly everyone makes. Trivial and purely rhetorical lines were skipped.</p>
+
+    <h3>Scoring</h3>
+    <p>Each claim got a sourced verdict, then a numeric correctness from 1 to 5. The map is fixed and shown so you can audit it. Correct is 5. Mostly correct is 4. Mixed is 3. Overstated and Mostly wrong are 2. Wrong is 1. Unverifiable and not-yet-resolved predictions carry no score and are left out of every average.</p>
+
+    <h3>Stakes</h3>
+    <p>Stakes measure how much rides on a claim, S1 highest to S7 lowest: foundational tech S1, work and science S2, political economy S3, markets S4, sector economics S5, companies S6, products and operations S7. There are two layers. A reproducible default, mapped one to one from each claim's scope, and a per-claim hand-judged tier that overrides the default where a claim's real content warrants it. The matrix uses the hand-judged tier for precision; the deterministic default is kept alongside each claim, so the judgment is auditable and you can see where the two disagree. The hand pass moved about a quarter of claims by a tier, and it moved the picture against Zitron, not for him. Scope also sorts each claim into one of four questions: capability, diffusion and utility, finance and markets, political economy.</p>
+
+    <h3>Recurring claims</h3>
+    <p>The greatest-hits timelines come from a separate scan of the full text. For each theme, a pattern was matched at sentence level, restricted to his AI era from 2023, required to sit near AI context, and deduplicated. Each surviving sentence is one dot. Counts move a little with the matching rule, so treat them as close, not exact.</p>
+
+    <h3>The six lenses</h3>
+    <p>Each core argument was researched once, then handed to a second agent told to attack both the research and Zitron and to revise the verdict. The published verdict is the adversarial one. The price analysis was built the same way, across four metrics, with a chartable timeline of GPT-4-class prices.</p>
+
+    <h3>Where to distrust this</h3>
+    <ul>
+      <li>Verdicts on individual claims are agent-assigned with web checks, not hand-verified one by one. The headline lenses and the price work got more scrutiny than the long tail of the database.</li>
+      <li>Stakes are mapped from scope. A finer hand-tag would move some claims by a tier.</li>
+      <li>Correctness means different things across tiers. A company's cash flow can be flatly wrong. A political-economy claim is part value judgment, so its score is softer.</li>
+      <li>Sources are labeled by outlet and date. Some links point to mid-2026 reporting and may move. A few of Zitron's own figures rest on anonymous tips, and those are flagged in place.</li>
+      <li>This is a representative sample of his most testable claims, not a transcript of every sentence. It reflects data as of June 11 2026 and will age.</li>
+    </ul>
+
+    <h3>The rating scale</h3>
+    <p>S is Bruenig-level cohesion and logic. A is great. B is solid. C is the Yiggy and Ezra zone. D is what are we even doing here. F is clown shit. He is judged against the standard he claims for himself, the definitive analyst of the AI bubble, not against the average commentator.</p>
+
+    <p class="sans" style="font-size:15px;margin-top:24px"><a href="index.html"><strong>Back to the audit</strong></a></p>
+  </section>
+</div>
+
+<footer><div class="wrap"><div class="col"><p><span class="tag">Zitron Dumbtron</span> Method page. Not affiliated with Ed Zitron. Quotations used for analysis and criticism.</p></div></div></footer>
+<script>
+(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');})();
+</script>
+</body>
+</html>

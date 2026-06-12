@@ -1,0 +1,7 @@
+# Full corpus and intermediate data (copyright + size; site uses excerpts only)
+crawl/
+# Local tooling and source-article copies (not for publication)
+.claude/
+AI Is Slowing Down.html
+Zitron on Chris Hayes Podcast 2026 Transcript.txt
+.DS_Store

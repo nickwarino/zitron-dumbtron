@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zitron Dumbtron · A Scored Audit of Ed Zitron on AI</title>
+<meta name="description" content="A comprehensive, source-heavy audit of Ed Zitron's AI writing, 2020 to 2026. Every claim scored by correctness and stakes, with recurring-claim timelines and adversarially-checked analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="tip" id="tip"></div>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="dh"><div><h3 id="drawerTitle"></h3><div class="sub" id="drawerSub"></div></div><button class="dclose" id="drawerClose" aria-label="Close">×</button></div>
+  <div class="dbody" id="drawerBody"></div>
+</aside>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
+    <nav class="topnav">
+      <a href="#rating" class="active">The Rating</a>
+      <a href="#matrix">Stakes Matrix</a>
+      <a href="#recurring">Recurring Claims</a>
+      <a href="#lenses">The Lenses</a>
+      <a href="#cheaper">Getting Cheaper?</a>
+      <a href="#database">Database</a>
+      <a href="methodology.html">Method</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
+  </div>
+</div>
+
+<nav class="toc" id="toc" aria-label="Contents"></nav>
+<div class="wrap">
+  <header class="hero">
+    <div class="col">
+      <div class="kicker">The Comprehensive Audit · 2020 to 2026 · Held To A Levine / Tooze Standard</div>
+      <h1>Zitron Dumbtron</h1>
+      <p class="dek">Every dated AI claim Ed Zitron has made, pulled from his full archive and scored two ways: how right it is, and how much rides on it.</p>
+      <div class="byline" id="heroStats"></div>
+    </div>
+  </header>
+
+  <section class="prose col" style="padding-top:30px">
+    <p class="lead">A swarm of agents read all 110 of Zitron's AI-relevant posts back to 2020, pulled 610 dated claims, and scored each one against the record as of June 2026. Then six of his core arguments were researched and adversarially checked. The point is not to dunk or to defend. It is to weight his claims by what actually rides on them, because being right that a company loses money is not the same as being right that the technology is a fraud.</p>
+    <p class="pull">It might be a bubble is table stakes. Everyone says it, including Altman. The question is the rest of what he says.</p>
+    <p>Two axes run through everything below. <strong>Correctness</strong>, one to five, derived from a sourced verdict on each claim. And <strong>stakes</strong>, S1 to S7, how consequential the claim is, from the foundational question of whether the tech is real and improving (S1) down to a pricing tweak or a single fact (S7). The headline finding is that these two axes point in opposite directions for him.</p>
+  </section>
+
+  <!-- RATING -->
+  <section id="rating" class="prose col">
+    <h2>The Rating</h2>
+    <p>He sells himself as the definitive analyst of the AI bubble, in the company of Matt Levine and Adam Tooze. Grade him there, not against the average poster. Two skills, two grades.</p>
+    <p>As a <strong>finance and company reporter, B</strong>. His scoops on token billing and inference costs are real, unprofitability is his best-supported theme, and on company and sector finance only about 21 percent of his scored claims are wrong.</p>
+    <p>As an <strong>analyst, D</strong>. The job of an analyst is the foundational call, and on the two questions that matter most, is the technology real and does it deliver value, he is more wrong than right. Across about 140 capability-and-utility claims, 69 are wrong and 53 are right. His distinctive version of them, useless, a con, hit a wall, not getting cheaper, is the wrong half, and he is not updating. He made the crypto comparison in 2023 and is still making it in 2026, after agentic coding shipped.</p>
+    <div class="tierlist">
+      <div class="tierrow"><div class="tierbadge t-s">S</div><div class="tierbody"><span class="lab">Bruenig-level cohesion and logic</span></div></div>
+      <div class="tierrow"><div class="tierbadge t-a">A</div><div class="tierbody"><span class="lab">Great job</span></div></div>
+      <div class="tierrow" style="opacity:.95"><div class="tierbadge t-b">B</div><div class="tierbody"><span class="lab">Solid</span><span class="tiermark" style="background:var(--accent-2)">his reporting only</span></div></div>
+      <div class="tierrow"><div class="tierbadge t-c">C</div><div class="tierbody"><span class="lab">Yiggy / Ezra Zone</span></div></div>
+      <div class="tierrow active"><div class="tierbadge t-d">D</div><div class="tierbody"><span class="lab">What are we even doing here?</span><span class="tiermark">◄ Zitron the analyst</span></div></div>
+      <div class="tierrow"><div class="tierbadge t-f">F</div><div class="tierbody"><span class="lab">Clown shit</span></div></div>
+    </div>
+    <p>Billed as an analyst, so the honest headline is a <strong>D</strong>. What keeps him out of F is that the reporting is real, the financial bubble is a genuine and still-live risk, and "enterprise ROI is unproven" remains a fair point. He is not a clown. He is a good reporter with a coin-flip thesis, sold as an oracle. An earlier draft of this page had him at C. Weighting by what he claims to be, that was too generous.</p>
+    <h3>What the foundational errors mean</h3>
+    <p id="nar_foundational">Claims are not independent points to be averaged. They are marshaled toward a conclusion. His accurate finance claims, that OpenAI loses money and the financing is circular, are bricks in an argument whose foundation is the claim that the technology is fake and finished. If the foundation is a coin flip, the building does not stand, however well the bricks are laid. "Amazon loses money" was true every year of the late 1990s and useless to anyone who used it to argue the internet was a fraud. An analysis is only as good as its load-bearing claim, and the load-bearing claim is the one he gets wrong.</p>
+    <p class="sans" style="font-size:14px;color:var(--muted)">Four of six core arguments below land at "largely undercuts Zitron," two at "genuinely mixed," one at "partly supports." His distinctive claims score 3.27 out of 5; the consensus claims everyone makes score 3.88. He was more right about crypto (3.73) than about AI (3.32).</p>
+  </section>
+
+  <section id="vindication" class="prose col">
+    <h2>The Tell: He Called It Crypto</h2>
+    <p>His core move in 2023 was to file generative AI next to crypto, NFTs, and the metaverse. Hype with no product underneath. That bet has a clean test, and four years has run it. Crypto and NFTs never produced durable mass use. Generative AI did. By 2026 ChatGPT has roughly 900 million weekly users, capability has climbed through reasoning and long-horizon tasks, the cost of a fixed level of capability has fallen about a thousandfold, and agentic coding through Claude Code, Codex, and Cursor is a real change in how software gets written. On the one axis that separates a fraud from a technology, durable and growing use, the analogy he built his brand on has broken.</p>
+    <p>So his loudest claims should be marked down over time, not up. The crypto comparison was a defensible if aggressive prior in 2023. Repeating useless, a con, nobody wants it in 2026, after the agentic shift, is a failure to update, which for an analyst is the cardinal sin. The hype he mocked was not all lies. Its central claim, that this is a genuinely transformative technology, especially for code, has been substantially borne out, in a way crypto's never was.</p>
+    <p class="pull">You do not accidentally spend 500 million dollars a month on a tool nobody wants.</p>
+    <p>The sharpest evidence against him is his own. His best reporting, the scoops on how much companies burn on Claude Code and Codex, documents exactly the demand he says does not exist. His numbers refute his thesis. None of this clears the bubble question, which is still live, or the ROI question, which is still thin. But it settles the one he is most known for, and it settles it against him.</p>
+  </section>
+
+  <section id="compares" class="prose col">
+    <h2>What He Compares AI To</h2>
+    <p>An analyst is mostly his reference class. Pick the wrong one and everything downstream tilts. Here is every analogy Zitron actually reaches for, ranked by how often, across his AI writing since 2023. Hover an example to read it in his words; click to open the post.</p>
+    <div class="note" id="theranosNote"></div>
+    <div id="compareList"></div>
+    <p class="sans" style="font-size:13.5px;color:var(--muted);margin-top:14px">Counts are mentions in his AI-era posts, so a high count can mean he invokes a case to embrace it (crypto, the metaverse, subprime) or to wave at while disclaiming (Enron, which he sarcastically insists NVIDIA is not, while mocking the denial to insinuate something is off). The kind label says which.</p>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- MATRIX -->
+  <section id="matrix" class="prose col">
+    <h2>Right Where It Matters Least</h2>
+    <p>Average correctness of his AI claims, grouped by what is at stake. Higher tiers are more consequential. The pattern is the indictment: he is strong on the knowable, lower-stakes finance and company claims, and weakest on whether AI actually delivers value and transforms work, which is the question his whole worldview rests on.</p>
+    <div class="matrix" id="matrix-rows"></div>
+    <p class="sans" style="font-size:13.5px;color:var(--muted)">Score is mean correctness (1 to 5) of scored claims in each tier. Unverifiable and not-yet-resolved predictions are excluded from the mean. Small-n tiers (S4, S7) are noisier. Stakes here are hand-judged per claim, so this is a judgment layer, not the reproducible scope-mapping; the hand pass moved about a quarter of claims by a tier and the two methods agree on the shape. Stakes-weighted overall correctness is 3.15, below his unweighted 3.32, because weighting the foundational claims more heavily pulls him down. On the combined foundational question, is it real and is it useful (S1 plus S2), he is more wrong than right: 69 wrong to 53 right. He is strongest at the bottom of the ladder (S7 operational detail, 3.96) and weakest at the top (S1 to S2, S4).</p>
+    <div class="dash" id="splitStats" style="margin-top:18px"></div>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- RECURRING CLAIMS -->
+  <section id="recurring" class="prose col">
+    <h2>His Greatest Hits</h2>
+    <p>The same theses, repeated across years. Each row is a recurring claim, with a count of how many times he has made it and an interactive timeline. Click to open. Hover any dot to read that instance; click a dot to open the post. Then read whether the theme holds up as of June 2026.</p>
+    <div class="legend"><span><i style="background:var(--accent)"></i> each dot is one dated instance</span><span>sorted by how often he says it</span></div>
+  </section>
+  <section class="col" id="catList"></section>
+
+  <hr class="fancy">
+
+  <!-- LENSES -->
+  <section id="lenses" class="prose col">
+    <h2>Six Arguments, Stress-Tested</h2>
+    <p>His core moves, each researched and then handed to an adversarial reviewer told to attack both the research and Zitron. The verdict is the reviewer's revised call.</p>
+  </section>
+  <section class="col" id="lensList"></section>
+
+  <hr class="fancy">
+
+  <!-- CHEAPER -->
+  <section id="cheaper" class="prose col">
+    <h2>Is AI Getting Cheaper?</h2>
+    <p>He says no, flatly and often. In his June 2026 piece <a href="https://www.wheresyoured.at/ai-doesnt-have-roi" target="_blank" rel="noopener">AI Doesn't Have ROI</a>: <em>"AI is more expensive today than it was three years ago, and it is not getting cheaper. Sam Altman's comments about 'intelligence too cheap to meter' were lies."</em> He treats "the cost of inference is coming down" as a booster lie. "Cheaper" has several meanings, so test each. The most telling is the cost of a fixed capability over time, a GPT-4-level model, because it holds quality constant while price moves.</p>
+    <div class="chart" id="cheapChart"></div>
+    <div id="cheapVerdict"></div>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- EVANS -->
+  <section id="evans" class="prose col">
+    <h2>The Measured Counterweight: Benedict Evans</h2>
+    <p>If Zitron is the polemic, Benedict Evans is the closest thing to the Levine-and-Tooze read the rating measures Zitron against. A respected, non-hyperbolic analyst, his May 2026 deck "AI Eats the World" is built from primary data, and it lands almost exactly where this audit does. The capability, the cost curve, and the demand are real and fast. The business model is genuinely unsettled. Here is the full deck, then the slides that bear straight on Zitron's claims.</p>
+    <div class="deckwrap"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQlE9lMtb4mepvtgNIxcLHXdPrQiCVPy3P8AFa1ivRtVS7jMaAV-4jyS5u0Ys8Hm4RSpQ0yOi_CqNIT/embed?start=false&loop=false&delayms=5000" allowfullscreen></iframe></div>
+
+    <div class="evcard">
+      <div class="et">Inference efficiency is growing 50 to 100x per year</div>
+      <div class="es">Slide 20 · "Price, use and capex are out of equilibrium"</div>
+      <p>Evans models the sector as explosive demand growth, times inference efficiency rising 50 to 100x a year, times an open question on model efficiency and asset life, times a new frontier model every 6 to 9 months.</p>
+      <p class="bear"><span class="stance stance-und">Undermines Zitron</span> &nbsp;This demolishes "AI is not getting cheaper." A neutral analyst puts the efficiency gain at 50 to 100x a year, matching the Epoch and a16z figures. It also validates the one real nuance: usage can outrun even that, so a user's bill still rises.</p>
+      <div class="src0">Source: Benedict Evans, AI Eats the World, May 2026</div>
+    </div>
+
+    <div class="evcard">
+      <div class="et">Unprecedented revenue growth, demand far ahead of supply</div>
+      <div class="es">Slide 18 · "Meanwhile, unprecedented growth"</div>
+      <p>OpenAI and Anthropic reported revenue is on a near-vertical curve, with demand outrunning supply. Evans's own caption adds the caveat: business models are nowhere near equilibrium.</p>
+      <p class="bear"><span class="stance stance-und">Undermines Zitron</span> &nbsp;Direct refutation of "no demand, nobody wants it." And note the caveat is the same one this audit credits him for: the business model is unproven. The measured read separates the two. Zitron does not.</p>
+      <div class="src0">Source: Companies, press reports (Evans deck, slide 18)</div>
+    </div>
+
+    <div class="evcard">
+      <div class="et">A real, durable buildout, not just disposable chips</div>
+      <div class="es">Slides 10, 11, 12 · semiconductor cycle, capex surge, construction</div>
+      <p>Monthly global semiconductor billings hit a record near $115bn. Leading-edge capex (TSMC, Intel, Samsung) is set for roughly $145bn in 2026. US data-centre construction, excluding the compute, has overtaken office construction for the first time.</p>
+      <p class="bear"><span class="stance stance-comp">Complicates Zitron</span> &nbsp;This is the durable base the stranded-GPU framing ignores: fabs, power, and shells with multi-decade lives. The kind of infrastructure a bubble leaves behind, like rails and fiber.</p>
+      <div class="src0">Sources: WSTS, US Census, Companies (Evans deck, slides 10 to 12)</div>
+    </div>
+
+    <div class="evcard">
+      <div class="et">The capacity gap, used last week versus daily essential</div>
+      <div class="es">Slide 32 · "Usage versus potential"</div>
+      <p>US workplace AI use is rising fast across every industry, but daily, essential use sits far below any use. The open question is how you get from "I tried it" to "I cannot work without it."</p>
+      <p class="bear"><span class="stance stance-comp">Cuts both ways</span> &nbsp;Real and rising adoption undercuts "useless." But the gap between trial and daily-essential is exactly the ROI skepticism that is Zitron's strongest ground. The honest middle, which the audit also lands on.</p>
+      <div class="src0">Source: Gallup (Evans deck, slide 32)</div>
+    </div>
+
+    <div class="evcard">
+      <div class="et">Models look like commodities, with no network effects</div>
+      <div class="es">Slide 25 · "And so far, models do seem to be commodities"</div>
+      <p>Frontier benchmark scores are converging across OpenAI, Anthropic, Google, Meta, and the Chinese labs. For most general use the models are very similar, and there are no network effects to lock anyone in.</p>
+      <p class="bear"><span class="stance stance-sup">Supports Zitron</span> &nbsp;A genuine point in his favor: no moat. The difference is framing. Evans treats it as a strategy risk for the labs. Zitron treats it as proof the whole thing is fake. Same fact, very different conclusion.</p>
+      <div class="src0">Source: ArtificialAnalysis (Evans deck, slide 25)</div>
+    </div>
+
+    <p class="pull">The calm expert and the audit agree. The capability, the cost curve, and the demand are real. The business model is not yet proven. That is the opposite of a con with a useless product.</p>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- RELIABILITY -->
+  <section id="reliability" class="prose col">
+    <h2>Reliability and the Human Baseline</h2>
+    <p>Hallucination is Zitron's favorite reliability club, and it deserves the deepest look on this page, because the strongest argument against him is also the one he half-relies on. The question "is hallucination inevitable" is really two questions that get conflated. The worst-case theory papers (<a href="https://arxiv.org/abs/2401.11817" target="_blank" rel="noopener">Xu et al.</a>, <a href="https://arxiv.org/abs/2409.05746" target="_blank" rel="noopener">Banerjee et al.</a>) prove by diagonalization that no computable model can be correct on every computable function, so a fully general problem-solver must hallucinate somewhere. But those authors concede the proofs say nothing about the rate on real tasks. The practical literature, including OpenAI's own <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Why Language Models Hallucinate</a>, <a href="https://arxiv.org/abs/2502.12187" target="_blank" rel="noopener">Suzuki et al.</a>, and the <a href="https://arxiv.org/abs/2508.07334" target="_blank" rel="noopener">Oracle Escape</a> result, argues the rate is a fixable incentive and grounding problem. "Inevitable in the worst case" and "negligible in the average case" are both true. Zitron leans on the first to imply the second is impossible. That is the equivocation, and the authority he would most want, OpenAI's paper, is a reducible argument he would have to misread to cite.</p>
+
+    <p>Reliability in 2026 is bimodal, and that is the fact his framing flattens. Unsupervised on the open web it is genuinely bad: the CJR Tow Center found eight AI search engines wrong on more than 60 percent of news-citation queries, the BBC and EBU found 45 percent of responses had a significant issue, and Stanford's RegLab found commercial legal AI hallucinating 17 to 33 percent despite "hallucination-free" marketing, with 700-plus court cases of fabricated citations now on record. Grounded and verifiable, it is genuinely good: SimpleQA accuracy jumps from under 40 percent to over 90 percent with tools, and the best grounded systems sit under 1.5 percent hallucination. "Unreliable" is true for one mode and false for the other. He treats the bad mode as the whole.</p>
+
+    <p>Your reframe is the right correction, and the research backs it. The deployment standard is "better than the human you would otherwise use, faster and cheaper," not perfect. The human gold standard was always a myth: <a href="https://learnmem.cshlp.org/content/12/4/361.full.pdf" target="_blank" rel="noopener">Loftus</a> showed human memory confabulates confidently, so non-fabrication was never the bar we held people to. And we hold AI to a superhuman one: in one radiology study people tolerated an 11.3 percent error rate from a human and only 6.8 percent from the machine. <a href="https://simonwillison.net/2023/Dec/9/andrej-karpathy/" target="_blank" rel="noopener">Karpathy's</a> reframe sharpens it: generation is the mechanism, a model is always dreaming, so the fix is grounding and system design, not waiting for a perfect oracle. <a href="https://simonwillison.net/2025/Mar/2/hallucinations-in-code/" target="_blank" rel="noopener">Willison</a> adds that a code hallucination is the least dangerous kind, because you run the code and the error surfaces. The augmentation evidence closes it: the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321" target="_blank" rel="noopener">BCG-Harvard field experiment</a> found 40 percent higher quality inside the AI frontier, and the support-agent trial found gains of 14 percent overall and 34 percent for novices. A technology with those effects is not useless.</p>
+
+    <p>But the human analogy has a real limit, and it is exactly where Zitron is strongest, so honesty requires stating it. AI error is shaped differently from human error. It arrives in confident, fluent prose with no tells, where a person would hedge. It is systematic and correlated across millions of identical outputs, so one failure mode propagates at scale instead of being idiosyncratic and self-limiting. And it is indifferent to truth rather than mistaken about it. Add automation bias, where humans rubber-stamp the machine, deskilling, where a clinician's unassisted detection rate fell after AI exposure, and the accountability gap, and "human in the loop" is often a fiction that launders machine error. On the unsupervised high-stakes case, legal citations, medical recall, news, he wins cleanly, and vendor promises that the problem is solved are false.</p>
+
+    <p>One more nuance you raised, and it is the right one. Reliability is jagged. AI improves fastest where the output is verifiable, code and math, because a checkable reward can train it, and it lags where quality is subjective, writing and taste, where no such signal exists. So "soulless slop" has more standing for prose than for code, and "it cannot really code" has less. The honest map is not useless and not magic but a <a href="https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged" target="_blank" rel="noopener">jagged frontier</a>.</p>
+
+    <p class="pull">Hallucination is real, bimodal, and not going to zero. But "it hallucinates, therefore it is useless" is a category error the very literature he invokes refutes.</p>
+
+    <p>Does this move the rating? No, and the reason is the honest one. It makes his dismissal look worse, because his strongest-sounding move, citing inevitability, is an equivocation, and the comparative standard that actually governs deployment is one he never applies. But it also hands him his best ammunition, the error-shape disanalogy, which is real. A D-tier analyst who is loud about a genuine problem is still pointing at a genuine problem. His D is not for being wrong that hallucination exists. It is for the method: selecting the worst cases, misreading his own sources, and freezing a moving target. The topic is legitimate. The reasoning is what fails.</p>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- SHIFT -->
+  <section id="shift" class="prose col">
+    <h2>How The Argument Moved</h2>
+    <p>His mix of claims by year, as a share of each year's output. The drift is real: from broad political-economy and tech-skepticism toward company and sector finance, where his reporting is strongest. As one critic put it, he swapped a 2024 economics case for a 2026 fraud case as the economics case got harder to make.</p>
+    <div class="legend" id="shiftLegend"></div>
+    <div id="shiftChart"></div>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- DATABASE -->
+  <section id="database" class="prose col">
+    <h2>The Database</h2>
+    <p>All 610 claims. Filter by verdict, stakes, domain, or year, or search. Each claim carries its scope, stakes tier, correctness, and a sourced assessment.</p>
+  </section>
+  <div class="filterbar">
+    <div class="wrap"><div class="col">
+      <div class="row" id="vFilters"></div>
+      <div class="row" style="margin-top:9px" id="sFilters"></div>
+      <div class="row" style="margin-top:9px"><div class="row" id="yFilters"></div><input class="search" id="search" type="search" placeholder="Search claims, posts, sources…"></div>
+    </div></div>
+  </div>
+  <section class="col"><div id="dbList"></div></section>
+
+  <section class="prose col">
+    <div class="note">A blunt, source-heavy audit, built to credit what is right and rebut what is not. See the <a href="methodology.html"><strong>methodology</strong></a> for how the archive was crawled, how claims were tagged and scored, and what the limits are. Not affiliated with Ed Zitron. Quotations used for analysis and criticism.</div>
+  </section>
+</div>
+
+<footer><div class="wrap"><div class="col">
+  <p><span class="tag">Zitron Dumbtron</span> 610 claims · 110 posts · 12 recurring theses · 6 stress-tested arguments. Scored as of 2026-06-11.</p>
+</div></div></footer>
+
+<script src="assets/claims-full.js"></script>
+<script src="assets/categories.js"></script>
+<script src="assets/lenses.js"></script>
+<script src="assets/cheapness.js"></script>
+<script src="assets/comparisons.js"></script>
+<script src="assets/citations.js"></script>
+<script>
+(function(){
+  const claims=window.CLAIMS_FULL||[], cats=window.CATEGORIES||[], lenses=window.LENSES||[], cheap=window.CHEAPNESS||{};
+  const ai=claims.filter(c=>c.domain==='AI');
+  const VMETA={
+    'Correct':{c:'v-true'},'Mostly correct':{c:'v-mtrue'},'Mixed':{c:'v-mixed'},'Too early to tell':{c:'v-early'},
+    'Overstated':{c:'v-over'},'Mostly wrong':{c:'v-mis'},'Wrong':{c:'v-false'},'Unverifiable':{c:'v-unv'}
+  };
+  const STLAB={S1:'Foundational tech',S2:'Work & science',S3:'Political economy',S4:'Markets & finance',S5:'Sector economics',S6:'Companies',S7:'Products / ops'};
+  const STORD=['S1','S2','S3','S4','S5','S6','S7'];
+  const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  // hero stats
+  document.getElementById('heroStats').innerHTML=
+    `<span><strong>${claims.length}</strong> claims scored</span><span class="rule"></span><span><strong>110</strong> posts</span><span class="rule"></span><span>2020 to 2026</span>`;
+
+  // ---- shared rich-hover map + side drawer ----
+  const TIPS={};
+  (function(){
+    const dbk=document.getElementById('drawerBackdrop'), drawer=document.getElementById('drawer');
+    function close(){if(drawer)drawer.classList.remove('open');if(dbk)dbk.classList.remove('open');}
+    if(dbk)dbk.onclick=close; const dc=document.getElementById('drawerClose'); if(dc)dc.onclick=close;
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  })();
+  function openPanel(title,subHTML,bodyHTML){
+    const drawer=document.getElementById('drawer'),dbk=document.getElementById('drawerBackdrop'),dbody=document.getElementById('drawerBody');
+    document.getElementById('drawerTitle').textContent=title; document.getElementById('drawerSub').innerHTML=subHTML;
+    dbody.innerHTML=bodyHTML; dbody.scrollTop=0; drawer.classList.add('open'); dbk.classList.add('open');
+  }
+  function buildTimeline(items){
+    items=items.slice().sort((a,b)=>a.date<b.date?-1:1); if(!items.length)return '';
+    const d0=new Date(items[0].date),d1=new Date(items[items.length-1].date),sp=(d1-d0)||1;
+    const dots=items.map((x,i)=>{const id='tl_'+i;TIPS[id]='<div class="td">'+x.date+' · '+esc(x.title)+'</div><div class="tq">'+esc(x.text)+'</div>';const left=((new Date(x.date)-d0)/sp)*100;return '<a class="dot" data-tip="'+id+'" href="'+x.url+'" target="_blank" rel="noopener" style="left:'+left+'%;top:'+(6+(i%4)*8)+'px;background:'+(x.color||'var(--accent)')+'"></a>';}).join('');
+    const list=items.map(x=>'<div class="dentry"><div class="dt">'+x.date+(x.tag?' · <span style="color:'+(x.color||'var(--muted)')+'">'+esc(x.tag)+'</span>':'')+'</div><div class="dq">'+esc(x.text)+'</div><a href="'+x.url+'" target="_blank" rel="noopener">'+esc(x.title)+' ↗</a></div>').join('');
+    return '<div class="dminitl">'+dots+'<div class="axis"></div></div><div class="ticks"><span>'+items[0].date.slice(0,7)+'</span><span>'+items[items.length-1].date.slice(0,7)+'</span></div>'+list;
+  }
+
+  // ---- matrix (click a tier to open its claims on a timeline) ----
+  function mean(rs){const x=rs.filter(r=>r.correctness!=null).map(r=>r.correctness);return x.length?[x.reduce((a,b)=>a+b,0)/x.length,x.length]:[null,0];}
+  const colFor=v=> v==null?'var(--v-unv)': v>=4?'var(--v-true)': v>=3.4?'var(--v-mtrue)': v>=3?'var(--v-mixed)': v>=2.6?'var(--v-over)': 'var(--v-false)';
+  const corrColor=c=> c==null?'var(--v-unv)': c>=4?'var(--v-true)': c>=3?'var(--v-mixed)':'var(--v-false)';
+  document.getElementById('matrix-rows').innerHTML=STORD.map(s=>{
+    const rs=ai.filter(r=>r.stakes===s); const [m,n]=mean(rs);
+    const w=m?((m-1)/4*100):0;
+    return `<div class="mrow mrow-click" data-stakes="${s}"><div class="mst"><span class="st st-${s}">${s}</span>${STLAB[s]}</div>
+      <div class="mbar"><div class="mfill" style="width:${w}%;background:${colFor(m)}"></div></div>
+      <div class="mscore" style="color:${colFor(m)}">${m?m.toFixed(2):'n/a'}</div>
+      <div class="mnum">${rs.length} claims →</div></div>`;
+  }).join('');
+  function openTierDrawer(s){
+    const rs=ai.filter(r=>r.stakes===s); const [m]=mean(rs);
+    const items=rs.map(r=>({date:r.date,title:r.post_title,text:'“'+r.claim+'” ('+r.verdict+')',url:r.post_url,color:corrColor(r.correctness),tag:r.verdict}));
+    const sub='<span class="st st-'+s+'">'+s+'</span> '+esc(STLAB[s])+' · '+rs.length+' claims · avg '+(m?m.toFixed(2):'n/a')+'/5';
+    const legend='<div class="sans" style="font-size:12px;color:var(--muted);margin:0 0 8px">Each dot is a claim, colored by correctness: <span style="color:var(--v-true)">●</span> right, <span style="color:var(--v-mixed)">●</span> mixed, <span style="color:var(--v-false)">●</span> wrong. Hover for the claim, click for the post.</div>';
+    openPanel(STLAB[s], sub, legend+buildTimeline(items));
+  }
+  document.querySelectorAll('.mrow-click').forEach(r=>r.onclick=()=>openTierDrawer(r.dataset.stakes));
+
+  // split stats
+  function avgDom(dom){const [m]=mean(claims.filter(c=>c.domain===dom));return m;}
+  function avgDist(d){const [m]=mean(ai.filter(c=>c.distinct===d));return m;}
+  document.getElementById('splitStats').innerHTML=[
+    {n:avgDist('distinctive').toFixed(2),l:'Distinctive claims'},
+    {n:avgDist('table-stakes').toFixed(2),l:'Table-stakes claims'},
+    {n:avgDom('AI').toFixed(2),l:'AI claims'},
+    {n:avgDom('crypto-web3').toFixed(2),l:'Crypto / web3 claims'},
+  ].map(c=>`<div class="stat"><div class="n">${c.n}</div><div class="l">${c.l} avg /5</div></div>`).join('');
+
+  // ---- tooltip ----
+  const tip=document.getElementById('tip');
+  function showTip(html,x,y){tip.innerHTML=html;tip.classList.add('show');let nx=x+14,ny=y+14;if(nx+360>window.innerWidth)nx=x-374;tip.style.left=nx+'px';tip.style.top=ny+'px';}
+  function hideTip(){tip.classList.remove('show');}
+
+  // ---- recurring claim timelines ----
+  const VCOLOR={'Mostly wrong':'v-mis','Overstated':'v-over','Mixed':'v-mixed','Mostly correct':'v-mtrue','Correct':'v-true'};
+  function catVerdictCls(v){v=(v||'').toLowerCase();if(v.includes('wrong'))return 'v-false';if(v.includes('overstat'))return 'v-over';if(v.includes('mixed'))return 'v-mixed';if(v.includes('table'))return 'v-mtrue';if(v.includes('partly'))return 'v-mixed';if(v.includes('correct')||v.includes('strongest')||v.includes('best'))return 'v-true';return 'v-mixed';}
+  const allDates=cats.flatMap(c=>c.instances.map(i=>i.date)).sort();
+  const D0=new Date(allDates[0]||'2023-01-01'), D1=new Date(allDates[allDates.length-1]||'2026-06-08');
+  const span=(D1-D0)||1;
+  function pos(d){return ((new Date(d)-D0)/span)*100;}
+  document.getElementById('catList').innerHTML=cats.map((c,ci)=>{
+    const dots=c.instances.map((x,i)=>{
+      const left=pos(x.date); const jit=(i%5)*10;
+      return `<a class="dot" href="${x.url}" target="_blank" rel="noopener" data-i="${ci}:${i}" style="left:${left}%;top:${4+jit}px"></a>`;
+    }).join('');
+    return `<div class="catcard" id="cat-${c.id}">
+      <div class="cathead" data-toggle="${c.id}">
+        <div class="cnt">${c.count}</div>
+        <div class="cmid"><div class="cttl">${esc(c.label)}</div>
+          <div class="csub"><span class="st st-${c.stakes}">${c.stakes}</span> &nbsp;${c.instances[0]?c.instances[0].date.slice(0,7):''} to ${c.instances.length?c.instances[c.instances.length-1].date.slice(0,7):''} &nbsp;·&nbsp; ${esc(c.verdict)}</div></div>
+        <div class="carrow">▸</div>
+      </div>
+      <div class="catbody">
+        <div class="dotline">${dots}<div class="axis"></div></div>
+        <div class="ticks"><span>${D0.getFullYear()}</span><span>${Math.round((D0.getFullYear()+D1.getFullYear())/2)}</span><span>${D1.getFullYear()}</span></div>
+        <span class="catverdict ${catVerdictCls(c.verdict)}">${esc(c.verdict)}</span>
+        <p class="catanalysis">${c.analysis}</p>
+        <div class="srcs">${(c.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div>
+      </div></div>`;
+  }).join('');
+  // toggle + dot tooltips
+  document.querySelectorAll('.cathead').forEach(h=>h.onclick=e=>{ if(e.target.closest('a'))return; document.getElementById('cat-'+h.dataset.toggle).classList.toggle('open');});
+  document.getElementById('catList').addEventListener('mouseover',e=>{
+    const d=e.target.closest('.dot'); if(!d)return;
+    const [ci,i]=d.dataset.i.split(':').map(Number); const x=cats[ci].instances[i];
+    showTip(`<div class="td">${x.date} · ${esc(x.title)}</div>${esc(x.quote)}<div class="td" style="margin-top:6px">click to open post ↗</div>`, e.clientX, e.clientY);
+  });
+  document.getElementById('catList').addEventListener('mousemove',e=>{ if(tip.classList.contains('show')){const d=e.target.closest('.dot'); if(d){let nx=e.clientX+14;if(nx+360>window.innerWidth)nx=e.clientX-374;tip.style.left=nx+'px';tip.style.top=(e.clientY+14)+'px';}}});
+  document.getElementById('catList').addEventListener('mouseout',e=>{ if(e.target.closest('.dot'))hideTip();});
+
+  // ---- lenses ----
+  const RELLAB={'rel-sup':'Strongly supports','rel-part':'Partly supports','rel-mix':'Genuinely mixed','rel-und':'Largely undercuts','rel-strund':'Strongly undercuts'};
+  document.getElementById('lensList').innerHTML=lenses.map(l=>`
+    <div class="lens">
+      <p class="q">${esc(l.title)}</p>
+      <span class="rel ${l.relcls}">${esc(l.net)}</span>
+      <h4>The bottom line</h4><p>${l.bottom_line}</p>
+      <h4>Steelman for Zitron</h4><p>${esc(l.steelman)}</p>
+      <h4>Where it breaks</h4><ul>${l.counterpoints.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+      ${l.caveat?`<h4>Adversarial caveat</h4><p>${esc(l.caveat)}</p>`:''}
+      <div class="srcs">${(l.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div>
+    </div>`).join('');
+
+  // ---- cheapness chart (linear default, log toggle) ----
+  (function(){
+    const t=cheap.timeline||[]; if(!t.length){return;}
+    const W=720,H=320,pad={l:56,r:16,t:18,b:46};
+    const xs=t.map(p=>new Date(p.date)); const x0=Math.min(...xs),x1=Math.max(...xs);
+    const X=d=>pad.l+((new Date(d)-x0)/((x1-x0)||1))*(W-pad.l-pad.r);
+    const vals=t.map(p=>p.out), vmax=Math.max(...vals), vmin=Math.min(...vals);
+    t.forEach((p,i)=>{TIPS['cp_'+i]='<div class="td">'+p.date+'</div><strong>'+esc(p.model)+'</strong> · $'+p.out+' per M output tokens<div class="tan">'+esc(p.note)+'</div>';});
+    let scale='linear';
+    function Y(v){const ph=H-pad.t-pad.b; if(scale==='log'){const a=Math.log10(vmin),b=Math.log10(vmax);return pad.t+(1-((Math.log10(v)-a)/((b-a)||1)))*ph;} return pad.t+(1-(v/(vmax||1)))*ph;}
+    function draw(){
+      const line=t.map((p,i)=>(i?'L':'M')+X(p.date).toFixed(1)+','+Y(p.out).toFixed(1)).join(' ');
+      const ticks=scale==='log'?[0.1,1,10,60]:[0,15,30,45,60];
+      const ylab=ticks.map(v=>'<g><line class="cax" x1="'+pad.l+'" x2="'+(W-pad.r)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" opacity="0.4"/><text x="'+(pad.l-8)+'" y="'+(Y(v)+3).toFixed(1)+'" text-anchor="end">$'+v+'</text></g>').join('');
+      const years=[2023,2024,2025].map(yr=>{const d=new Date(yr+'-01-01');return '<text x="'+X(d).toFixed(1)+'" y="'+(H-pad.b+18)+'" text-anchor="middle">'+yr+'</text>';}).join('');
+      const pts=t.map((p,i)=>'<circle class="cpt" data-tip="cp_'+i+'" cx="'+X(p.date).toFixed(1)+'" cy="'+Y(p.out).toFixed(1)+'" r="4.5"></circle>').join('');
+      document.getElementById('cheapPlot').innerHTML='<svg viewBox="0 0 '+W+' '+H+'">'+ylab+years+'<line class="cax" x1="'+pad.l+'" y1="'+pad.t+'" x2="'+pad.l+'" y2="'+(H-pad.b)+'"/><path class="cln" d="'+line+'"/>'+pts+'</svg>';
+    }
+    document.getElementById('cheapChart').innerHTML=
+      '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px"><div class="sans" style="font-size:13px;color:var(--muted)">Cost to run a <strong>GPT-4-class model</strong>, USD per million output tokens. Lower is cheaper.</div><div style="display:flex;gap:6px"><button class="chip" id="scaleLin">Linear</button><button class="chip" id="scaleLog">Log</button></div></div><div id="cheapPlot"></div><div class="sans" id="scaleNote" style="font-size:12px;color:var(--muted);margin-top:6px"></div>';
+    function setScale(sc){scale=sc;draw();
+      document.getElementById('scaleLin').classList.toggle('on',sc==='linear');
+      document.getElementById('scaleLog').classList.toggle('on',sc==='log');
+      document.getElementById('scaleNote').textContent= sc==='linear' ? 'Linear scale: the drop from $60 to under $1 is so steep it looks like a cliff. That is the point.' : 'Log scale: each gridline is 10x cheaper, so the steady decline across model generations is visible.';
+    }
+    document.getElementById('scaleLin').onclick=()=>setScale('linear');
+    document.getElementById('scaleLog').onclick=()=>setScale('log');
+    setScale('linear');
+    // verdict + metrics
+    const mvcls=v=>{v=(v||'').toUpperCase();if(v.includes('WRONG')&&v.includes('MOSTLY'))return 'mv-mwrong';if(v.includes('WRONG'))return 'mv-wrong';if(v.includes('MIXED'))return 'mv-mixed';if(v.includes('RIGHT'))return 'mv-right';return 'mv-mixed';};
+    document.getElementById('cheapVerdict').innerHTML=
+      `<div class="gradecard" style="margin:18px 0"><div class="bigletter" style="font-size:46px;line-height:1.1">${esc(cheap.verdict)}</div>
+        <div class="gtxt"><p>${esc(cheap.bottom_line)}</p></div></div>
+       <div class="metricgrid">${(cheap.metric_breakdown||[]).map(m=>`<div class="metricrow"><span class="mv ${mvcls(m.verdict)}">${esc(m.verdict)}</span><span class="mt"><strong>${esc(m.metric)}</strong>. ${esc(m.note)}</span></div>`).join('')}</div>
+       <div class="srcs">${(cheap.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div>`;
+  })();
+
+  // ---- shift over time ----
+  (function(){
+    const SC=[['tech-viability','#8f1d1d'],['demand-adoption','#b1480f'],['political-economy','#5b3a86'],['bubble-timing','#d8c98a'],['industry-economics','#1f6d54'],['company','#4a6b2a'],['other','#6c6358']];
+    const SCL={'tech-viability':'Tech viability','demand-adoption':'Demand','political-economy':'Political economy','bubble-timing':'Bubble','industry-economics':'Sector economics','company':'Companies','other':'Other'};
+    document.getElementById('shiftLegend').innerHTML=SC.map(([k,c])=>`<span><i style="background:${c}"></i>${SCL[k]}</span>`).join('');
+    const years=[...new Set(ai.map(c=>c.year))].filter(y=>y>='2023').sort();
+    document.getElementById('shiftChart').innerHTML=years.map(y=>{
+      const rs=ai.filter(c=>c.year===y); const n=rs.length;
+      const segs=SC.map(([k,c])=>{const cnt=rs.filter(r=>r.scope===k).length; const w=cnt/n*100; return w>0?`<div class="seg" style="width:${w}%;background:${c}" title="${SCL[k]}: ${cnt}"></div>`:'';}).join('');
+      return `<div class="stack"><span class="yl">${y}</span><span class="track">${segs}</span><span class="tot">${n}</span></div>`;
+    }).join('');
+  })();
+
+  // ---- database ----
+  const dstate={v:new Set(),s:new Set(),dom:new Set(),y:new Set(),q:''};
+  const yrs=[...new Set(claims.map(c=>c.year))].sort();
+  document.getElementById('vFilters').innerHTML=Object.keys(VMETA).map(v=>`<button class="chip" data-v="${v}">${v}</button>`).join('');
+  document.getElementById('sFilters').innerHTML=STORD.map(s=>`<button class="chip" data-s="${s}"><span class="st st-${s}" style="padding:1px 6px">${s}</span> ${STLAB[s]}</button>`).join('')+
+    ['AI','crypto-web3','business-pr-culture'].map(d=>`<button class="chip" data-dom="${d}">${d}</button>`).join('');
+  document.getElementById('yFilters').innerHTML=yrs.map(y=>`<button class="chip" data-y="${y}">${y}</button>`).join('');
+  function bind(sel,key){document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{const k=b.dataset[key];b.classList.toggle('on');dstate[key==='v'?'v':key==='s'?'s':key==='dom'?'dom':'y'].has(k)?undefined:0;const set=key==='v'?dstate.v:key==='s'?dstate.s:key==='dom'?dstate.dom:dstate.y;set.has(k)?set.delete(k):set.add(k);renderDB();});}
+  bind('[data-v]','v');bind('[data-s]','s');bind('[data-dom]','dom');bind('[data-y]','y');
+  document.getElementById('search').oninput=e=>{dstate.q=e.target.value.toLowerCase();renderDB();};
+  function corrBadge(c){if(c==null)return '<span class="st" style="background:var(--v-unv)">n/a</span>';const col=c>=4?'var(--v-true)':c>=3?'var(--v-mixed)':'var(--v-false)';return `<span class="st" style="background:${col}">${c}/5</span>`;}
+  function dbCard(c){const m=VMETA[c.verdict]||{c:'v-mixed'};
+    return `<article class="claim" id="${c.id}">
+      <div class="top"><span class="meta">${c.date} · <a href="${c.post_url}" target="_blank" rel="noopener">${esc(c.post_title)} ↗</a></span>
+        <span class="verdict ${m.c}">${c.verdict}</span></div>
+      <p class="quote">${esc(c.quote||c.claim)}</p>
+      <p class="says">${esc(c.claim)}</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0">
+        <span class="st st-${c.stakes}" title="${esc(c.stakes_rationale||'')}">${c.stakes} ${STLAB[c.stakes]}</span>
+        ${c.stakes_auto&&c.stakes_auto!==c.stakes?`<span class="distbadge d-table" title="reproducible scope default was ${c.stakes_auto}">moved from ${c.stakes_auto}</span>`:''}
+        ${corrBadge(c.correctness)}
+        <span class="distbadge ${c.distinct==='distinctive'?'d-distinct':'d-table'}">${c.distinct}</span>
+        <span class="scopebadge sc-other">${esc(c.qgroup)}</span>
+      </div>
+      <details><summary>The check</summary><p class="catanalysis" style="margin-top:8px">${esc(c.assessment)}</p>
+        <div class="srcs">${(c.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div></details>
+    </article>`;}
+  function renderDB(){
+    let rows=claims.filter(c=>{
+      if(dstate.v.size&&!dstate.v.has(c.verdict))return false;
+      if(dstate.s.size&&!dstate.s.has(c.stakes))return false;
+      if(dstate.dom.size&&!dstate.dom.has(c.domain))return false;
+      if(dstate.y.size&&!dstate.y.has(c.year))return false;
+      if(dstate.q){const h=(c.claim+' '+c.quote+' '+c.assessment+' '+c.post_title).toLowerCase();if(!h.includes(dstate.q))return false;}
+      return true;});
+    const list=document.getElementById('dbList');
+    if(!rows.length){list.innerHTML='<div class="empty">No claims match these filters.</div>';return;}
+    let html=`<div class="sans" style="color:var(--muted);font-size:13px;margin:6px 0 10px">${rows.length} claims</div>`; let cy='';
+    rows.forEach(c=>{if(c.year!==cy){cy=c.year;html+=`<div class="seclabel">${cy}</div>`;}html+=dbCard(c);});
+    list.innerHTML=html;
+  }
+  renderDB();
+
+  // ---- comparisons (uses the shared drawer) ----
+  (function(){
+    const data=(window.COMPARISONS||{}); const fams=data.families||[];
+    const tn=document.getElementById('theranosNote'); if(tn)tn.innerHTML='<strong>Not Theranos.</strong> '+esc(data.theranos_note||'');
+    const cl=document.getElementById('compareList');
+    const KCOL={'Fake hype tech, no product':'#8f1d1d','Financial contagion, bad debt':'#b1480f','Lose money to buy growth':'#2a4a86','Unprofitable unicorn':'#2a4a86','Speculative tech bubble':'#5b3a86','Disclaims the fraud, then mocks the denial':'#1f6d54','Failed hype products':'#6c6358','Productive bubble, usually to dismiss':'#4a6b2a'};
+    function openDrawer(f){
+      const col=KCOL[f.kind]||'var(--accent)'; const ins=(f.instances||[]); if(!ins.length)return;
+      const items=ins.map(x=>({date:x.date,title:x.title,text:'“'+x.quote+'”',url:x.url,color:col}));
+      openPanel(f.label,'<span class="st" style="background:'+col+'">'+esc(f.kind)+'</span> '+ins.length+' mentions · '+f.posts+' posts',buildTimeline(items));
+    }
+    if(!cl||!fams.length)return;
+    const max=Math.max(...fams.map(f=>f.hits));
+    cl.innerHTML=fams.map((f,fi)=>{
+      const col=KCOL[f.kind]||'var(--accent)'; const w=max?f.hits/max*100:0; const n=(f.instances||[]).length;
+      return '<div class="cmprow cmprow-click" data-fam="'+fi+'"><div class="clab"><span>'+esc(f.label)+'</span><span style="color:'+col+'">'+f.hits+'</span></div><div class="ckind">'+esc(f.kind)+' · '+f.posts+' posts &nbsp;·&nbsp; <span class="more">view '+n+' mentions →</span></div><div class="ctrack"><div class="cfill" style="width:'+w+'%;background:'+col+'"></div></div></div>';
+    }).join('');
+    cl.querySelectorAll('.cmprow-click').forEach(r=>r.onclick=()=>openDrawer(fams[+r.dataset.fam]));
+  })();
+  // ---- citations: build rich hover tips + inject narrative ----
+  (function(){
+    const C=window.CITES||{}, SM={supports:'sup',complicates:'comp',undermines:'und'};
+    Object.keys(C).forEach(k=>{const c=C[k];TIPS[k]='<span class="stance stance-'+(SM[c.stance]||'comp')+'">'+(c.stance||'')+' Zitron</span><div class="td" style="margin-top:6px">'+esc(c.title)+'</div><div class="tq">'+esc(c.passage)+'</div><div class="tan">'+esc(c.analysis)+'</div>';});
+    const N=window.CITES_NAR||{};
+    Object.keys(N).forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=N[id];});
+  })();
+
+  // generic rich-hover for any [data-tip] element
+  document.body.addEventListener('mouseover',e=>{const el=e.target.closest('[data-tip]');if(el&&TIPS[el.dataset.tip])showTip(TIPS[el.dataset.tip],e.clientX,e.clientY);});
+  document.body.addEventListener('mousemove',e=>{if(tip.classList.contains('show')){const el=e.target.closest('[data-tip]');if(el){let nx=e.clientX+14;if(nx+380>window.innerWidth)nx=e.clientX-390;tip.style.left=nx+'px';tip.style.top=(e.clientY+14)+'px';}}});
+  document.body.addEventListener('mouseout',e=>{if(e.target.closest('[data-tip]'))hideTip();});
+
+  // ---- floating TOC + scroll-spy ----
+  (function(){
+    const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['evans','Evans'],['reliability','Reliability'],['shift','The Shift'],['database','Database']];
+    const toc=document.getElementById('toc');
+    if(toc) toc.innerHTML=SEC.map(([id,label])=>'<a href="#'+id+'" data-spy="'+id+'">'+label+'</a>').join('');
+    const topLinks=[...document.querySelectorAll('.topnav a')];
+    const tocLinks=[...document.querySelectorAll('#toc a')];
+    function setActive(id){
+      tocLinks.forEach(a=>a.classList.toggle('active', a.dataset.spy===id));
+      topLinks.forEach(a=>a.classList.toggle('active',(a.getAttribute('href')||'')==='#'+id));
+    }
+    const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    SEC.forEach(([id])=>{const el=document.getElementById(id);if(el)obs.observe(el);});
+  })();
+
+  // theme
+  const tb=document.getElementById('themeBtn'),root=document.documentElement;
+  function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}
+  try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}
+  tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');
+})();
+</script>
+</body>
+</html>
