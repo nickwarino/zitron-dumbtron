@@ -30,12 +30,13 @@
 <div class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
-    <nav class="topnav">
+    <nav class="topnav" id="topnav">
       <a href="index.html">The Audit</a>
       <a href="hayes.html" class="active">Hayes Transcript</a>
       <a href="methodology.html">Method</a>
     </nav>
     <span class="spacer"></span>
+    <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
   </div>
 </div>
@@ -71,7 +72,7 @@
 
 <script src="assets/hayes.js"></script>
 <script>
-(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');})();
+(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nv.classList.remove('open')));}})();
 (function(){
   const VC={'Correct':'#1a7f37','Fair':'#1a7f37','Mostly correct':'#2da44e','Mixed':'#bf8700','Overstated':'#d4691e','Mostly wrong':'#cf4a1a','Wrong':'#c1121f','Too early to tell':'#57606a'};
   const data=window.HAYES||[];

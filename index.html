@@ -22,9 +22,10 @@
 <div class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
-    <nav class="topnav">
+    <nav class="topnav" id="topnav">
       <a href="#rating" class="active">The Rating</a>
       <a href="#matrix">Stakes Matrix</a>
+      <a href="#rwindex">Right/Wrong</a>
       <a href="#recurring">Recurring Claims</a>
       <a href="#lenses">The Lenses</a>
       <a href="#cheaper">Getting Cheaper?</a>
@@ -32,6 +33,7 @@
       <a href="methodology.html">Method</a>
     </nav>
     <span class="spacer"></span>
+    <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
   </div>
 </div>
@@ -98,6 +100,22 @@
     <div class="matrix" id="matrix-rows"></div>
     <p class="sans" style="font-size:13.5px;color:var(--muted)">Score is mean correctness (1 to 5) of scored claims in each tier. Unverifiable and not-yet-resolved predictions are excluded from the mean. Small-n tiers (S4, S7) are noisier. Stakes here are hand-judged per claim, so this is a judgment layer, not the reproducible scope-mapping; the hand pass moved about a quarter of claims by a tier and the two methods agree on the shape. Stakes-weighted overall correctness is 3.15, below his unweighted 3.32, because weighting the foundational claims more heavily pulls him down. On the combined foundational question, is it real and is it useful (S1 plus S2), he is more wrong than right: 69 wrong to 53 right. He is strongest at the bottom of the ladder (S7 operational detail, 3.96) and weakest at the top (S1 to S2, S4).</p>
     <div class="dash" id="splitStats" style="margin-top:18px"></div>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- RIGHT/WRONG INDEX -->
+  <section id="rwindex" class="prose col">
+    <h2>The Right/Wrong Index</h2>
+    <p>One score per claim, ranking every call he has made from most wrong to most right. It folds in the three things that should decide how much a call counts: how accurate it was, how much was at stake, and how original it was. Being right about a thing everyone says is cheap. Being wrong about the load-bearing question is expensive. The index prices both.</p>
+    <details class="rwformula"><summary>How the score works</summary>
+      <p>Accuracy sets the sign, from Correct at plus two through Mixed at zero to Wrong at minus two. Two multipliers scale the size. Stakes run from S1 foundational at full weight down to S7 operational at a third. Originality gives a distinctive claim full weight and a table-stakes claim everyone makes a little over half. The product runs from minus 100, a flat-wrong call on a high-stakes, original question, to plus 100, a dead-right one. Mixed and table-stakes claims fall toward the middle by design. Unverifiable and not-yet-resolved claims carry no score.</p>
+    </details>
+    <div class="rwfilters" id="rwFilters"></div>
+    <div class="rwhist" id="rwHist"></div>
+    <div class="rwlead" id="rwLead"></div>
+    <button class="rwfull" id="rwFullBtn">See the full ranking</button>
+    <p class="sans" style="font-size:13px;color:var(--muted);margin-top:10px">Click any bar to read the claim, its verdict, and the score breakdown. <span id="rwCount"></span></p>
   </section>
 
   <hr class="fancy">
@@ -445,6 +463,74 @@
   }
   document.querySelectorAll('.mrow-click').forEach(r=>r.onclick=()=>openTierDrawer(r.dataset.stakes));
 
+  // ---- Right/Wrong index ----
+  (function(){
+    const ACC={5:2,4:1,3:0,2:-1,1:-2};
+    const SW={S1:1,S2:.9,S3:.75,S4:.6,S5:.5,S6:.4,S7:.3};
+    const ow=c=>c.distinct==='distinctive'?1:.55;
+    const rw=c=>{const v=c.verdict;if(v==='Unverifiable'||v==='Too early to tell')return null;const a=ACC[c.correctness];if(a===undefined)return null;return Math.round(a*(SW[c.stakes]||.5)*ow(c)*50);};
+    const scored=claims.map(c=>({c,s:rw(c)})).filter(x=>x.s!==null);
+    const rwcol=s=> s<=-50?'var(--v-false)': s<0?'var(--v-mis)': s===0?'var(--v-early)': s<50?'var(--v-mtrue)':'var(--v-true)';
+    const trim=(s,n)=>{s=s||'';return s.length>n?s.slice(0,n-1)+'…':s;};
+    const domLab={'AI':'AI','crypto-web3':'Crypto / Web3','metaverse-nft':'Metaverse / NFT','business-pr-culture':'Business & PR','other-tech':'Other tech'};
+    const st={dom:new Set(),stakes:new Set(),distinctOnly:false};
+    const $=id=>document.getElementById(id);
+    // filters
+    const fdom=Object.keys(domLab).filter(d=>scored.some(x=>x.c.domain===d));
+    let fh='<span class="fl">Domain</span>';
+    fdom.forEach(d=>fh+='<button class="chip" data-dom="'+d+'">'+domLab[d]+'</button>');
+    fh+='<span class="fl" style="margin-left:10px">Stakes</span>';
+    ['S1','S2','S3','S4','S5','S6','S7'].forEach(s=>fh+='<button class="chip" data-stk="'+s+'"><span class="st st-'+s+'" style="padding:1px 6px">'+s+'</span></button>');
+    fh+='<button class="chip" data-distinct="1" style="margin-left:10px">Distinctive only</button>';
+    $('rwFilters').innerHTML=fh;
+    const tog=b=>b.classList.toggle('on');
+    $('rwFilters').querySelectorAll('[data-dom]').forEach(b=>b.onclick=()=>{tog(b);const k=b.dataset.dom;st.dom.has(k)?st.dom.delete(k):st.dom.add(k);renderAll();});
+    $('rwFilters').querySelectorAll('[data-stk]').forEach(b=>b.onclick=()=>{tog(b);const k=b.dataset.stk;st.stakes.has(k)?st.stakes.delete(k):st.stakes.add(k);renderAll();});
+    const db=$('rwFilters').querySelector('[data-distinct]');db.onclick=()=>{tog(db);st.distinctOnly=!st.distinctOnly;renderAll();};
+    const active=()=>scored.filter(x=>{
+      if(st.dom.size&&!st.dom.has(x.c.domain))return false;
+      if(st.stakes.size&&!st.stakes.has(x.c.stakes))return false;
+      if(st.distinctOnly&&x.c.distinct!=='distinctive')return false;
+      return true;});
+    function openClaimDrawer(x){
+      const c=x.c,s=x.s,a=ACC[c.correctness],sw=SW[c.stakes]||.5,o=ow(c),m=VMETA[c.verdict]||{c:'v-mixed'};
+      const sub='<span class="verdict '+m.c+'">'+c.verdict+'</span> &nbsp;<span class="st st-'+c.stakes+'">'+c.stakes+' '+esc(STLAB[c.stakes])+'</span> &nbsp;<span class="distbadge '+(c.distinct==='distinctive'?'d-distinct':'d-table')+'">'+c.distinct+'</span>';
+      const bd=(a>=0?'+':'')+a+' accuracy &times; '+sw+' stakes ('+c.stakes+') &times; '+o+' originality ('+c.distinct+') &times; 50';
+      const body='<div style="font-family:var(--sans);font-size:40px;font-weight:700;line-height:1;color:'+rwcol(s)+'">'+(s>0?'+':'')+s+'</div>'+
+        '<div class="sans" style="font-size:12.5px;color:var(--muted);margin:5px 0 16px">'+bd+'</div>'+
+        '<p style="font-style:italic;border-left:3px solid var(--accent);padding-left:14px;margin:0 0 12px;font-size:16px">'+esc(c.quote||c.claim)+'</p>'+
+        '<p style="margin:0 0 14px">'+esc(c.claim)+'</p>'+
+        '<p class="sans" style="font-size:13.5px;color:var(--ink-soft);line-height:1.62">'+esc(c.assessment)+'</p>'+
+        '<div class="srcs" style="margin-top:12px">'+(c.srcs||[]).map(z=>'<a href="'+z[1]+'" target="_blank" rel="noopener">'+esc(z[0])+' ↗</a>').join('')+'</div>'+
+        '<p class="sans" style="font-size:12.5px;margin-top:12px;color:var(--muted)"><a href="'+c.post_url+'" target="_blank" rel="noopener">'+esc(c.post_title)+' ↗</a> · '+c.date+'</p>';
+      openPanel((s>0?'+':'')+s+'  ·  Right / Wrong', sub, body);
+    }
+    const lrow=(x,cls)=>'<button class="'+cls+'" data-id="'+x.c.id+'"><span class="rwsc" style="color:'+rwcol(x.s)+'">'+(x.s>0?'+':'')+x.s+'</span><span class="rwbarwrap"><span class="rwbar" style="width:'+Math.abs(x.s)+'%;background:'+rwcol(x.s)+'"></span></span><span class="rwlab">'+esc(trim(x.c.claim,92))+'</span></button>';
+    const bindRows=(root,cls)=>root.querySelectorAll('.'+cls).forEach(r=>r.onclick=()=>{const x=scored.find(z=>z.c.id===r.dataset.id);if(x)openClaimDrawer(x);});
+    function renderHist(rows){
+      const keys=[];for(let b=-100;b<=100;b+=20)keys.push(b);
+      const bk={};keys.forEach(k=>bk[k]=[]);
+      rows.forEach(x=>{let b=Math.round(x.s/20)*20;if(b<-100)b=-100;if(b>100)b=100;bk[b].push(x);});
+      const max=Math.max(1,...keys.map(k=>bk[k].length));
+      const bars=keys.map(k=>{const n=bk[k].length,h=Math.round(n/max*118);return '<div class="rwhcol" data-b="'+k+'" title="'+n+' claims near '+(k>0?'+':'')+k+'"><div class="rwhn">'+(n||'')+'</div><div class="rwhbar" style="height:'+h+'px;background:'+rwcol(k)+'"></div></div>';}).join('');
+      $('rwHist').innerHTML='<div class="rwhrow">'+bars+'</div><div class="rwhaxis"><span>−100 · most wrong</span><span>0 · mixed</span><span>+100 · most right</span></div>';
+      $('rwHist').querySelectorAll('.rwhcol').forEach(col=>col.onclick=()=>{const b=+col.dataset.b,list=bk[b].slice().sort((p,q)=>p.s-q.s);if(list.length)openList('Scores near '+(b>0?'+':'')+b,list.length+' claims',list);});
+    }
+    function renderLead(rows){
+      const sorted=rows.slice().sort((p,q)=>p.s-q.s);
+      const worst=sorted.slice(0,15),best=sorted.slice(-15).reverse();
+      $('rwLead').innerHTML='<div class="rwcols"><div><div class="rwhd rwhd-bad">Most Wrong</div>'+worst.map(x=>lrow(x,'rwrow')).join('')+'</div><div><div class="rwhd rwhd-good">Most Right</div>'+best.map(x=>lrow(x,'rwrow')).join('')+'</div></div>';
+      bindRows($('rwLead'),'rwrow');
+    }
+    function openList(title,sub,list){
+      const html=list.map(x=>lrow(x,'rwfrow')).join('');
+      openPanel(title,sub,html);
+      bindRows($('drawerBody'),'rwfrow');
+    }
+    function renderAll(){const rows=active();renderHist(rows);renderLead(rows);$('rwCount').textContent=rows.length+' of '+scored.length+' scored claims shown.';$('rwFullBtn').onclick=()=>{const s=active().slice().sort((p,q)=>p.s-q.s);openList('Full ranking',s.length+' scored claims, most wrong to most right',s);};}
+    renderAll();
+  })();
+
   // split stats
   function avgDom(dom){const [m]=mean(claims.filter(c=>c.domain===dom));return m;}
   function avgDist(d){const [m]=mean(ai.filter(c=>c.distinct===d));return m;}
@@ -638,7 +724,7 @@
 
   // ---- floating TOC + scroll-spy ----
   (function(){
-    const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['evans','Evans'],['bruenig','Bruenig'],['ownership','Ownership'],['reliability','Reliability'],['shift','The Shift'],['database','Database'],['sources','Sources']];
+    const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['rwindex','Right/Wrong'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['evans','Evans'],['bruenig','Bruenig'],['ownership','Ownership'],['reliability','Reliability'],['shift','The Shift'],['database','Database'],['sources','Sources']];
     const toc=document.getElementById('toc');
     if(toc) toc.innerHTML=SEC.map(([id,label])=>'<a href="#'+id+'" data-spy="'+id+'">'+label+'</a>').join('');
     const topLinks=[...document.querySelectorAll('.topnav a')];
@@ -656,6 +742,11 @@
   function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}
   try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}
   tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');
+
+  // mobile nav toggle
+  const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');
+  if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};
+    nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nv.classList.remove('open');nt.setAttribute('aria-expanded','false');}));}
 })();
 </script>
 </body>
