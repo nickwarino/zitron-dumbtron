@@ -347,6 +347,15 @@ hr.fancy{border:0;height:1px;background:var(--hair);margin:42px 0}
 .drawer .dentry a{font-family:var(--sans);font-size:12px;color:var(--link);text-decoration:none}
 .drawer .dentry a:hover{color:var(--accent)}
 
+/* ---------- Sources section ---------- */
+.refs h4{font-family:var(--sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent-2);margin:20px 0 7px;padding-bottom:5px;border-bottom:1px solid var(--hair)}
+.refs ul{list-style:none;margin:0;padding:0;columns:2;column-gap:30px}
+@media(max-width:640px){.refs ul{columns:1}}
+.refs li{font-family:var(--sans);font-size:13.5px;line-height:1.4;margin:0 0 8px;break-inside:avoid}
+.refs a{color:var(--link);text-decoration:none}
+.refs a:hover{color:var(--accent)}
+.refs .who{color:var(--muted)}
+
 /* ---------- Footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:50px;padding:34px 0 70px}
 footer .col{color:var(--muted);font-size:14.5px;font-family:var(--sans)}
