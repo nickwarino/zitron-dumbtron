@@ -61,10 +61,11 @@ Old files deleted on request: the original two-document scorecard (`comprehensiv
 
 ## 5. Key findings (as of 2026-06-11)
 
-- On the combined foundational question (is the tech real, S1, and does it deliver value, S2): **70 wrong, 69 right. A coin flip.**
+- On the combined foundational question (is the tech real, S1, and does it deliver value, S2): **61 wrong, 39 right. More wrong than right.**
 - Company and sector finance (S5, S6): ~21% wrong. His strong zone.
-- Distinctive claims average 3.27 of 5; table-stakes claims 3.88.
-- He was more right about crypto (3.73) than about AI (3.32).
+- Distinctive claims average 3.24 of 5; table-stakes claims 3.81.
+- He was more right about crypto (3.73) than about AI (3.29).
+- Ratings apply a trajectory lens: a forward/directional capability bet is judged against the trend as of mid-2026, and a narrow correct call on a dead product (e.g. Sora) is not credited as a foundational win. Either the verdict softens (premature dead-end calls become Mixed or Too-early) or the stakes drop to product level. The pass re-rated ~30 of 489 AI claims and moved the foundational picture further against Zitron.
 - Lens verdicts: bubble-consensus, tech-denialism, productive-bubble all "largely undercut Zitron"; analogy-check and circular-financing "genuinely mixed"; broken-economy "partly supports."
 - "Is AI getting cheaper": he is mostly wrong. Price per fixed capability fell ~50 to 200x/year (Epoch), ~1000x over three years (a16z); GPT-4-level intelligence is ~1/1000th its launch cost. His narrow point (frontier launch prices, cost-per-task rising with reasoning tokens) is real but does not support the headline.
 - Durable vs stranded assets: GPUs (~half of data-center capex, 3 to 5 year life) are the fast-rotting layer, but the durable base (power, grid, fabs, EUV, HBM, fiber, shells, 15 to 40+ year lives) is 45 to 55% of data-center capex and a majority of the total buildout. The rails-and-fiber story largely holds; only the chip strands.
