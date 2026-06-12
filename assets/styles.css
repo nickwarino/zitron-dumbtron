@@ -305,11 +305,14 @@ hr.fancy{border:0;height:1px;background:var(--hair);margin:42px 0}
 .chart .cln{stroke:var(--accent);stroke-width:2;fill:none}
 .chart .cax{stroke:var(--hair-strong);stroke-width:1}
 .chart text{font-family:var(--sans);fill:var(--muted);font-size:11px}
-.metricgrid{display:grid;gap:10px;margin:14px 0}
-.metricrow{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--hair-strong);padding-left:12px}
-.metricrow .mv{font-family:var(--sans);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;flex:none;width:130px}
-.mv-wrong{color:var(--v-false)}.mv-mwrong{color:var(--v-mis)}.mv-mixed{color:var(--v-mixed)}.mv-right{color:var(--v-true)}
-.metricrow .mt{font-size:15px;color:var(--ink-soft);font-family:var(--sans)}
+.metricgrid{display:grid;gap:14px;margin:14px 0}
+.metricrow{border-left:3px solid var(--hair-strong);padding-left:14px}
+.metricrow .mv{display:inline-block;font-family:var(--sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:6px;margin-bottom:7px}
+.mv-wrong{color:var(--v-false);background:var(--v-false-bg)}
+.mv-mwrong{color:var(--v-mis);background:var(--v-mis-bg)}
+.mv-mixed{color:var(--v-mixed);background:var(--v-mixed-bg)}
+.mv-right{color:var(--v-true);background:var(--v-true-bg)}
+.metricrow .mt{display:block;font-size:15px;color:var(--ink-soft);font-family:var(--sans);line-height:1.5}
 
 /* ---------- Evans deck + cards ---------- */
 .deckwrap{position:relative;width:100%;padding-top:62%;margin:18px 0;border:1px solid var(--hair);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:var(--paper-2)}
