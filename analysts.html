@@ -28,6 +28,7 @@
 </style>
 </head>
 <body>
+<div class="tip" id="tip"></div>
 <div class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
@@ -133,6 +134,15 @@
     L.innerHTML=html;
   }
   render();
+})();
+(function(){
+  var tip=document.getElementById('tip'); if(!tip)return;
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function preview(a){var href=a.getAttribute('href')||'';if(!/^https?:/i.test(href))return null;var host=href;try{host=new URL(href).host.replace(/^www\./,'');}catch(e){}var label=(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,150);return '<div class="td">↗ '+esc(host)+'</div>'+(label?'<div class="tq">'+esc(label)+'</div>':'')+'<div style="font-family:var(--sans);font-size:11px;color:var(--muted);margin-top:5px;word-break:break-all">'+esc(href)+'</div>';}
+  function show(h,x,y){tip.innerHTML=h;tip.classList.add('show');var nx=x+14;if(nx+360>window.innerWidth)nx=x-374;tip.style.left=nx+'px';tip.style.top=(y+14)+'px';}
+  document.body.addEventListener('mouseover',function(e){var a=e.target.closest('a[href]');var h=a?preview(a):null;if(h)show(h,e.clientX,e.clientY);else if(!a)tip.classList.remove('show');});
+  document.body.addEventListener('mousemove',function(e){if(tip.classList.contains('show')){var a=e.target.closest('a[href]');if(a){var nx=e.clientX+14;if(nx+380>window.innerWidth)nx=e.clientX-390;tip.style.left=nx+'px';tip.style.top=(e.clientY+14)+'px';}}});
+  document.body.addEventListener('mouseout',function(e){if(e.target.closest('a[href]'))tip.classList.remove('show');});
 })();
 </script>
 </body>
