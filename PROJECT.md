@@ -42,7 +42,9 @@ assets/
   hayes.js              window.HAYES: 21 annotated Chris Hayes podcast claims.
   bruenig-transcript.js window.BRUENIG_TX: Bruenig podcast, annotated drawer.
   tooze-transcript.js   window.TOOZE_TX: Tooze, two episodes, annotated drawer.
-transcripts/            Markdown copies of the Hayes/Bruenig/Tooze transcripts.
+transcripts/            Transcript copies (Hayes .txt; Bruenig and Tooze .md).
+scripts/                Committed tooling: assetlib.py, validate.py, update_corpus.sh, workflows/.
+Makefile                make check / update / verify / serve.
 crawl/                  Provenance and intermediate data (gitignored).
   md/                   All 110 post .md files (full text + publish dates).
   rerate/               Re-rating, dead-link-repair, and lit-swarm agent I/O.
@@ -102,11 +104,13 @@ The original two-document scorecard (`comprehensive.html`, `claims-docs.js`, `cl
 
 ## 6. How to rebuild or extend
 
-The data files are generated, not hand-edited. To change them, edit the generating Python (re-run the snippets that produced each `assets/*.js` from `crawl/*.json`) or edit the JSON and regenerate.
+The `assets/*.js` files are the canonical data store; `crawl/` is provenance. Edit data through `scripts/assetlib.py` (load/save keeps the `window.X=` format), then run `make check` (`scripts/validate.py`): it parses every data file, enforces the verdict-to-correctness map, scans generated prose for em/en dashes and transform scars, and prints the headline stats so the prose in index.html, methodology.html, and this file can be synced.
 
-- The crawl, extraction, and enrichment were done by `Workflow` scripts saved under `crawl/` and the session's workflow scripts directory. The raw extraction output is the workflow task output; the enriched records are `crawl/claims_enriched.json`.
-- `crawl/md/*.md` is the full local corpus. Re-fetch with `curl -sS -A "Mozilla/5.0" https://www.wheresyoured.at/<slug>.md`.
-- All generated prose is de-em-dashed by a fixed transform (em dash to period or comma). Zitron's verbatim quotes keep their original punctuation.
+- `make update` (`scripts/update_corpus.sh`) diffs the live sitemap against `crawl/md/` and fetches any new posts' `.md` (carries real publish date and full text). Claim extraction from new posts is agent work; merge the new records into `assets/claims-full.js` via assetlib, then `make check`.
+- The original crawl/extraction/citation `Workflow` scripts are committed under `scripts/workflows/`. The enriched intermediate `crawl/claims_enriched.json` is provenance, no longer the source of truth: re-grades go directly into `assets/claims-full.js`.
+- `make verify` runs the citation checker (`.claude/skills/verify-citations/`, committed).
+- `hayes.js`, `bruenig-transcript.js`, `tooze-transcript.js` are hand-written JS literals, edited directly.
+- Generated prose is de-em-dashed (em dash to comma or period); authors' verbatim quotes keep their punctuation. validate.py enforces this.
 
 ## 7. Style rules (important, the user cares)
 

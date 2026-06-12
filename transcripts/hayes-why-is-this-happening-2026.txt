@@ -1,0 +1,1028 @@
+What's really interesting is none of them talk about their AI revenue.
+none of them.
+Microsoft mentioned it in 2 quarters.
+Last quarter of 2024, 1st quarter of 2025, and then stopped mentioning it entirely.
+1:15
+IBM just stopped mentioning their AI revenue.
+Are they shy?
+And so when nobody wants to talk about the money and nobody can really precisely describe the outcomes, that's when people should get a little concerned.
+1:29
+Hello and welcome to Wise Is Happening with me, your host, Chris Hayes.
+Welcome back to our ongoing series about all the implications of the AI, boom.
+1:46
+You have probably seen...
+Well, I don't know if you have, but maybe you've read the book, The Big Short by Michael Lewis, or seen the phenomenal movie by Adam McKay, which is like, I think, genuinely a classic, the big short.
+The tale there is a chronicle of a disparate group of what you might call our kind of financial dissidents, who in the sort of era of 2006, 2007, as the housing boom is going and everyone's making a ton of money, start to sniff out, there's something very deeply amiss, deeply wrong.
+2:13
+And the more information they get, the more convinced they become that everyone in the market more or less is wrong, that this entire money making machine is about to collapse in on itself, because they're people in finance, they take bets that it will collapse and those bets prove to be accurate.
+2:28
+It's a very satisfying tale and a satisfying look and movie because it's a kind of David and Goliath, and you sort of get to follow the prophet as the prophecies come true.
+And the reason I bring all this up is we're in a boom right now with AI.
+2:40
+I mean, the amount of money that's being put into it is staggering.
+And I think the broad amount of the financial system and the press thinks that it's gonna pay off, at least, you know, that's basically been what markets have priced things at, if you look at the stock of the big AI companies and particularly NVIDIA that makes the chips, this all depends on.
+2:59
+It keeps going up and up and up, spin a little down recently.
+But there are, just like there were at the housing bubble, there are dissenters and distance.
+I'm gonna talk to one today.
+Now, the thing about being a dissenter or dissident against this sort of conventional wisdom is you could be wrong.
+3:14
+You know, there were people that thought, for instance, the internet was never going to amount to anything or that personal computers were a ridiculous technology.
+And in the long view of history, it's always a fine line between crank and profit sort of depends on what happens in the end.
+3:27
+But given the fact that there is so much money at stake and because I think the maximalist view that this is going to end in tears, is one that people get the least amount of exposure to.
+3:37
+I wanted to spend some time reckoning with that view today with my guest, Ed Zitron.
+He's the host of the better offline podcast, and he writes the Where's Your Ed at newsletter on Ghost.
+3:48
+And I would say that he is one of the foremost AI Bears or even AI haters on the whole internet.
+Is that fair?
+I think that's fair.
+4:01
+I really hate bad software.
+That really, I love technology.
+I owe my life to technology, but the current state of the tech industry sucks.
+You're a tech person, you were a gaming journalist for a little bit.
+4:11
+Yes, I was.
+I wrote about video games in England for goodness, about five, 6 years, moved to America in 2008.
+Great year.
+Fantastic year to move to America.
+And yes, it's strange watching what's happening. And it feels like as I watch the pieces fall together.
+4:27
+It's all been kind of working up to this because the AI bubble is a symptom of a larger problem with the software industry, the hypergrowth era is ending.
+We have seen software as this thing will always grow exponentially.
+4:41
+So every single bubble is looked at it through the same lens, you say, Metaverse will grow exponentially.
+NFTs will take over all culture.
+We won't buy physical things anymore as far as collectibles go.
+4:53
+We'll only have these digital versions.
+Everything's seen through what I call the grot economy, the growth at all cost mindset.
+And I think we're coming to the close of it.
+Let's stay there because I think one of the reasons that I hear skepticism about AI from people, and I think is a rational is that we did just go through this huge hype cycle.
+5:11
+Yeah, that was, I mean, a little bit white from memory.
+But before AI, during COVID, there's a huge amount of money sloshing around the economy, because of all of the money was being directly injected both through fiscal stimulus and the Fed, and people were spending all their times in front of their screens.
+5:27
+And there was this huge boom around the metaverse, blockchain, and like non-fungible tokens, NFTs.
+Yes. What do you think the takeaways from that sort of boom bus cycle are?
+5:40
+So a little bit before the metaverse, there was another bubble that other people forgot about, and that was Clubhouse.
+So Clubhouse was this audio only social network that, if you talk to venture capitalists at the time,
+5:51
+Oh my god, this was the biggest thing ever.
+It was going to be worth bazillion dollars.
+It was radio 2.
+Now, nobody went and looked up how much radio makes or what the revenues were really anything, but they got celebrities on.
+6:03
+They did everything they could.
+It was very clear
+the venture capitalists were pushing this so that they could get a big acquisition.
+Now, never happened in clubhouses, kind of fallen into irrelevance.
+With NFTs with the metaverse.
+6:14
+People forget that Meta used to be called Facebook.
+We still call it Facebook.
+They change their entire company name, to Meta.
+One of the craziest things in history.
+6:24
+And we just don't talk about it.
+It's insane that happened.
+You had people on CBS Es being like, yep, the metaverse is here.
+We're all going to live in the metaverse.
+It's very real.
+It's going to happen.
+And the actual experience was a very bad virtual reality experience.
+6:39
+But I feel like the tech industry has kind of been lapping for the last 10, 15 years.
+LARPing, meaning live action role playing.
+Yes, like pretending. Going through the motions because you had the era of smartphones and mobile apps.
+6:55
+huge deal.
+You had the era of software as a service, SAS.
+These were the big revenue drivers of the tech industry.
+It was a way to get more money out of people because you had a subscription service or you had an app you could buy on your phone.
+7:08
+Most of those will have monthly subscriptions now.
+Yeah, convert to subscription.
+Exactly.
+So it was a way of getting people away from that troublesome thing where they only paid you once.
+Nevertheless, this worked for a while.
+And then apps worked and then nothing else really worked.
+7:21
+We kind of started running out of kind of hypergrowth ideas.
+We haven't really had one since like, I don't know, LinkedIn.
+Maybe there are probably some examples, but we just stopped having big things that worked.
+7:33
+So the tech industry did what it did before.
+Hire a lot of people, put a lot of money into things, buy a lot of things, buy little companies.
+The Activision blizzard acquisition from Microsoft was claimed as a metaverse thing, which was very silly because if the metaverse is all video games, that's just so much.
+7:49
+But it's the tech industry doing what it thinks works.
+And I think we're getting to the endpoint of that.
+I want to wait to talk about the tech and hide that off from the economics of it, but just stay on this for a 2nd.
+8:03
+Because to me, the big difference is no one could ever really explain to me the use case of the metaverse.
+Right, you know, people would sometimes be like, yeah, I'd be like, well, what's, what do I do with it?
+8:15
+And people say, you know, with crypto, it's like, well, can I pay for a cup of coffee with it?
+No, you can't really do that.
+No, it's essentially, there was a little bit of talk of like the blockchain is going to replace contracts.
+8:25
+And I was like, huh, but is anyone actually doing that?
+No.
+And even the metaverse, you know, you kept sort of saying like, what's the use case?
+What's it do?
+No one can ever answer.
+I don't feel like that way with AI.
+8:35
+Like, there are use cases.
+In fact, I've used it for use cases. And it seems to me like there's a much clearer like, okay, do this doc review.
+Here's a 1000 documents.
+8:46
+It would take a human to go through them.
+It can read and synthesize.
+Now, the question of whether it could, like, do it well or not is a different question.
+But to me, the difference is that you can at least articulate what it's for in certain circumstances or reasons or places it might be useful in a way that for me, the metaverse never did.
+9:03
+So there are uses for large language models.
+If you remove all of the hype, there are things they can do.
+The problem is, is here's a little challenge for you.
+Go and talk to a bunch of AI boosters and ban them from speaking in the future tense.
+9:19
+Don't allow them to say anything about this will.
+It might or it could.
+Say what it does today.
+Because when you do that, it's not really clear what's changed.
+Yes, you can use it to review documents.
+9:30
+The results are not great or maybe they are.
+You actually don't know because you didn't read the documents a thing that is based on statistics did.
+The idea that you can rely on it is inherently broken because open AI's own research says hallucinations are a part of these things.
+9:45
+They're never going away.
+You have people in the AI industry claiming hallucinations are going away.
+They're just wrong.
+Open AI said it.
+You going to argue with them?
+There's a recent paper I was just looking at yesterday that says that even when you, when I use AI, I do, you know, use it where you sort of like gate the sources, and there's a paper I saw yesterday that like even when you gate the sources, right?
+10:04
+When you're saying just use these sources, you cannot purge hallucination.
+No, and even with coding LLMs, because this is one of the most annoying debates ever, is the usefulness of LLMs within coding.
+10:16
+And I think the big thing with the AI, LLM coding debate is you're beginning to find out that there are, I don't want to say a lot, but there is a contingent software engineers that might not know a lot about code or might be getting by with not a ton of information.
+10:32
+To them, this might seem magical.
+There's an amazing writer called Nick Suresh, he, this amazing blog called, I will Effing Pile Drive You, if you mention AI again.
+And he made the point that this is something that has its uses for the little things, but the moment you start expanding it to building entire things for you and writing all this code for you, you are just kind of kicking the can, you're still going to have to read all this code to make sure it makes sense.
+10:56
+Or alternatively, you could not read it and just hope it works.
+Software can function when the code is bad.
+Doesn't mean it's secure or stable or efficient, or indeed that someone else coming along in the future to read it, can understand the intention, because there was none, because the large language model wrote it.
+11:14
+Right.
+The sort of quality control question, which you get in research, seems to me a big thing, right?
+Well, let's put that aside for a second, right?
+is a quality control question solvable is sort of put to the side.
+It seems to me that it's worthwhile to just, for the next part of this, to distinguish between, is a tech useful or even transformational?
+11:29
+And is the current financial investment in it justified as distinct questions?
+Yes.
+And 2 examples come to mind.
+There was an enormous railroad boom that happened in the 19th century.
+11:42
+In which an enormous percentage of the country's entire GDP went into railroads.
+It completely overbuilt, and it led to a huge crash, and that crash led to a great depression.
+It doesn't mean that railroads weren't useful.
+11:54
+In fact, railroads are quite useful.
+Right. But it also is the case that you could have a use vet technology that leads to a boom and bust.
+The internet being another example, right?
+It isn't the case that the internet proved not to be useful.
+12:07
+It's also the case that like there was a huge boom in 1999 and 2000.
+right?
+Right.
+And I have this thing I've been saying, the beginning of history.
+It's not fully connected to Fuki Yam, but nevertheless, it's the, I don't think it's instructive.
+12:20
+I understand why people do it.
+It's how human beings work.
+I don't think it's useful to look at these previous booms because when you put trains on the railroad, sometimes the train didn't just randomly go up or into the ground. With the original internet systems, back in the middle of 2025, a guy called Jim Cavello from Goldman Sachs did a great piece, along with some other analysts called Gen AI.
+12:40
+too much spend for not enough gain.
+I paraphrase the title there.
+And he made the point that when the internet did cost a lot of money at the $64,000 sum microsystem service.
+Nevertheless, that capital outlay was completely different, but there was also a very clear path to utility.
+12:57
+It would be the dispersion of fiber optic cable.
+It would be the access points, the actual things being built so that people could get to the internet and high speed into them.
+13:07
+On top of that, the same thing happened with smartphones.
+Cavello notes that in the early 2000s, there were clear roadmaps, smaller Bluetooth radios, smaller GPSs, smaller chips, smaller batteries, that would lead to smartphones.
+13:21
+No such path exists for large language models.
+For that example to make sense, you would have to have a way in which the cost came down and the hallucinations went away.
+Neither of those appear to be happening, and indeed, the efficacy of these models.
+13:35
+They're actual outcomes.
+It's actually very difficult to measure them.
+The benchmarks are deliberately created for them.
+And all of the benchmarks for software engineering are focused on one programming language, Python, and very common GitHub issues.
+13:49
+So to train for more things, they're having to create specialized data.
+They're going to have to do that forever, and even then, it isn't obvious if it's actually fixing things.
+Right, I mean, this is this problem of basically, are they training on the test data, right?
+14:01
+Are they, are you basically saying, here, take a look at all this data and then we're going to test you on it, and, oh, lo and behold, your performance is good.
+Fun fact about that.
+They actually found the one of the anthropic models had just started going and looking for the solution.
+14:13
+Wasn't trying to solve, just went on GitHub and did it.
+Now, people mistake this for intelligence.
+No, you asked the thing to do a thing and it did a thing.
+Right.
+It's just doing the functions it was told to do.
+Wait, okay, but that's a great example because like a year ago I couldn't do that.
+14:26
+I mean, it is doing something new, even if it's going to GitHub, right?
+GitHub for people that don't know is a sort of open source library. And where you can host projects, yeah.
+Where you host projects and people share code.
+But like a year ago, it didn't do that, right?
+14:38
+I used the web search tool.
+It used the tool it's had for a while.
+Perhaps it did something new, I guess, but it's a lateral improvement.
+It's an improvement on the thing it's already doing.
+It's not making unique software.
+14:49
+Even the clawed code things you're saying where people are spitting out websites.
+There are 10s of 1000s of website templates and open source software projects that they're replicating.
+15:00
+It did, this is a little bit, I won't get doing the weeds.
+They did something called a C +plus compiler and Anthropic said, we made this.
+We did this.
+It was a clone of an open source project, and it was less efficient.
+15:11
+something like 10,000 times less efficient, which is crazy.
+And it's, these things don't make novel ideas because if you just look at what has already happened and say, well, based on this, this will happen.
+15:23
+You'll never.
+You can't get out past the arithmetic statistical average.
+yes.
+So let's talk about the scope of the money here.
+Basically, paint a picture of how big this bubble is that you say is a bubble, where the money's coming from and how it's flowing.
+15:39
+So, it's around a $10000000000 now.
+I think by the end of the year, if you think about all of the venture capital funding, all of the money that's been put into data centers, all of the capital expenditures from Microsoft, Amazon, Google, Meta, and the money flowing through Taiwanese server companies like Hon Hi, so Foxcon, and Quanta and all that.
+15:59
+The money is coming from a few places.
+It's coming from venture capitalists, and I can get into the crisis there.
+So, private equity, and specifically private credit. And actually, a lot of the money's coming from Japan.
+16:12
+Sutomo, SNBC and Mitsubishi, MUFG.
+I swear I'm going somewhere but this.
+But the money is coming from private equity, private credit, venture capital, and in some cases the hyper scalers themselves, and most of it's flowing to like 3 companies.
+16:27
+I mean, it seems to me that it's also, right.
+when you're when you're talking about AI and anthropic, right?
+They need to raise capital, right?
+But places like Google or Microsoft are spending.
+I mean, Google just throws off a ton of cash, right?
+16:39
+So that's a place where they've got arguably the most profitable business in the history of human capitalism.
+And they can just sink that cash into more and more investment.
+The problem is that's slowly not becoming true.
+16:50
+Amazon, I think, is raising 10s of 1000000000s of dollars of bonds.
+Google already did the same thing.
+Microsoft probably will at some point.
+Microsoft, I think, is the only one out of them that is not using debt, that's no longer just using cash flow to pay for this.
+17:04
+Because none of these businesses are profitable, not a single one of them.
+What's really interesting is none of them talk about their AI revenue.
+none of them.
+Microsoft mentioned it in 2 quarters.
+17:15
+Last quarter of 2024, 1st quarter of 2025 and then stopped mentioning it entirely.
+IBM just stopped mentioning their AI revenue.
+It's, are they shy?
+And so when nobody wants to talk about the money, and nobody can really precisely describe the outcomes, that's when people should get a little concerned.
+17:34
+More of our conversation after this quick break.
+19:49
+If we talk, say, a $100000000, right?
+And the idea is you're investing all this money.
+What does the investment go to?
+Like what needs to be built that all this money is sunk into?
+19:59
+So there's 2 things to look at.
+There are the AI companies, so the open AIs and anthropics of the world and then the hyper scalars, software and hardware.
+Okay.
+So AI companies like Anthropic.
+20:10
+It just came out, Krishna Rao, the chief financial officer of Anthropic, in their case against the Department of Defense, just said that Anthropic, through March 2026 for its entire lifetime, made exceeding $5000000000
+20:23
+They've spent $100000000 in that period on training and inference.
+Inference is the creating of the output.
+Fancy word for that.
+Training is this word that's meant to conjure up in your head this idea of research and development.
+20:35
+Training in large language models can mean everything from pre-training, so feeding a bunch of information to post-training, which is everything from, we're going to give you some stuff and test the outputs, to minor tweaks, to stop something called model drift, which is just when a model that is trained on static information will eventually become irrelevant.
+20:56
+You need to keep updating it to make sure when you feed it something, it understands it.
+And there's actual, you know, huge human intervention here, which is like, no, that's wrong, that's wrong, that's wrong, because you have to kind of train the model to learn.
+21:07
+Exactly.
+You've got human trainers who are training the models themselves as in, model gives an output and they go, that's a good one, that's a bad one.
+Then you've got people literally creating training data.
+21:17
+Now, where do they spend that money?
+So this is the top layer, the AI labs.
+Those ones are spending it, renting GPUs from Nvidia, which are usually in the case of anthropic held by Amazon or Google, or in the case of Amazon and Google, their own custom silicon, TPUs for Google, and Tranium and inferentia for Amazon.
+21:37
+Now, putting all that aside, it's just spending on the chips to make the thing.
+Right. So you've got, if I'm anthropic,
+I got labor costs, right?
+I got employees.
+And then I have to do all the stuff that I want to do, run these models is very, very computation intensive.
+21:54
+Yes. And in order to do that computation, I need physical hardware.
+Yep, the so-called GPUs, which are the chip that NVIDian others make, which is this sort of frontier next generation processing chip, right?
+22:06
+Yes. And the way that it works is that clawed an AI rent that hardware?
+So it's crazy how much it costs as well because they want to say that inference is profitable.
+22:18
+No one's actually proven this.
+It's actually quite expensive to provide a user of service.
+The other problem is, coding models especially are incredibly computationally expensive.
+You've got one user who might be tying up 6 to 12 GPUs.
+22:31
+Each one costing 50 grand a piece or more.
+What's crazy and what really makes this different to most software eras is that your most excitable customers are the ones that cost you the most.
+22:42
+And in all of the cases of the AI labs, they're subsidizing them.
+Claude Code, crazy fact, research called Shellock found this, for every dollar that someone is spending on an anthropic subscription.
+22:55
+When they use claw code, they can spend anywhere from 8 to $13.5 worth of compute costs because Anthropic is subsidizing them.
+Right, let's stay on clock because this is important on the business model, right?
+23:06
+So cloud code is people are have been crowing about it and almost every engineer.
+It talks about is using it.
+You can do things where you're basically giving it plain language instructions and it's coding for you.
+23:16
+The back end of what it's doing is extremely compute intent.
+Yes. And the expense of that is renting the GPUs, the electricity, right?
+The server space, right?
+those are the basic.
+23:27
+Usually you pay the company like Google or Amazon directly, but that's the cost.
+Right.
+So that's the business relationship is, I'm anthropic, and I'm paying some other company that's doing all that backend stuff, right?
+And the cost of that thing I'm paying them for, right?
+23:41
+Can be $13 for every $one I'm getting in revenue.
+I mean I think about this a lot.
+I use this example, another conversation just with Google and Gemini.
+Where if you say, what's a good Korean restaurant in Brooklyn, Google will show me a Gemini response at the top, and then there's a Reddit thread that's like great Korean in Brooklyn, right?
+23:59
+The computational, the like actual resource cost of just going to the Reddit thread is essentially zero, it's basically a tiny amount.
+But the Gemini cost was like pretty significant to go generate all that computation in the back.
+24:14
+And you've scrolled right past that and gone straight to Reddit, because you trust the person way more than you're going to trust Gemini.
+Right.
+But so the point is, even if this thing is producing is like in the clod code case, one of my understandings of your main argument here is that the current model is they are wildly subsidizing, because the compute is so expensive and intensive, in order to make it work, they have to wildly subsidize it on the consumer.
+24:41
+Yes.
+So really simple explanation.
+Anthropic has 2 and open AI has this as well.
+2 different kinds of customers.
+You've got a customer that pays you a monthly subscription, and you pay through an API.
+24:53
+It just means connect the model to your thingy.
+Now, when you use Claude code, you're just paying a monthly subscription, $20, $100, or $200 a month, and then you have arbitrary limits that Anthropic doesn't really specifically say, but if you were paying on the API.
+25:09
+So if you're paying for the tokens directly from anthropic, you would be paying not $200 a month, but 2.5 , $2700 a month.
+Gotcha.
+So these subscriptions are essentially massively marked down to get customers who subscribe.
+25:23
+Right, but there doesn't appear to be a way that you can.
+I don't think anybody that's paying 200 bucks a month is going to go, yeah, I'll pay 3 grand.
+That sounds great.
+I don't think that'll happen.
+25:33
+And it, what it is, is an attempt to graft the previous business models and use the previous growth trick, which is the initiatification, the cheap monthly fee, that they can then rise and then they'll find ways of undercutting you.
+25:47
+Yeah, that was going to be my next question, right?
+So this idea of you subsidize users on the front end, you sort of lose money on every customer, you get enough market share that you can then get price power and increase.
+25:57
+This is famously what Amazon used, which, you know, lost money on every customer and every book it sold for a shockingly long period of time, and achieve pricing power.
+And it's also Uber is another example, right?
+26:10
+Where, you know, people remember this time when Uber came about, where you could take an Uber like...
+Yeah, I remember landing in cities when I was doing like business travel.
+I mean, because New York, it was always like,
+26:21
+Yeah, that was muddy.
+It was relatively expensive, but still pretty cheap.
+But then sometimes you'd land somewhere and be like a $6 ride from the airport to the hotel.
+You think yourself, wait, how is this doesn't make any sense to me.
+26:33
+This can't possibly be the case that anyone's making money out of it.
+But that in comparison, it would be if like every Uber driver cost Uber $50,000 a day.
+The economies are just completely different.
+26:44
+When Uber was subsidized.
+I think between 2019 and 2022 when they became a kind of messy profitable, like not a great one.
+It was maybe 32, $33000000000, which is a lot of money.
+26:56
+Amazon Web Services, arguably one of the most the single most important technological innovations ever.
+Mostly done through just money and time.
+though this isn't adjusted for inflation.
+27:07
+In the 11 years, from, I think, 2003 onwards, they spent $38 or $39000000 in Capex. For some context, open AI raised $42000000 in 2025.
+27:18
+So you're saying the scale of the subsidy here is just way bigger than those previous ones.
+That's the point.
+Yes, and the underlying infrastructure.
+Everything is more expensive and it's not getting cheaper.
+27:28
+Okay, so if we talk about the front-end model makers, right, that they're subsidizing, you know, even in this filing, right? Anthropic, 5000000000 of revenue, 1000000000 in expenses, obviously that's not profitable.
+27:39
+And that's just the compute.
+That's just the compute.
+So then there's the hyper scalers, right?
+Which are the physical owners that are building the data centers, right?
+In some cases, there's a lot of independent ones now.
+27:51
+That are building data centers in the hopes that AI demand arrives that doesn't exist. And people like Cor Weave and Nebius and such, who would think so, NeoClouds, they just are warehouses full of GPUs that are technically data centers.
+28:03
+So let's say I'm one of those and I build a data center.
+Did they then have a business relationship with one of the intermediars like Amazon or do they directly contract with Anthropic?
+The answer is yes.
+So some of them do.
+28:14
+Some of them, it gets even more complex.
+We don't need to go into it.
+There are people that rent the data centers who then sell the stuff, but nevertheless, that's actually kind of the problem.
+When you look at who's paying for AI compute and you actually really go and look at who's paying the money, there are really only 2 kinds of customers, anthropic and open AI or hyper scalers.
+28:34
+Meta?
+Oh, sorry, NVIDIA.
+Nvidia has agreed to spend in the next 5 years, $26000000000 in AI compute deals.
+And I don't think it's a good sign that the shovel seller is also paying for the digs.
+28:48
+Take a 2nd because it's going too fast.
+So Nvidia buying compute is weird for this reason.
+I just want walk people through this.
+Real soon. They make the chip.
+The chip is the thing you sell to the person that's going to say set up a data center.
+29:02
+right?
+So in the ideal world, I'm in Nvidia.
+I sell a chip to the data center.
+The data center buys it for me because I make the useful thing.
+And then the data center sells its compute or rents it to one of the models, right?
+29:13
+If you're selling the chip, why would you want to be also buying the power of the data center?
+And Nvidia's made a deal where they're basically going to support the construction of a lot of data centers, meaning they're going to be buying their own product, essentially.
+29:28
+Yes, they're feeding money to themselves.
+Right. So here's some money for data centers.
+So you can buy a bunch of our chips, which is a little bit like it seems a little bit like you're just paying yourself for something.
+29:38
+So I'll give you the one that I think is going to blow up nasty.
+A company called Corewave, AI compute company.
+They're a public company.
+They lose money, hand over fist, and they have 10s of 1000000000s of dollars of debt.
+29:50
+And they're making what do they do?
+They just build, they have buildings, they fill them full of GPUs, NVIDA invested in them.
+Okay. Nvidia propped up their IPO, in video bought $2000000000 worth of stock recently, and Nvidia is also one of their largest customers.
+30:04
+So other customers are open AI, Microsoft, for open AI, and Google, unsurprisingly, for open AI.
+I'm not kidding you.
+Google is renting compute from Core Wave to rent to open AI.
+30:17
+Oh, wow.
+So there are people that are doing compute middlemen where they rent and then they rent it out to someone else, and I don't want to get too deep into it because we'll be here forever, but there are also co-location companies who build data centers to rent a core weave to rent to someone else.
+30:31
+It's really bad.
+When you actually look at the non-hyper scalar or open AI compute, there's less than a $1000000000 of revenue on $178.500000000 of data set credit deals done in 2025.
+30:44
+Wait, say that again.
+Who has less than a $1000000 of revenue?
+Everyone, as far as people paying to rent GPUs when you remove all of the hyperscalers and open AI and anthropic?
+30:55
+It's less than a 1000000000 of revenue last year.
+But doesn't that just mean that the big ones are driving all of the business?
+Yeah, but the big ones are also not talking about how much money they,
+And in fact, the big ones are losing all the money, and the ones spending the most money, open AI, is also burning so much money, they need to constantly raise 1000000000s of dollars. Some of it, coming from Amazon and Microsoft and then video.
+31:17
+At some point, you've got to wonder if it's just the same 1000000000s being cycled again and again, right? And nobody making a profit other than Nvidia.
+Nvidia's just printing money.
+31:28
+Okay, that's the one place.
+So there is one place in this that people are genuinely making a profit, which is, you know, I always use an example.
+I make a sandwich for $2 and I sell it to you for $4, right?
+31:39
+Nvidia makes a chip for X dollars and they sell it to someone for 2 X or X plus Y.
+They are definitely making a lot of money.
+Yeah, the Panini press guy.
+The Panini press maker.
+They are making the money.
+31:50
+But the sandwich costs a dollar and it costs them $10 to make.
+It's really bad and their only customers appear to be themselves or very small amount of AI companies, all of whom are terribly unprofitable.
+32:04
+Right.
+So they're definitely making a profit.
+And what you're identifying as the weakness is the people they're selling to are not making a profit.
+So NVIDI can make a is definitely make a profit.
+They're booking profits.
+32:14
+Yes, great gross margins as well.
+In arguably true.
+They're stock is going up hugely because they're doing that.
+What you're saying is the people they're selling to are not making a profit, and a certain point, they can't keep buying if they're not making a profit.
+32:27
+Yes. And then the people that are buying their chips that they're selling their compute power to, which are the models, are also not making a profit.
+And so at a certain point, the music ends, and people go diving for the chairs because if the models aren't profitable, then they don't need the data centers and if the data centers aren't profitable, then no one needs the chips and the whole thing collapses.
+32:50
+There's also one abstraction that makes things a little worse, which is when I say there's less than a $1000000000 last year of AI compute revenue outside of the hyperscalers.
+What I mean by that is it doesn't suggest there's actually much revenue potential in renting an AI data center.
+33:05
+Bloomberg report at this end of last year.
+$178.5000000 of data center credit deals.
+So debt were done in America alone last year.
+may even be more.
+That's a lot higher than a less than a billion.
+33:17
+The other thing is, all of these data center debt deals are basically done by new companies.
+So all of the debts kind of crap.
+We'll be right back after we take this quick break.
+35:50
+They're entering the market and they're floating debt to make these new data centers.
+With the idea that when this all takes off,
+They're going to have a steady diet of customers.
+They can sell the compute too. Because compute demand is going to go up and up and up.
+36:04
+But if the demand doesn't go up, then that collapses.
+And they won't be able to pay the debt that they raised from private credit, that already has issues with people not paying their debts because their due diligence wasn't so good.
+36:18
+Right.
+So your understanding of the sort of vector that this gets into something that's a larger financial problem, your contention, your thesis, is that there's a ton of bad debt floating around.
+Yes.
+36:29
+And also, this is all happening in a historic downturn in venture capital and in private equity.
+Since 2018, venture capital has failed to, on average, there are still some success stories, of course, to have a TVPI total value put in of higher than .8 to one.
+36:48
+2.2.
+Sounds complex.
+It just means for every dollar you invest, you get somewhere between ¢80 and $one.20 back.
+That's not very good.
+The S&P 500 would beating the crap out of that.
+That's happening with venture capital.
+36:59
+Private equity is also having the other problem, which is private equity is having trouble selling their companies.
+There was the massive rush in the kind of software era, the run up there where private equity bought an absolute crap ton of software companies.
+37:14
+30 to 40%, the co-precedent for Apollo said this recently, of private equity deals done between 2018 and 2022 were for software companies, which means the private equity firm and the software company took on debt.
+37:27
+And after that, of course, we had the 2021 era, the massive amounts of insane crazy deals, the Metaverse era, ton of really bad companies got bought for 30, 40% higher than they should have been.
+37:38
+So you've got private equity and venture capital, sitting at this time with a bunch of stuff they can't sell, which means they don't have liquidity, which means that they can't invest quite as much, and indeed they themselves might have debt they have to pay.
+37:53
+This is happening at a time when technology and the infrastructure behind it, referring to AI needs more money than it's ever needed ever.
+So there's 2 parts of this on a push on.
+38:05
+So one is, if you think about this idea that, look, we're going to take on a lot of debt to build something out in the future, that isn't profitable now, but will be.
+Okay?
+Fine.
+38:15
+People do that all the time.
+That's kind of the risk of investment.
+That's the risk of investment.
+People do that all the time.
+That's the basic model here.
+So then the question is, okay.
+One is right now it's very expensive and compute intensive to do this, but maybe it won't be in the future.
+38:29
+And what I think is interesting about that question is, that might be a really good thing, if that's true, for Claude or open AI.
+38:40
+But if that were true, it's going to be a bad thing for all the data centers in the GPUs, right?
+Like the principle right now is you need a lot of computing power, the computing power is being populated with these huge physical infrastructure is an enormous amounts of investment, but maybe we'll figure out a way.
+38:57
+There's some evidence that, you know, one Chinese model has done this, that you don't need all that computer power.
+And you can still get the same results.
+Even though that would seem like a great innovation at some level, if that were true, it means that all of that physical infrastructure is no longer needed or valuable, right?
+39:14
+So we can get back to the fact that it isn't getting cheaper.
+What Deep Seek did was they train cheaper, but the cost of inference is still going up because even if the model is...
+What do you mean by the cost of inference?
+39:25
+So the cost of inference is the amount of money that it costs to create an outpove.
+So, you will see that some models have got cheaper.
+People conflate that with the companies themselves finding a cheaper way of doing this.
+39:37
+They've never said that.
+They've just brought the price down.
+They can afford it when they can raise five, 10, $300000000 at a time, like Anthropic just did.
+What Deep Seat did was they were able to train a model for cheaper.
+39:47
+Right.
+That's the Chinese company that sort of shocked people and there was this big hit that happened to the market because of it.
+They were able to sort of shortcut this process.
+Yes, because they couldn't access the latest chips.
+39:58
+But putting all that aside,
+The other problem is the pre-training, which when you shovel the data in, stop having the same results, we kind of hit the diminishing returns point.
+So their only way to make these models do more was to burn more tokens.
+40:12
+So, even if a model cost comes down, you're using more tokens to do the same thing, you're spending more money as a user.
+We don't know what it costs them.
+They're all unprofitable.
+But to your point, you're completely right about these data centers, they also have another problem, which is, takes about 2 years, 3 years to build an AI data center.
+40:31
+NVIDA is selling new trips every year.
+This seems like a big problem.
+The depreciation problem, right?
+Well, the depreciation problem is one.
+In the, they burn out in 3 to 6 years.
+40:41
+We don't really know yet, but I've heard crazy failure rates like 10 to 20% within a year, but we truly don't know that.
+It's both the depreciation problem and the fact that let's take Blackwell.
+40:51
+Released kind of in 2024, but really in 2025.
+We still have data centers being built, like Stargate Abilene, out in Texas for open AI and Oracle, that are using Blackwell GPUs that by the time that bloody thing's built, which will be 2027, they will be 2 to 3 years old.
+41:06
+You will have an entire data center full of obsolete GPUs, and all of the GPU data centers being built last year are going to be Blackwell.
+Blackwell's, what? It's the current gen, the new gen is Vera Reuben.
+41:19
+This is just the GPUs.
+So you've got all these data centers.
+And now you've got this flood of supply of an obsolete chip.
+I ain't no economics now or anything, but generally when the supply increases, they have to lower the price because everyone's got it, and you're already seeing the price of renting those GPUs come down.
+41:37
+Right.
+Because they're older chips. And so they're going to, the same way that like, you know, a newer car sells for more than a used car.
+But also there are more and more of them coming online anymore. Right.
+Right, right, right, right.
+41:48
+And also, I don't even think they're profitable for the providers to run.
+There is compelling evidence that no one's making a profit renting them, which is crazy.
+It's crazy.
+we're all doing this, and we don't know that for sure.
+42:00
+Wait, meaning folks that have the centers.
+The actual data centers.
+Right.
+I hear I, it's rumant, so I can't confirm it.
+I heard of a data center out in North Dakota that was losing a $1000000 a day.
+That's not a good business.
+42:11
+So one problem is the time scale for building the data centers is being outpaced by the new chips.
+You're building things that are obsolete.
+There's also the threat that maybe you find more efficient ways in which you have sort of stranded assets, right?
+42:24
+That you have all these data centers.
+It turns out you don't need all this compute because we've come up with a more efficient way to do it.
+But again, the story that the AI people are telling.
+Invest now, it's not profitable.
+42:34
+Keep building.
+And if we get to something that can, for instance, do what a 1st year associate at a law firm does, then you have a situation, again, I'm just, this is the case, right?
+42:46
+The case is, you've got a situation, we hire 1st year associates.
+They largely do things like Dock Review and they draft memos.
+And we're going to have a model.
+It's going to be trained on legal stuff.
+42:57
+It's going to be a, you know, enterprise system that Claude charges $60,000 a year for, a huge amount of revenue would be like the most expensive software, basically.
+43:08
+So the business case here is you hire a 1st year associate for $120,000.
+We charge you $60,000, right?
+We're making a ton of money.
+43:18
+You're saving $60,000, and it's a bummer that the 1st year law source gets out of a job.
+But if we could do that at scale, if there's 1000000s and 1000000s of these kinds of jobs that people are making, high 5 figures to 6 figures, that we can sell you software to replace.
+43:33
+I mean, again, this is the contention of why it would be valuable.
+This is the core contention.
+Like if you look into what these companies are saying.
+I guess the question then becomes, is that a plausible outcome, because I think if it is plausible, you could probably make the math work, and if it's not plausible, then you can't.
+43:50
+So the law firm example is great.
+The problem is, I don't think enough people know what people do at jobs.
+Law firm associates make law firms work.
+44:01
+Law firm associates are doing the work that partners don't want to do, and if any partners are listening, you know I'm bloody right.
+So what you're describing there would be AGI that just this conscious computer, which by the way, everyone's real excited to control a conscious creature, that's just describing slavery.
+44:18
+It's important to say what AGI is.
+It is describing slavery.
+Right.
+You saying if you achieve what they call artificial general intelligence.
+We actually just had a conversation about this, what David Chalmers, about consciousness, that then you're actually, there's all sorts of moral implications of what that device is once you...
+44:36
+Right.
+Yes.
+Back to the law, slave.
+So this theoretical thing, yeah, if it could do literally what an associate did, sure, but an associate does much more than just dog review, they're doing a bunch of research.
+44:50
+And it's not just, I found a thing.
+Look, it's drafting motions.
+If you get emotion wrong, a judge will sanction you and you will embarrass the partner, what you're paying for with employees, in many cases, is actually risk management.
+45:04
+Judgment and judgment and taste and culture and also risk management.
+You are handing the risk off to a human being that you can rely on and train.
+Also, how are we going to make partners if we can't make associates?
+45:18
+We're just going to hire a law student to become a partner.
+I mean, I don't know, I could sit around handing other people's work and talking.
+No, that's not true.
+Partners do all sorts of work, I'm sure.
+But nevertheless, yeah, in theory, if you could replace 10, $60,000, $150,000 in the case of a law student.
+45:33
+You can replace 10 of them with $60,000.
+Sure.
+It isn't doing that.
+And large language models are sold as, the reason I mentioned the thing earlier with AI boosters, they need to be legally banned from saying in the future, it will could.
+45:46
+We need to talk about what's happening today.
+It isn't doing it.
+It isn't doing it.
+And in fact, every single example.
+I hear of, in specifically law, large language models being used, ends up with someone getting in trouble with a judge.
+45:59
+I think they just had a DOJ person that this happened to as well.
+Well, I don't think that's true that every example, because people are using AI all over the legal world, I can tell you, but there definitely have been hallucinated citations that have been filed, and I think in some cases, even by government lawyers, the DOJ, that have been caught, where they're citing to a case that literally was invented by the AI.
+46:17
+So, to your point.
+Yeah, if you could do the thing it doesn't do and has no proof of doing, yeah, sure.
+Grandmother at wheels should be a bicycle and so on and so forth.
+A lot of this, in fact, all of this is really sold on the goods and shirts and wheels.
+46:30
+It's a bet about what its future capabilities are.
+based on what I would describe as semiotic knowledge, logic even.
+It's this idea that because things have worked this way in the past.
+46:42
+It'll happen before.
+There was a time when the internet was slower, then everyone's internet connectivity went up.
+Not really the same thing because the technology was always there to get it faster.
+The fiber optic cable was there.
+46:52
+The massive overbill was there.
+This is not a problem that you solve by having more compute.
+It is not.
+I mean, they think it is.
+right?
+I mean, just to be clear about what the disagreement is.
+Their contention is that they have found a reliable and straightforward law of scaling, which is that the more compute you have, the better it gets and the more that it starts to act in ways that are intelligent.
+47:13
+Except the scaling laws are broken.
+That diminishing returns I mentioned earlier, it's no longer getting the same kind of improvements just by pre-training them.
+But isn't it?
+I mean, I just got to say, like, this is where my experience of use of the models is that they're getting much better.
+47:27
+At what?
+Specifically.
+Multi-step tasks in research.
+Here's a great example.
+You go to clotting, you say.
+I said this the other day.
+I'm trying to figure out the relative homicide rates in major American cities in the 1890s.
+47:43
+I want to look at New Orleans, which is what I'm writing about and compare it to New York and Philadelphia.
+A year ago, with previous models, you would have gotten essentially nonsense, or you would have gotten like, well, here's the Wikipedia.
+47:54
+here a few things.
+In this case, it like went through, it found like there's 2 like real sources on this.
+Like there's a book about southern homicides.
+There's another book about northeastern policing.
+48:04
+I know this because I've actually done the research, right?
+Right.
+It goes through.
+It basically does find in one of the books because it's in public domain what the New Orleans homicide rate is, it talks about what the data difficulties are in your Philadelphia, and it basically spits out an answer that I can check because it's citing it.
+48:22
+That's basically correct.
+Okay. In New Orleans, it's 25 out of 100,000, and in New York and Philadelphia, it's five, something like that.
+A computer could not do that a year ago.
+Like, it just couldn't.
+48:32
+Now, there's all sorts of ways in which I can check it because I have the expertise.
+But this was like a sophisticated multi-step thing that I had to go through and sort of use a bunch of powers that it just didn't have a year ago.
+48:43
+I mean, you have to check every step, though.
+didn't you?
+You have to go and check all the data.
+I did have to check the citations.
+So what you're describing there is an improvement.
+They have found ways to connect them to web search tools.
+48:54
+These things are able to drag stuff, but what you're ultimately describing is more sophisticated but less reliable search.
+It is an improvement because they're able to post-train it in that case and say this result is bad, this result's good.
+49:10
+I've used even the most sophisticated ones used by hedge funds, the searches.
+The problem is, is that, yeah, it will get some things right and it will find the occasional thing, oh, you didn't see this in a 10 K from 2 years ago.
+49:21
+Problem is you have to check every single bloody thing.
+You can't rely on anything.
+Perhaps it helped you get in the right direction.
+Is that worth this much money?
+Is, I mean, what you're describing, you were seeing in models middle of 2025, I guess we did something.
+49:36
+Wow, we have better search, more sophisticated, but less reliable search.
+Or multi-step things.
+I mean, the thing to me was that this is a fairly like compound task, right?
+So it has to do.
+It's got to do a bunch of stuff.
+49:47
+And the thing that I thought was striking was that it actually, it did a good job of finding the right source, which that was sort of interesting to me, like, oh, that is the book.
+You know, that is the book where this is contained.
+You didn't just like go to the Wikipedia page.
+49:57
+I think the thing that I kind of come back to, and this is the sort of horns of the dilemma and many people have talked about this, is that it seems to me that there's no way out of some kind of cataclysm for this reason.
+50:11
+How do you mean? Either your case is correct.
+In which case, it's just not going to be profitable, and the whole thing is going to collapse in on itself.
+Yeah. Or, you're wrong.
+50:24
+And they get a lot better and they are profitable.
+And what being profitable means is that they can replace the labor of 10s of 1000000s of people.
+50:35
+Right.
+That's another cataclysm.
+Like, the point is that like, if they're right, if the thing that they're promising, which is like, oh, yeah, we could start getting rid of all these people that do all these jobs and replacing it with AI, that's good for the profitability of these companies, but I think it's probably insanely destructive to the macro economy in American society.
+50:54
+Sure.
+And I'm not afraid of that because you just don't think that's going to happen.
+you think, see no signs of it.
+Right. But it is the only way, like, it is the only way it would make sense.
+That's the point.
+51:04
+The point is that, like, for the math to work out.
+It has to be something pretty darn revolutionary.
+And it has to be 10000000000s of dollars.
+like I worked it mathematically.
+51:15
+By 2030 for any of this to make sense for Microsoft Meta, Google, and Amazon.
+They need $200000000000 of new revenue, not enhanced revenue.
+I mean, brand new, brand spec and new dollars. In a software industry that has never been higher than $700-000000000 of yearly revenue.
+51:29
+What is annual USGDP is like $300000000000, right?
+So you're talking about like, just, just 10% of the world. Right, an enormous part of the entire economy.
+And it needs to happen in the next 6 months.
+51:42
+There is one other thing, though.
+I think that there is a social contagion that will happen with this.
+Look around the world of bosses right now, and the amount of them who are like, oh, yeah, I can't write to replace everyone.
+51:55
+I want to replace all the actors in my movies, I'm going to replace some more workers.
+He's just going to give me money and then I'm going to have all the money and the pieces of crap I sell things to, there's hogs braying for my slop.
+52:06
+The excitement in it.
+But also, how many of them are just wrong?
+How many of them just say things that aren't true.
+We had people in newspapers saying things about AI that aren't true.
+We have bosses claiming things about AI that aren't true.
+52:19
+We have people lying about it.
+It's truly obscene and regular people know.
+Regular people.
+Like if you go and talk to like electricians, HVAC people, hairdressers, teachers.
+52:30
+Their reaction to this is horror.
+There are some who are using it to cut corners.
+Everyone wants to do that.
+Human beings do that.
+Well, there's also a lot of people that have like crazily intense parasocial relationships and talk to it all the time.
+52:42
+I think that there should be criminal tribunals for the companies that it's disgusting.
+anyway.
+I think that we are going to see something happen before the economic stuff as an outcome of it, actually, where regular people have seen how their bosses think of them.
+52:56
+And it's happened for years.
+You saw it with remote work where bosses were like, hey, you got to get back to the office, man.
+You got to get back there.
+I've got to be able to look at you every day.
+I got to be able to stomp around so you can feed off my mood.
+53:07
+You've got to go to the metaverse now because that's where I'm going to be.
+Have fun staying poor.
+You won't in crypto.
+Also, I'm replacing you with AI.
+So you've got that, and then you've got the other thing, which is it needs to make all this money now, now.
+53:20
+Next 6 months.
+Open AI, even then, raised $110 billion.
+Actually, they only raised 15 billion.
+35000000000 of the money from Amazon is due when they achieve AGI or go public, and both the 3000000000 from NVIDI and the 3000000000 from Soft Bank are being paid in $100000000000 tranches like Klana, not literally, though.
+53:41
+And what's funny is Soft Bank has to raise $400000000 in loans to pay for their pub.
+Everything that's happening is a stress test of debt and equity.
+How much can venture capital spend?
+53:54
+How much can hyper scalers afford?
+How much money?
+So is left in the conference?
+So then what's, what is that out of your theory, what emerges as a prediction of the 1st place that you'll see a crack of fault?
+54:04
+Like what what would be the 1st sign?
+We're already seeing it with private credit.
+So, I kind of hinted at it earlier.
+Private credit, private equity, massively bought so many different software companies. And when they bought them with these leverage buyouts, they bought them, pumped them full of debt, and then took on debt to buy them.
+54:21
+I've heard something ridiculous, like private equity firms are leveraged to 4 to 6 times the value of their assets.
+So you're already seeing it.
+There was a stat that came out the other day.
+There's 42000000000 of software loans just for software companies that are in distress status, so not likely to be paid.
+54:38
+Right. You have across the board.
+You can go and look inside there.
+they have to publish this, private equity firms, private credit firms and BDCs, business development companies, basically the same thing.
+They're suddenly starting to take payment in kind for loans, as in you get stock.
+54:53
+Okay, given stock, and then you just kind of put all the cost onto the end of the loan.
+They're not getting paid on these loans.
+These loans are going, they're starting to default.
+So you think you're going to start to see loan defaults?
+55:04
+like the private credit market is going to ripple first.
+We're already seeing it.
+And then I think my real, my 3 horsemen are, you're going to see a data center project fall apart for its complaint.
+You're going to see in construction, one collapse, and then you're going to see a fully constructed one that has to shut down because it runs out of money.
+55:20
+Because remember, these things are heavily debt pilled.
+they are full of debt, there's not a single one of them that is even close to profitable before the debt, and then you add the debt on top.
+That's interesting.
+55:31
+So those 3 things to look for that in data centers.
+Exactly.
+Because the AI bubble, in my opinion, is a symptom of the larger death of software as a growth model.
+Because the assumption was software eating the world, Mark, Andrew, it was that every industry could be software tied, which is true, and that as a result, all of them could grow forever.
+55:50
+private equity, venture capital brought into this, they invested in all these companies. So now nobody will buy the companies.
+MNA has died and it's harder to take them public.
+And if you can't take it public and you can't sell someone else, what do you do?
+56:02
+Well, the answer is you sell them to another private equity firm.
+So there's currently a game of hot potato called continuation funds, or secondaries, depending on who you ask.
+Eventually, no one's gonna have the money to buy the thingy.
+56:15
+The other thing is that at the core of all this, whatever financialization you're doing, you have to make things that are profitable at the bottom of it.
+Yes, you do.
+I mean, that's whatever financialization happens. You know, you can have periods of where you buy an asset and you bloat it with debt and you sell it to someone else, right?
+56:31
+And there are ways in some intermediary sense that people can make money off passing things hither and yon.
+But in the end, you got to make money.
+Things have to be useful and make money for everything to keep going.
+56:44
+And the thing is, all of these investments, and Apollo's, John Zito, I think his name is, he said that the whole thing is, is that these software companies were required or invested in based on the idea that they would grow like they did between 2005 and 2018.
+56:58
+Now, they grow like after 2018.
+There's less money, and there's only so many software companies you can build, only so many people you can sell to.
+The last thing to me that also seems possible, just to end it here, is that, you know, there's a sense that like, sometimes they'll talk about their own vision of artificial intelligence being like a utility, like electricity or water.
+57:18
+And what's interesting about that is that, like, utility companies aren't that profitable, and they're not that sexy, and they're not like, it's a strange thing, because it seems to me like maybe it is possible this becomes like a utility that, like, everyone sort of has it or has access to it.
+57:33
+But if that's the case, then it's basically just a commodity.
+Like, utility companies are not super profitable.
+In fact, they're regulated.
+And that's the thing.
+The utility thing doesn't really make sense because water is water.
+57:44
+An AI model is many different things run by many different companies that needs constant maintenance to avoid model drift, because otherwise it's just a static object that cannot respond to new things.
+You don't need to continually make sure power is power before it turns into something else.
+57:59
+Yes, there are power of regulation things.
+I know.
+But one other very scary thing to add, I don't like scaring people, but some of the money that's going into data centers now, more and more, in fact, from like Blackstone and so on and Aries, I hear, is from insurance funds and retirement funds because they've needed more liquidity than they had.
+58:19
+So they've started investing in private credit loans, the data centers, and the sales pitch is simple.
+This is the future.
+This is a good yield.
+You'll get paid more on your money
+58:30
+Without the worrisome thing of, will they always be able to pay back their debt?
+And we mentioned Oracle earlier.
+Oracle is a mess, but Oracle has taken over $100000000000 of debt.
+58:42
+They had negative cash flow of $24 billion, and they are building 4.5 gigawatts of data centers, so 100s of 1000000000s of dollars, and they're building them for one company.
+Open AI, who lost at least 8000000000 more like 10 or $15000000000 last year, and expects to burn $2300000000 by 2030.
+59:01
+Oracle will die.
+if open AI dies.
+And this is not, this is not me catastrophizing.
+Mathematically speaking.
+Oracle cannot pay the debt.
+If open AI does not make more money, then Nvidia does right now, by 2030.
+59:17
+Yes, that's the bet, and they'll say it themselves, Dario would say this, and Sam, Dario Amade, is that their bet is on a revenue trajectory that is essentially unprecedented in human capitalism.
+They think they can achieve that, and if they don't, it doesn't work.
+59:29
+Ed Zitron, host of the better offline podcast, writes the where's your Ed at newsletter on Ghost.
+Great to have you here.
+Thank you for having me.

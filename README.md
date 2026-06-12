@@ -10,4 +10,6 @@ A source-heavy, interactive audit of Ed Zitron's writing about AI, 2020 to 2026.
 
 See `PROJECT.md` for the full methodology and an honest "where to distrust this."
 
+**Run locally:** open `index.html`, or `make serve`. **Maintain the data:** `make check` validates every data file and prints the headline stats; `make update` fetches new posts; `make verify` re-checks every cited URL. Tooling lives in `scripts/`.
+
 Criticism and commentary. Quotations are used for analysis. Not affiliated with Ed Zitron or his publications.
