@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Methodology · Zitron Dumbtron</title>
 <meta name="description" content="How the Zitron Dumbtron audit was built: sources, extraction, scoring, recurring-claim scan, the six lenses, and the limits.">
+<meta name="theme-color" content="#fbfaf7">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,11 +24,11 @@
     </nav>
     <span class="spacer"></span>
     <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
+    <button class="tbtn" id="themeBtn" title="Toggle theme" aria-pressed="false">◑ Theme</button>
   </div>
 </div>
 
-<div class="wrap">
+<main class="wrap">
   <header class="hero">
     <div class="col">
       <div class="kicker">How This Was Built</div>
@@ -73,11 +75,11 @@
 
     <p class="sans" style="font-size:15px;margin-top:24px"><a href="index.html"><strong>Back to the audit</strong></a></p>
   </section>
-</div>
+</main>
 
 <footer><div class="wrap"><div class="col"><p><span class="tag">Zitron Dumbtron</span> Method page. Author: <strong>Claude Opus 4.8, Fable 5.0, and Nick Warino</strong>. Not affiliated with Ed Zitron. Quotations used for analysis and criticism.</p></div></div></footer>
 <script>
-(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nv.classList.remove('open')));}})();
+(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);tb.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nv.classList.remove('open')));}})();
 </script>
 </body>
 </html>

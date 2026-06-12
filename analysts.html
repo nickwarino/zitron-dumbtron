@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Literature · Zitron Dumbtron</title>
 <meta name="description" content="A verified database of what top-tier analysts (Tooze, Levine, Bruenig, Mazzucato, Perez, DeLong, Acemoglu) have written about AI, with a lit-review comparison to Ed Zitron: same concerns, opposite conclusions.">
+<meta name="theme-color" content="#fbfaf7">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +17,7 @@
   .litfilters .fl{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:0 2px}
   .litauthorhead{font-family:var(--sans);font-weight:700;font-size:18px;margin:26px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
   .litauthorwho{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0 0 8px}
-  .litcard{border:1px solid var(--hair);border-radius:11px;padding:15px 17px;margin:11px 0;background:var(--paper-2)}
+  .litcard{border:1px solid var(--hair);border-radius:var(--r-card);padding:var(--pad-card);margin:11px 0;background:var(--paper-2)}
   .littop{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:8px}
   .litdate{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);background:var(--paper);border:1px solid var(--hair);padding:1px 8px;border-radius:20px}
   .litstance{font-family:var(--sans);font-size:10.5px;font-weight:700;color:#fff;padding:2px 9px;border-radius:20px}
@@ -40,11 +42,11 @@
     </nav>
     <span class="spacer"></span>
     <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
+    <button class="tbtn" id="themeBtn" title="Toggle theme" aria-pressed="false">◑ Theme</button>
   </div>
 </div>
 
-<div class="wrap">
+<main class="wrap">
   <header class="hero">
     <div class="col">
       <div class="kicker">The Literature · Same Concerns, Opposite Conclusions</div>
@@ -72,14 +74,14 @@
     <div class="litfilters" id="litFilters"></div>
     <div id="litList"></div>
   </section>
-</div>
+</main>
 
 <footer><div class="wrap"><div class="col"><p><span class="tag">Zitron Dumbtron</span> The Literature. Author: <strong>Claude Opus 4.8, Fable 5.0, and Nick Warino</strong>. Quotations used for analysis and criticism; every source verified live.</p></div></div></footer>
 
-<script src="assets/analysts.js"></script>
+<script src="assets/analysts.js" defer></script>
 <script>
-(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nv.classList.remove('open')));}})();
-(function(){
+(function(){const tb=document.getElementById('themeBtn'),root=document.documentElement;function setT(t){root.setAttribute('data-theme',t);tb.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('zd-theme',t);}catch(e){}}try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nv.classList.remove('open')));}})();
+window.addEventListener('DOMContentLoaded',function(){
   const D=window.ANALYSTS||[];
   document.getElementById('nclaims').textContent=D.length;
   const AUTH=['Adam Tooze','Matt Levine','Matt Bruenig','Mariana Mazzucato','Carlota Perez','J. Bradford DeLong','Daron Acemoglu'];
@@ -96,7 +98,7 @@
   Object.keys(SCOPE).forEach(s=>fh+='<button class="chip" data-scope="'+s+'">'+SCOPE[s]+'</button>');
   fh+='<span class="fl" style="margin-left:8px">vs Zitron</span>';
   Object.keys(STANCE).forEach(s=>fh+='<button class="chip" data-stance="'+s+'">'+STANCE[s][0]+'</button>');
-  fh+='<input id="litSearch" placeholder="search quotes…" style="margin-left:8px;font-family:var(--sans);font-size:13px;padding:6px 11px;border:1px solid var(--hair-strong);border-radius:999px;background:transparent;color:var(--ink);min-width:160px">';
+  fh+='<input id="litSearch" placeholder="search quotes…" aria-label="Search quotes and claims" style="margin-left:8px;font-family:var(--sans);font-size:13px;padding:6px 11px;border:1px solid var(--hair-strong);border-radius:999px;background:transparent;color:var(--ink);min-width:160px">';
   document.getElementById('litFilters').innerHTML=fh;
   const tog=(b,set,key)=>{b.classList.toggle('on');const k=b.dataset[key];set.has(k)?set.delete(k):set.add(k);render();};
   document.querySelectorAll('[data-auth]').forEach(b=>b.onclick=()=>tog(b,st.auth,'auth'));
@@ -134,7 +136,7 @@
     L.innerHTML=html;
   }
   render();
-})();
+});
 (function(){
   var tip=document.getElementById('tip'); if(!tip)return;
   function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}

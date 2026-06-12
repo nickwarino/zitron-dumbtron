@@ -6,20 +6,29 @@
 <title>Zitron Dumbtron · A Scored Audit of Ed Zitron on AI</title>
 <meta name="description" content="A comprehensive, source-heavy audit of Ed Zitron's AI writing, 2020 to 2026. Every claim scored by correctness and stakes, with recurring-claim timelines and adversarially-checked analysis.">
 <meta name="author" content="Claude Opus 4.8, Fable 5.0, and Nick Warino">
+<meta name="theme-color" content="#fbfaf7">
+<meta property="og:title" content="Zitron Dumbtron · A Scored Audit of Ed Zitron on AI">
+<meta property="og:description" content="A comprehensive, source-heavy audit of Ed Zitron's AI writing, 2020 to 2026. Every claim scored by correctness and stakes, with recurring-claim timelines and adversarially-checked analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nickwarino.github.io/zitron-dumbtron/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<script>try{var t=localStorage.getItem('zd-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 <div class="tip" id="tip"></div>
 <div class="drawer-backdrop" id="drawerBackdrop"></div>
-<aside class="drawer" id="drawer" aria-hidden="true">
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
   <div class="dh"><div><h3 id="drawerTitle"></h3><div class="sub" id="drawerSub"></div></div><button class="dclose" id="drawerClose" aria-label="Close">×</button></div>
   <div class="dbody" id="drawerBody"></div>
 </aside>
 
 <div class="topbar">
+  <div class="progress" id="progress"></div>
   <div class="topbar-inner">
     <a class="brand" href="index.html">Zitron<b>·</b>Dumbtron</a>
     <nav class="topnav" id="topnav">
@@ -30,17 +39,18 @@
       <a href="#lenses">The Lenses</a>
       <a href="#standard">The Standard</a>
       <a href="#database">Database</a>
+      <a href="hayes.html">Hayes</a>
       <a href="analysts.html">The Literature</a>
       <a href="methodology.html">Method</a>
     </nav>
     <span class="spacer"></span>
     <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <button class="tbtn" id="themeBtn" title="Toggle theme">◑ Theme</button>
+    <button class="tbtn" id="themeBtn" title="Toggle theme" aria-pressed="false">◑ Theme</button>
   </div>
 </div>
 
 <nav class="toc" id="toc" aria-label="Contents"></nav>
-<div class="wrap">
+<main class="wrap">
   <header class="hero">
     <div class="col">
       <div class="kicker">The Comprehensive Audit · 2020 to 2026 · Held To A Levine / Tooze Standard</div>
@@ -49,6 +59,8 @@
       <div class="byline" id="heroStats"></div>
     </div>
   </header>
+
+  <details class="toc-inline"><summary>On this page</summary><nav id="tocInline" aria-label="Page contents"></nav></details>
 
   <section class="prose col" style="padding-top:30px">
     <p class="lead">This audit reads all 110 of Ed Zitron's AI posts since 2020, scores 610 dated claims against the record as of June 2026, and stress-tests six of his core arguments. It is not a dunk and not a defense. It weights each claim by what rides on it. Being right that a company loses money is not the same as being right that the technology is a fraud.</p>
@@ -230,7 +242,7 @@
   <section id="evans" class="prose col">
     <h2>The Measured Counterweight: Benedict Evans</h2>
     <p>Benedict Evans is the closest thing to the Levine-and-Tooze read the rating invokes: a measured analyst working from primary data. His May 2026 deck, AI Eats the World, lands where this audit lands. Capability, cost, and demand are real and fast. The business model is unsettled. The deck is below, then the slides that bear on Zitron.</p>
-    <div class="deckwrap"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQlE9lMtb4mepvtgNIxcLHXdPrQiCVPy3P8AFa1ivRtVS7jMaAV-4jyS5u0Ys8Hm4RSpQ0yOi_CqNIT/embed?start=false&loop=false&delayms=5000" allowfullscreen></iframe></div>
+    <div class="deckwrap"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQlE9lMtb4mepvtgNIxcLHXdPrQiCVPy3P8AFa1ivRtVS7jMaAV-4jyS5u0Ys8Hm4RSpQ0yOi_CqNIT/embed?start=false&loop=false&delayms=5000" loading="lazy" title="Benedict Evans slide deck" allowfullscreen></iframe></div>
 
     <div class="evcard">
       <div class="et">Inference efficiency is growing 50 to 100x per year</div>
@@ -280,7 +292,7 @@
   <!-- TOOZE -->
   <section id="tooze" class="prose col">
     <h2>The Tooze Standard</h2>
-    <p>The rating holds Zitron to a Levine and Tooze read. Here is what Tooze actually says. On the <a href="https://foreignpolicy.com/podcasts/ones-and-tooze/what-ai-means-for-the-economy-and-for-politics/" target="_blank" rel="noopener">Ones and Tooze</a> podcast he works through AI as a technology and a political economy (<a href="#" onclick="openToozeTx();return false;">click for the annotated transcript</a>). The economic historian benchmarked in the rating reaches the opposite of Zitron's conclusion, for the same reason Bruenig does: he keeps the layers separate.</p>
+    <p>The rating holds Zitron to a Levine and Tooze read. Here is what Tooze actually says. On the <a href="https://foreignpolicy.com/podcasts/ones-and-tooze/what-ai-means-for-the-economy-and-for-politics/" target="_blank" rel="noopener">Ones and Tooze</a> podcast he works through AI as a technology and a political economy (<a href="javascript:void(0)" onclick="openToozeTx();return false;">click for the annotated transcript</a>). The economic historian benchmarked in the rating reaches the opposite of Zitron's conclusion, for the same reason Bruenig does: he keeps the layers separate.</p>
     <h4>Is it real?</h4>
     <p>Settled, in Tooze's telling. "Practically everyone agrees that AI clearly is of the type of general purpose technologies," in the lineage of steam, electrification, and semiconductors. The only live debate is whether it is a normal general-purpose technology or something hyper, an R&D-enhancing one that could lift growth permanently, because "we are not just getting smarter, we are getting smarter at getting smarter." Zitron is litigating a question the standard analyst treats as closed: not how big AI is, but whether it is real at all.</p>
     <h4>The wall</h4>
@@ -312,7 +324,7 @@
     <p>This is not pro-AI or pro-capitalist bias. A man who writes policy for Bernie Sanders, whose <a href="https://www.peoplespolicyproject.org/projects/social-wealth-fund/" target="_blank" rel="noopener">Social Wealth Fund</a> proposal argues at length that capitalism distributes the gains of innovation indefensibly, looks at the same political economy and concludes the technology is good and the fight is over who owns its gains. He names the irony: the left's anti-AI reflex is partly anti-tech-sector animus, yet tech is the sector AI most disrupts. "If you don't like the tech sector, a new technology that makes coding trivially easy seems like exactly the thing you might invent to stick it to them."</p>
     <p class="pull">A Sanders policy adviser looked at AI and said the tech is real and the enemy is how its gains are distributed. That is S-tier, and it is the opposite of calling the tech a con.</p>
     <p>The point generalizes. The economy is broken for institutional reasons, ownership and distribution, not because the technology is fake. That is why the rot-economy verdict here is "right that something is broken, fuzzy on the mechanism." The serious left puts the problem in <a href="https://www.peoplespolicyproject.org/project/tackling-inequality-through-the-social-ownership-of-capital/" target="_blank" rel="noopener">who captures the gains</a>, a structural question. His answer is concrete: a social wealth fund that hands every American a share and an annual dividend, the proposal that inspired Bernie's AI sovereign-wealth-fund bill. Zitron puts it in the technology and the vibe of growth, the wrong target, and one a socialist economist who uses the tools declines to aim at.</p>
-    <p>He put it more plainly still on his podcast in February 2026 (<a href="#" onclick="openBruenigTx();return false;">click for the annotated transcript</a>). AI is just labor-saving technology, filed with word processing, the assembly line, and fertilizer, not with crypto. Two million Americans lose a job every month already, so the harm is the missing welfare floor, not the tool. And the tool is "the wonder we have made," built by the workers who wrote the Transformer paper, not by Altman. If five people capture trillions from software they did not make, "that's your system, dude," not the technology. The fight is ownership. The technology is real.</p>
+    <p>He put it more plainly still on his podcast in February 2026 (<a href="javascript:void(0)" onclick="openBruenigTx();return false;">click for the annotated transcript</a>). AI is just labor-saving technology, filed with word processing, the assembly line, and fertilizer, not with crypto. Two million Americans lose a job every month already, so the harm is the missing welfare floor, not the tool. And the tool is "the wonder we have made," built by the workers who wrote the Transformer paper, not by Altman. If five people capture trillions from software they did not make, "that's your system, dude," not the technology. The fight is ownership. The technology is real.</p>
 
     <h4>He does not just argue it. He builds with it, for workers.</h4>
     <p>Bruenig used an LLM to write a <a href="https://mattbruenig.com/2026/02/10/technical-details-of-my-llm-generated-book/" target="_blank" rel="noopener">technical book on NLRB law</a>, and he runs <a href="https://nlrbresearch.com/ai" target="_blank" rel="noopener">NLRB Research</a>, whose AI assistant is a Claude skill grounded in 365,000-plus primary sources, NLRB and MSPB decisions, LMRDA filings, collective bargaining agreements, and California PERB rulings, that turns a labor-law question into a cited legal memo. It is built for unions and workers, and it makes labor-law research that used to take an expensive firm cheap, fast, and accessible. That is AI tilting power toward labor, not capital.</p>
@@ -388,7 +400,7 @@
     <div class="wrap"><div class="col">
       <div class="row" id="vFilters"></div>
       <div class="row" style="margin-top:9px" id="sFilters"></div>
-      <div class="row" style="margin-top:9px"><div class="row" id="yFilters"></div><input class="search" id="search" type="search" placeholder="Search claims, posts, sources…"></div>
+      <div class="row" style="margin-top:9px"><div class="row" id="yFilters"></div><input class="search" id="search" type="search" placeholder="Search claims, posts, sources…" aria-label="Search claims, posts, and sources"></div>
     </div></div>
   </div>
   <section class="col"><div id="dbList"></div></section>
@@ -487,24 +499,24 @@
     </div>
     <p class="sans" style="font-size:13px;color:var(--muted);margin-top:14px">A few studies above (CJR Tow Center, BBC and EBU, Stanford RegLab) are cited by name where a stable public link was not confirmed. The 610-claim database links every claim to its own source directly.</p>
   </section>
-</div>
+</main>
 
 <footer><div class="wrap"><div class="col">
   <p><span class="tag">Zitron Dumbtron</span> 610 claims · 110 posts · 12 recurring claims · 6 stress-tested arguments. Scored as of 2026-06-12.</p>
   <p style="margin-top:8px">Author: <strong>Claude Opus 4.8, Fable 5.0, and Nick Warino</strong>.</p>
 </div></div></footer>
 
-<script src="assets/claims-full.js"></script>
-<script src="assets/categories.js"></script>
-<script src="assets/lenses.js"></script>
-<script src="assets/cheapness.js"></script>
-<script src="assets/comparisons.js"></script>
-<script src="assets/citations.js"></script>
-<script src="assets/bruenig-transcript.js"></script>
-<script src="assets/tooze-transcript.js"></script>
-<script src="assets/hayes.js"></script>
+<script src="assets/claims-full.js" defer></script>
+<script src="assets/categories.js" defer></script>
+<script src="assets/lenses.js" defer></script>
+<script src="assets/cheapness.js" defer></script>
+<script src="assets/comparisons.js" defer></script>
+<script src="assets/citations.js" defer></script>
+<script src="assets/bruenig-transcript.js" defer></script>
+<script src="assets/tooze-transcript.js" defer></script>
+<script src="assets/hayes.js" defer></script>
 <script>
-(function(){
+window.addEventListener('DOMContentLoaded',function(){
   const claims=window.CLAIMS_FULL||[], cats=window.CATEGORIES||[], lenses=window.LENSES||[], cheap=window.CHEAPNESS||{};
   const ai=claims.filter(c=>c.domain==='AI');
   const VMETA={
@@ -514,6 +526,7 @@
   const STLAB={S1:'Foundational tech',S2:'Work & science',S3:'Political economy',S4:'Markets & finance',S5:'Sector economics',S6:'Companies',S7:'Products / ops'};
   const STORD=['S1','S2','S3','S4','S5','S6','S7'];
   const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const atr=s=>esc(s).replace(/"/g,'&quot;');
   // link the first mention of each panel analyst in an (already-escaped) assessment to their AI source
   const PANEL_SRC=[
     [/\b(Adam Tooze|Tooze)\b/,'https://adamtooze.substack.com/p/chartbook-341-on-thinking-in-medias'],
@@ -532,29 +545,42 @@
 
   // ---- shared rich-hover map + side drawer ----
   const TIPS={};
+  let drawerLastFocus=null;
+  function closePanel(){
+    const drawer=document.getElementById('drawer'),dbk=document.getElementById('drawerBackdrop');
+    if(drawer){drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true');}
+    if(dbk)dbk.classList.remove('open');
+    document.body.style.overflow='';
+    if(drawerLastFocus&&document.contains(drawerLastFocus))drawerLastFocus.focus();
+    drawerLastFocus=null;
+  }
   (function(){
-    const dbk=document.getElementById('drawerBackdrop'), drawer=document.getElementById('drawer');
-    function close(){if(drawer)drawer.classList.remove('open');if(dbk)dbk.classList.remove('open');}
-    if(dbk)dbk.onclick=close; const dc=document.getElementById('drawerClose'); if(dc)dc.onclick=close;
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+    const dbk=document.getElementById('drawerBackdrop');
+    if(dbk)dbk.onclick=closePanel; const dc=document.getElementById('drawerClose'); if(dc)dc.onclick=closePanel;
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel();});
   })();
   function openPanel(title,subHTML,bodyHTML){
     const drawer=document.getElementById('drawer'),dbk=document.getElementById('drawerBackdrop'),dbody=document.getElementById('drawerBody');
+    if(!drawer.classList.contains('open'))drawerLastFocus=document.activeElement;
     document.getElementById('drawerTitle').textContent=title; document.getElementById('drawerSub').innerHTML=subHTML;
-    dbody.innerHTML=bodyHTML; dbody.scrollTop=0; drawer.classList.add('open'); dbk.classList.add('open');
+    dbody.innerHTML=bodyHTML; dbody.scrollTop=0; drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); dbk.classList.add('open');
+    document.body.style.overflow='hidden';
+    const dc=document.getElementById('drawerClose'); if(dc)dc.focus();
   }
   window.openPanel=openPanel;
+  window.closePanel=closePanel;
   // ---- Bruenig podcast transcript in the side drawer ----
   window.openBruenigTx=function(){const t=window.BRUENIG_TX;if(t)openPanel(t.title,t.sub,t.body);};
   window.openToozeTx=function(){const t=window.TOOZE_TX;if(t)openPanel(t.title,t.sub,t.body);};
   // ---- Hayes annotated transcript in the side drawer ----
   window.openHayesTx=function(){
-    const VC={'Correct':'#1a7f37','Fair':'#1a7f37','Mostly correct':'#2da44e','Mixed':'#bf8700','Overstated':'#d4691e','Mostly wrong':'#cf4a1a','Wrong':'#c1121f','Too early to tell':'#57606a'};
+    const css=getComputedStyle(document.documentElement), vv=n=>css.getPropertyValue(n).trim()||'#777';
+    const VC={'Correct':vv('--v-true'),'Fair':vv('--v-true'),'Mostly correct':vv('--v-mtrue'),'Mixed':vv('--v-mixed'),'Overstated':vv('--v-over'),'Mostly wrong':vv('--v-mis'),'Wrong':vv('--v-false'),'Too early to tell':vv('--v-early')};
     const data=window.HAYES||[];
     const order=['Correct','Fair','Mostly correct','Mixed','Too early to tell','Overstated','Mostly wrong','Wrong'];
     const counts={}; data.forEach(d=>counts[d.v]=(counts[d.v]||0)+1);
     let tally='<div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px">';
-    order.forEach(k=>{if(counts[k])tally+='<span style="font-family:var(--sans);font-size:11.5px;font-weight:600;color:#fff;padding:3px 9px;border-radius:20px;background:'+(VC[k]||'#777')+'">'+counts[k]+' '+k+'</span>';});
+    order.forEach(k=>{if(counts[k])tally+='<span style="font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--paper);padding:3px 9px;border-radius:20px;background:'+(VC[k]||'#777')+'">'+counts[k]+' '+k+'</span>';});
     tally+='</div>';
     const intro='<div style="border-left:4px solid var(--accent);background:var(--paper-2);border-radius:8px;padding:12px 14px;margin:0 0 14px;font-family:var(--sans);font-size:13.5px;line-height:1.55"><strong>The tell, in one sentence.</strong> Chris Hayes is a sympathetic host who wants the bear case to be right. Three times he volunteers firsthand evidence the tools got materially better in a year. Three times Zitron reframes a real capability jump as "just search," "not new," or "less reliable." The failure to update, captured live, with a friendly interviewer doing the falsification for you.</div>';
     const cards=data.map(d=>{
@@ -562,7 +588,7 @@
       h+='<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px">';
       h+='<span style="font-family:var(--sans);font-size:11px;font-weight:600;color:var(--muted);background:var(--paper);border:1px solid var(--hair);padding:2px 7px;border-radius:20px">'+d.t+'</span>';
       h+='<span style="font-family:var(--sans);font-weight:600;font-size:14px;flex:1;min-width:130px">'+d.topic+'</span>';
-      h+='<span style="font-family:var(--sans);font-size:10.5px;font-weight:700;color:#fff;padding:3px 9px;border-radius:20px;background:'+(VC[d.v]||'#777')+'">'+d.v+'</span></div>';
+      h+='<span style="font-family:var(--sans);font-size:10.5px;font-weight:700;color:var(--paper);padding:3px 9px;border-radius:20px;background:'+(VC[d.v]||'#777')+'">'+d.v+'</span></div>';
       h+='<blockquote style="margin:0 0 10px;padding:2px 0 2px 14px;border-left:3px solid var(--accent);font-style:italic;font-size:15px;line-height:1.5">“'+d.q+'”</blockquote>';
       if(d.host)h+='<div style="margin:0 0 10px;padding:9px 12px;background:var(--paper);border:1px solid var(--hair);border-radius:8px;font-size:13px;line-height:1.5;color:var(--ink-soft);font-family:var(--sans)">'+d.host+'</div>';
       h+='<div style="font-size:14px;line-height:1.6"><span style="display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;color:var(--muted);border:1px solid var(--hair);padding:2px 8px;border-radius:20px;margin-right:7px">'+d.s+'</span>'+d.a+'</div></div>';
@@ -574,7 +600,7 @@
   function buildTimeline(items){
     items=items.slice().sort((a,b)=>a.date<b.date?-1:1); if(!items.length)return '';
     const d0=new Date(items[0].date),d1=new Date(items[items.length-1].date),sp=(d1-d0)||1;
-    const dots=items.map((x,i)=>{const id='tl_'+i;TIPS[id]='<div class="td">'+x.date+' · '+esc(x.title)+'</div><div class="tq">'+esc(x.text)+'</div>';const left=((new Date(x.date)-d0)/sp)*100;return '<a class="dot" data-tip="'+id+'" href="'+x.url+'" target="_blank" rel="noopener" style="left:'+left+'%;top:'+(6+(i%4)*8)+'px;background:'+(x.color||'var(--accent)')+'"></a>';}).join('');
+    const dots=items.map((x,i)=>{const id='tl_'+i;TIPS[id]='<div class="td">'+x.date+' · '+esc(x.title)+'</div><div class="tq">'+esc(x.text)+'</div>';const left=((new Date(x.date)-d0)/sp)*100;return '<a class="dot" data-tip="'+id+'" href="'+x.url+'" target="_blank" rel="noopener" aria-label="'+atr(x.date+' · '+x.title)+'" style="left:'+left+'%;top:'+(6+(i%4)*8)+'px;background:'+(x.color||'var(--accent)')+'"></a>';}).join('');
     const list=items.map(x=>'<div class="dentry"><div class="dt">'+x.date+(x.tag?' · <span style="color:'+(x.color||'var(--muted)')+'">'+esc(x.tag)+'</span>':'')+'</div><div class="dq">'+esc(x.text)+'</div><a href="'+x.url+'" target="_blank" rel="noopener">'+esc(x.title)+' ↗</a></div>').join('');
     return '<div class="dminitl">'+dots+'<div class="axis"></div></div><div class="ticks"><span>'+items[0].date.slice(0,7)+'</span><span>'+items[items.length-1].date.slice(0,7)+'</span></div>'+list;
   }
@@ -586,7 +612,7 @@
   document.getElementById('matrix-rows').innerHTML=STORD.map(s=>{
     const rs=ai.filter(r=>r.stakes===s); const [m,n]=mean(rs);
     const w=m?((m-1)/4*100):0;
-    return `<div class="mrow mrow-click" data-stakes="${s}"><div class="mst"><span class="st st-${s}">${s}</span>${STLAB[s]}</div>
+    return `<div class="mrow mrow-click" data-stakes="${s}" role="button" tabindex="0"><div class="mst"><span class="st st-${s}">${s}</span>${STLAB[s]}</div>
       <div class="mbar"><div class="mfill" style="width:${w}%;background:${colFor(m)}"></div></div>
       <div class="mscore" style="color:${colFor(m)}">${m?m.toFixed(2):'n/a'}</div>
       <div class="mnum">${rs.length} claims →</div></div>`;
@@ -720,9 +746,9 @@
     function renderHist(rows){
       const keys=[];for(let b=-100;b<=100;b+=20)keys.push(b);
       const bk={};keys.forEach(k=>bk[k]=[]);
-      rows.forEach(x=>{let b=Math.round(x.s/20)*20;if(b<-100)b=-100;if(b>100)b=100;bk[b].push(x);});
+      rows.forEach(x=>{let b=Math.round((x.s+100)/20)*20-100;if(b<-100)b=-100;if(b>100)b=100;bk[b].push(x);});
       const max=Math.max(1,...keys.map(k=>bk[k].length));
-      const bars=keys.map(k=>{const n=bk[k].length,h=Math.round(n/max*118);return '<div class="rwhcol" data-b="'+k+'" title="'+n+' claims near '+(k>0?'+':'')+k+'"><div class="rwhn">'+(n||'')+'</div><div class="rwhbar" style="height:'+h+'px;background:'+rwcol(k)+'"></div></div>';}).join('');
+      const bars=keys.map(k=>{const n=bk[k].length,h=Math.round(n/max*118);return '<div class="rwhcol" data-b="'+k+'" role="button" tabindex="0" title="'+n+' claims near '+(k>0?'+':'')+k+'" aria-label="'+n+' claims near '+(k>0?'+':'')+k+'"><div class="rwhn">'+(n||'')+'</div><div class="rwhbar" style="height:'+h+'px;background:'+rwcol(k)+'"></div></div>';}).join('');
       $('rwHist').innerHTML='<div class="rwhrow">'+bars+'</div><div class="rwhaxis"><span>−100 · most wrong</span><span>0 · mixed</span><span>+100 · most right</span></div>';
       $('rwHist').querySelectorAll('.rwhcol').forEach(col=>col.onclick=()=>{const b=+col.dataset.b,list=bk[b].slice().sort((p,q)=>p.s-q.s);if(list.length)openList('Scores near '+(b>0?'+':'')+b,list.length+' claims',list);});
     }
@@ -755,7 +781,14 @@
 
   // ---- tooltip ----
   const tip=document.getElementById('tip');
-  function showTip(html,x,y){tip.innerHTML=html;tip.classList.add('show');let nx=x+14,ny=y+14;if(nx+360>window.innerWidth)nx=x-374;tip.style.left=nx+'px';tip.style.top=ny+'px';}
+  function placeTip(x,y){
+    let nx=x+14,ny=y+14;
+    if(nx+380>window.innerWidth)nx=Math.max(8,x-390);
+    const th=tip.offsetHeight||0;
+    if(ny+th>window.innerHeight-8)ny=Math.max(8,y-th-14); // flip above near the viewport bottom
+    tip.style.left=nx+'px';tip.style.top=ny+'px';
+  }
+  function showTip(html,x,y){tip.innerHTML=html;tip.classList.add('show');placeTip(x,y);}
   function hideTip(){tip.classList.remove('show');}
 
   // ---- recurring claim timelines ----
@@ -768,10 +801,10 @@
   document.getElementById('catList').innerHTML=cats.map((c,ci)=>{
     const dots=c.instances.map((x,i)=>{
       const left=pos(x.date); const jit=(i%5)*10;
-      return `<a class="dot" href="${x.url}" target="_blank" rel="noopener" data-i="${ci}:${i}" style="left:${left}%;top:${4+jit}px"></a>`;
+      return `<a class="dot" href="${x.url}" target="_blank" rel="noopener" data-i="${ci}:${i}" aria-label="${atr(x.date+' · '+x.title)}" style="left:${left}%;top:${4+jit}px"></a>`;
     }).join('');
     return `<div class="catcard" id="cat-${c.id}">
-      <div class="cathead" data-toggle="${c.id}">
+      <div class="cathead" data-toggle="${c.id}" role="button" tabindex="0" aria-expanded="false">
         <div class="cnt">${c.count}</div>
         <div class="cmid"><div class="cttl">${esc(c.label)}</div>
           <div class="csub"><span class="st st-${c.stakes}">${c.stakes}</span> &nbsp;${c.instances[0]?c.instances[0].date.slice(0,7):''} to ${c.instances.length?c.instances[c.instances.length-1].date.slice(0,7):''} &nbsp;·&nbsp; ${esc(c.verdict)}</div></div>
@@ -786,13 +819,13 @@
       </div></div>`;
   }).join('');
   // toggle + dot tooltips
-  document.querySelectorAll('.cathead').forEach(h=>h.onclick=e=>{ if(e.target.closest('a'))return; document.getElementById('cat-'+h.dataset.toggle).classList.toggle('open');});
+  document.querySelectorAll('.cathead').forEach(h=>h.onclick=e=>{ if(e.target.closest('a'))return; const open=document.getElementById('cat-'+h.dataset.toggle).classList.toggle('open'); h.setAttribute('aria-expanded',open?'true':'false');});
+  function catDotTip(d){const [ci,i]=d.dataset.i.split(':').map(Number);const x=(cats[ci]||{instances:[]}).instances[i];if(!x)return null;return `<div class="td">${x.date} · ${esc(x.title)}</div>${esc(x.quote)}<div class="td" style="margin-top:6px">click to open post ↗</div>`;}
   document.getElementById('catList').addEventListener('mouseover',e=>{
     const d=e.target.closest('.dot'); if(!d)return;
-    const [ci,i]=d.dataset.i.split(':').map(Number); const x=cats[ci].instances[i];
-    showTip(`<div class="td">${x.date} · ${esc(x.title)}</div>${esc(x.quote)}<div class="td" style="margin-top:6px">click to open post ↗</div>`, e.clientX, e.clientY);
+    const h=catDotTip(d); if(h)showTip(h, e.clientX, e.clientY);
   });
-  document.getElementById('catList').addEventListener('mousemove',e=>{ if(tip.classList.contains('show')){const d=e.target.closest('.dot'); if(d){let nx=e.clientX+14;if(nx+360>window.innerWidth)nx=e.clientX-374;tip.style.left=nx+'px';tip.style.top=(e.clientY+14)+'px';}}});
+  document.getElementById('catList').addEventListener('mousemove',e=>{ if(tip.classList.contains('show')){const d=e.target.closest('.dot'); if(d)placeTip(e.clientX,e.clientY);}});
   document.getElementById('catList').addEventListener('mouseout',e=>{ if(e.target.closest('.dot'))hideTip();});
 
   // ---- lenses ----
@@ -866,9 +899,10 @@
   document.getElementById('sFilters').innerHTML=STORD.map(s=>`<button class="chip" data-s="${s}"><span class="st st-${s}" style="padding:1px 6px">${s}</span> ${STLAB[s]}</button>`).join('')+
     ['AI','crypto-web3','business-pr-culture'].map(d=>`<button class="chip" data-dom="${d}">${d}</button>`).join('');
   document.getElementById('yFilters').innerHTML=yrs.map(y=>`<button class="chip" data-y="${y}">${y}</button>`).join('');
-  function bind(sel,key){document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{const k=b.dataset[key];b.classList.toggle('on');dstate[key==='v'?'v':key==='s'?'s':key==='dom'?'dom':'y'].has(k)?undefined:0;const set=key==='v'?dstate.v:key==='s'?dstate.s:key==='dom'?dstate.dom:dstate.y;set.has(k)?set.delete(k):set.add(k);renderDB();});}
+  function bind(sel,key){document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{const k=b.dataset[key];b.classList.toggle('on');const set=key==='v'?dstate.v:key==='s'?dstate.s:key==='dom'?dstate.dom:dstate.y;set.has(k)?set.delete(k):set.add(k);renderDB();});}
   bind('[data-v]','v');bind('[data-s]','s');bind('[data-dom]','dom');bind('[data-y]','y');
-  document.getElementById('search').oninput=e=>{dstate.q=e.target.value.toLowerCase();renderDB();};
+  let searchT;
+  document.getElementById('search').oninput=e=>{clearTimeout(searchT);searchT=setTimeout(()=>{dstate.q=e.target.value.toLowerCase();renderDB();},150);};
   function corrBadge(c){if(c==null)return '<span class="st" style="background:var(--v-unv)">n/a</span>';const col=c>=4?'var(--v-true)':c>=3?'var(--v-mixed)':'var(--v-false)';return `<span class="st" style="background:${col}">${c}/5</span>`;}
   function dbCard(c){const m=VMETA[c.verdict]||{c:'v-mixed'};
     return `<article class="claim" id="${c.id}">
@@ -886,8 +920,30 @@
       <details><summary>The check</summary><p class="catanalysis" style="margin-top:8px">${linkAnalysts(esc(c.assessment))}</p>
         <div class="srcs">${(c.srcs||[]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])} ↗</a>`).join('')}</div></details>
     </article>`;}
+  // paginated render: first 60 matches, then "Show N more" appends 150 per click
+  let dbRows=[],dbShown=0;
+  function dbChunk(from,to){
+    let html='',cy=from>0?dbRows[from-1].year:'';
+    for(let i=from;i<to;i++){const c=dbRows[i];if(c.year!==cy){cy=c.year;html+=`<div class="seclabel">${cy}</div>`;}html+=dbCard(c);}
+    return html;
+  }
+  function dbMoreHTML(){
+    const left=dbRows.length-dbShown;
+    return left>0?`<div id="dbMoreWrap" style="text-align:center;margin:20px 0"><button class="rwfull" id="dbMoreBtn">Show ${Math.min(150,left)} more (${left} remaining)</button></div>`:'';
+  }
+  function bindDbMore(){
+    const b=document.getElementById('dbMoreBtn'); if(!b)return;
+    b.onclick=()=>{
+      const next=Math.min(dbShown+150,dbRows.length);
+      document.getElementById('dbCards').insertAdjacentHTML('beforeend',dbChunk(dbShown,next));
+      dbShown=next;
+      const w=document.getElementById('dbMoreWrap'); if(w)w.remove();
+      document.getElementById('dbList').insertAdjacentHTML('beforeend',dbMoreHTML());
+      bindDbMore();
+    };
+  }
   function renderDB(){
-    let rows=claims.filter(c=>{
+    dbRows=claims.filter(c=>{
       if(dstate.v.size&&!dstate.v.has(c.verdict))return false;
       if(dstate.s.size&&!dstate.s.has(c.stakes))return false;
       if(dstate.dom.size&&!dstate.dom.has(c.domain))return false;
@@ -895,12 +951,23 @@
       if(dstate.q){const h=(c.claim+' '+c.quote+' '+c.assessment+' '+c.post_title).toLowerCase();if(!h.includes(dstate.q))return false;}
       return true;});
     const list=document.getElementById('dbList');
-    if(!rows.length){list.innerHTML='<div class="empty">No claims match these filters.</div>';return;}
-    let html=`<div class="sans" style="color:var(--muted);font-size:13px;margin:6px 0 10px">${rows.length} claims</div>`; let cy='';
-    rows.forEach(c=>{if(c.year!==cy){cy=c.year;html+=`<div class="seclabel">${cy}</div>`;}html+=dbCard(c);});
-    list.innerHTML=html;
+    if(!dbRows.length){list.innerHTML='<div class="empty">No claims match these filters.</div>';return;}
+    let lim=60;
+    // deep link: if the hash targets a claim card beyond the first page, render up to and including it
+    const hid=decodeURIComponent((location.hash||'').slice(1));
+    if(hid){const idx=dbRows.findIndex(c=>c.id===hid);if(idx>=lim)lim=idx+1;}
+    dbShown=Math.min(lim,dbRows.length);
+    list.innerHTML=`<div class="sans" style="color:var(--muted);font-size:13px;margin:6px 0 10px">${dbRows.length} claims</div><div id="dbCards">`+dbChunk(0,dbShown)+'</div>'+dbMoreHTML();
+    bindDbMore();
   }
   renderDB();
+  // scroll a deep-linked claim card into view on first load
+  (function(){
+    const hid=decodeURIComponent((location.hash||'').slice(1));
+    if(!hid||/^rw-/.test(hid))return;
+    const el=document.getElementById(hid);
+    if(el&&el.classList.contains('claim'))el.scrollIntoView();
+  })();
 
   // ---- comparisons (uses the shared drawer) ----
   (function(){
@@ -917,7 +984,7 @@
     const max=Math.max(...fams.map(f=>f.hits));
     cl.innerHTML=fams.map((f,fi)=>{
       const col=KCOL[f.kind]||'var(--accent)'; const w=max?f.hits/max*100:0; const n=(f.instances||[]).length;
-      return '<div class="cmprow cmprow-click" data-fam="'+fi+'"><div class="clab"><span>'+esc(f.label)+'</span><span style="color:'+col+'">'+f.hits+'</span></div><div class="ckind">'+esc(f.kind)+' · '+f.posts+' posts &nbsp;·&nbsp; <span class="more">view '+n+' mentions →</span></div><div class="ctrack"><div class="cfill" style="width:'+w+'%;background:'+col+'"></div></div></div>';
+      return '<div class="cmprow cmprow-click" data-fam="'+fi+'" role="button" tabindex="0"><div class="clab"><span>'+esc(f.label)+'</span><span style="color:'+col+'">'+f.hits+'</span></div><div class="ckind">'+esc(f.kind)+' · '+f.posts+' posts &nbsp;·&nbsp; <span class="more">view '+n+' mentions →</span></div><div class="ctrack"><div class="cfill" style="width:'+w+'%;background:'+col+'"></div></div></div>';
     }).join('');
     cl.querySelectorAll('.cmprow-click').forEach(r=>r.onclick=()=>openDrawer(fams[+r.dataset.fam]));
   })();
@@ -937,16 +1004,40 @@
     const label=(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,150);
     return '<div class="td">↗ '+esc(host)+'</div>'+(label?'<div class="tq">'+esc(label)+'</div>':'')+'<div style="font-family:var(--sans);font-size:11px;color:var(--muted);margin-top:5px;word-break:break-all">'+esc(href)+'</div>';
   }
-  function tipFor(e){const dt=e.target.closest('[data-tip]');if(dt&&TIPS[dt.dataset.tip])return TIPS[dt.dataset.tip];const a=e.target.closest('a[href]');if(a)return linkPreview(a);return null;}
+  function tipFor(e){
+    const dt=e.target.closest('[data-tip]');if(dt&&TIPS[dt.dataset.tip])return TIPS[dt.dataset.tip];
+    const di=e.target.closest('.dot[data-i]');if(di)return catDotTip(di);
+    const a=e.target.closest('a[href]');if(a)return linkPreview(a);return null;
+  }
   document.body.addEventListener('mouseover',e=>{const h=tipFor(e);if(h)showTip(h,e.clientX,e.clientY);else if(!e.target.closest('[data-tip],a[href]'))hideTip();});
-  document.body.addEventListener('mousemove',e=>{if(tip.classList.contains('show')){const t=e.target.closest('[data-tip],a[href]');if(t){let nx=e.clientX+14;if(nx+380>window.innerWidth)nx=e.clientX-390;tip.style.left=nx+'px';tip.style.top=(e.clientY+14)+'px';}}});
+  document.body.addEventListener('mousemove',e=>{if(tip.classList.contains('show')){const t=e.target.closest('[data-tip],a[href]');if(t)placeTip(e.clientX,e.clientY);}});
   document.body.addEventListener('mouseout',e=>{if(e.target.closest('[data-tip],a[href]'))hideTip();});
+  // keyboard focus shows the same tip as hover
+  document.body.addEventListener('focusin',e=>{const h=tipFor(e);if(h){const r=e.target.getBoundingClientRect();showTip(h,r.left,r.bottom+4);}else hideTip();});
+  document.body.addEventListener('focusout',e=>{if(e.target.closest('[data-tip],a[href]'))hideTip();});
+  // Enter/Space activates click-only divs carrying role="button"
+  document.body.addEventListener('keydown',e=>{
+    if(e.key!=='Enter'&&e.key!==' ')return;
+    if(e.target.closest('button,a,input,select,textarea,summary'))return;
+    const t=e.target.closest('[role="button"]'); if(!t)return;
+    e.preventDefault(); t.click();
+  });
 
   // ---- floating TOC + scroll-spy ----
   (function(){
     const SEC=[['rating','The Rating'],['vindication','Called It Crypto'],['compares','Analogies'],['matrix','Stakes Matrix'],['rwindex','Right/Wrong'],['recurring','Recurring Claims'],['lenses','The Lenses'],['cheaper','Getting Cheaper?'],['standard','The Standard'],['beat','Beat the Panel'],['evans','Evans'],['tooze','Tooze'],['bruenig','Bruenig'],['ownership','Ownership'],['reliability','Reliability'],['shift','The Shift'],['database','Database'],['sources','Sources']];
     const toc=document.getElementById('toc');
     if(toc) toc.innerHTML=SEC.map(([id,label])=>'<a href="#'+id+'" data-spy="'+id+'">'+label+'</a>').join('');
+    const tocInline=document.getElementById('tocInline');
+    if(tocInline) tocInline.innerHTML=SEC.map(([id,label])=>'<a href="#'+id+'">'+label+'</a>').join('');
+    // reading progress bar in the topbar
+    const pb=document.getElementById('progress');
+    if(pb){
+      let ticking=false;
+      const upd=()=>{const h=document.documentElement,max=h.scrollHeight-h.clientHeight;pb.style.width=(max>0?(h.scrollTop/max*100):0)+'%';ticking=false;};
+      window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(upd);}},{passive:true});
+      upd();
+    }
     const topLinks=[...document.querySelectorAll('.topnav a')];
     const tocLinks=[...document.querySelectorAll('#toc a')];
     function setActive(id){
@@ -959,7 +1050,7 @@
 
   // theme
   const tb=document.getElementById('themeBtn'),root=document.documentElement;
-  function setT(t){root.setAttribute('data-theme',t);try{localStorage.setItem('zd-theme',t);}catch(e){}}
+  function setT(t){root.setAttribute('data-theme',t);tb.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('zd-theme',t);}catch(e){}}
   try{const s=localStorage.getItem('zd-theme');if(s)setT(s);}catch(e){}
   tb.onclick=()=>setT(root.getAttribute('data-theme')==='light'?'dark':'light');
 
@@ -967,7 +1058,7 @@
   const nt=document.getElementById('navToggle'),nv=document.getElementById('topnav');
   if(nt&&nv){nt.onclick=()=>{const o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o?'true':'false');};
     nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nv.classList.remove('open');nt.setAttribute('aria-expanded','false');}));}
-})();
+});
 </script>
 </body>
 </html>
