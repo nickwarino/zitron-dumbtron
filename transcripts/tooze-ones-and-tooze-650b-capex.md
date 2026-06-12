@@ -1,0 +1,25 @@
+# Adam Tooze on the $650B AI Capex Boom (Ones and Tooze)
+
+**Source:** Ones and Tooze (Foreign Policy), video edition
+**URL:** https://www.youtube.com/watch?v=5UMYfLZYvg0
+**Speakers:** Cameron Abadi (FP deputy editor), Adam Tooze
+
+Used in *Zitron Dumbtron* for analysis and criticism. The AI segment. The data point: about $650 billion in AI capital expenditures expected in the coming year, with Alphabet, Microsoft, Meta, and Amazon spending a combined ~$600 billion, a more-than-fourfold increase in roughly three years. The Germany / European-defense segment that follows is omitted as off-topic.
+
+---
+
+**Tooze (on scale):** These used to be regarded as capital-light businesses. That is one of the shocks to the system. Over three years, rule of thumb, we are going from like 240 billion in 2024 to 400-odd, 450 billion in 2025 to 650 billion. Place this in perspective: the US economy last year, about 30 trillion dollars. So the planned investment for the coming year is about 2 percent of GDP. That puts us in the ballpark of previous tech booms. We are not quite at the level of the railway booms of the 19th century, let alone really large wartime spending. But a level of spending rising from half a percentage point of GDP to 1.5 to closer to 2 percent is clearly a major jolt to the US economy in a positive sense, at least in the first instance.
+
+**Tooze (AI capex as de facto stimulus):** In a Keynesian logic, investment and government spending are both exogenous impulses to economic growth. In this case it is being funded through private credit and the mobilization of cash by the businesses themselves, and it results in a positive impulse to GDP. The crucial thing with a multiplier effect is not the level but the change. People estimate that at the beginning of 2025 it was really the only thing that was driving the economy forward. The rest of the economy was contracting, and AI did the offset. So short run, this is a stimulus.
+
+**Tooze (the pressing question):** That is the big news of the last week, the sell-off in the AI firms themselves, as markets are shocked by the scale of their capital spending and the increasingly insistent question. You are sure, we get it, it is an amazing technology, you are going to build these data centers, but how are you actually going to earn any money doing this? That question becomes more and more pressing.
+
+**Cameron:** Are we living through an economic bubble fueled by AI? Is this what it feels like to live through a bubble?
+
+**Tooze (what kind of bubble):** If it is a bubble, what kind of bubble is it? There are at least three different types. One is a metaverse-type bubble: it just does not turn out to be that useful and no one really wants to go there, so you spend a lot of money and then do not do anything with it. Or it could be a bubble like the railways were a bubble, which are not the metaverse or tulips, they are railways, and they interconnected the United States and Europe and totally transformed the world. They were a bubble in the sense that the revenue streams and the earnings that ultimately resulted came in a different time pattern from the buildup of financial obligations and resulted in huge financial meltdowns repeatedly, but not because the railways were not really vital, simply because there was a mismatch between financial expectations and the resulting technological change.
+
+And then the third type of bubble disjuncture would be not that it does not pay back and does not transform the world, but that it just does not turn out to be something you can easily build a moat around, in Warren Buffett's terms, so as to generate profit. So it is more like the airline story, where you are totally transforming the world with your technology, you are just not making any money with it, which from the point of view of the market would be terrible, and from the point of view of the consumer would be potentially quite great.
+
+**Tooze (the consensus now):** What does not come up so much anymore is the apocalyptic AGI scenario, nor the metaverse. Everyone's resolved that this is real, it's significant, we just don't know how, and how large. (Paraphrasing Cameron's framing, which Tooze accepts.)
+
+**Tooze (household exposure):** This is much more like dot-com than it is like the subprime mortgage story. We are not looking at a bank-centered story of financial asset inflation. Nevertheless very serious, because of the scale of US household exposure to equities: 21 percent of US household wealth is now invested in the stock market, a record high, overwhelmingly concentrated in the top 10 percent of households, and the market is more concentrated than ever, with the overwhelming majority of value now in 20 stocks, the majority heavily invested in AI. A dot-com-level adjustment would mean losses well in excess of a trillion dollars. But so long as it is people's savings rather than borrowed money, it is more likely to produce a wealth-effect recession than a financial crisis. They are not borrowing that much, considering the scale of the investing they are doing.

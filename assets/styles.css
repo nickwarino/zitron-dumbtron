@@ -396,6 +396,17 @@ footer .col{color:var(--muted);font-size:14.5px;font-family:var(--sans)}
 .rwfrow{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--hair);padding:7px 2px;cursor:pointer;font-family:inherit;color:inherit}
 .rwfrow:hover{background:var(--paper-2)}
 
+/* top-tier analyst panel */
+.panelist{border:1px solid var(--hair);border-radius:12px;padding:16px 18px;margin:12px 0;background:var(--paper-2)}
+.phead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px}
+.pname{font-family:var(--sans);font-weight:700;font-size:16px;color:var(--ink)}
+.pwho{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.pq{margin:0 0 11px;padding:3px 0 3px 15px;border-left:3px solid var(--accent);font-style:italic;font-size:16px;line-height:1.5;color:var(--ink)}
+.pq a.src{font-style:normal;font-family:var(--sans);font-size:12px;font-weight:600;white-space:nowrap}
+.pstance{font-family:var(--sans);font-size:13.5px;line-height:1.62;margin:0}
+.pstance .yes{color:var(--v-true);font-weight:700}
+.pstance .no{color:var(--v-false);font-weight:700}
+
 /* mobile nav toggle */
 .navtoggle{display:none;background:none;border:1px solid var(--hair-strong);border-radius:8px;width:38px;height:34px;cursor:pointer;align-items:center;justify-content:center;color:var(--ink)}
 .navtoggle svg{width:18px;height:18px}
