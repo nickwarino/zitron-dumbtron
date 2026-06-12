@@ -171,7 +171,7 @@ window.HAYES = [
     t: "59:17",
     topic: "The honest core",
     q: "Their bet is on a revenue trajectory that is essentially unprecedented in human capitalism. They think they can achieve it, and if they don't, it doesn't work.",
-    v: "Fair",
+    v: "Correct",
     s: "S4 · Markets",
     a: "Correct, and the cleanest sentence in the interview. This is the real stake, and it is a live risk everyone serious concedes, including the people building it. The bubble may pop. That was never the contested claim. The contested claim is the one he spends the hour on: that the technology underneath is fake, useless, and going nowhere. The finance is sound. The foundation is the coin flip."
   }
