@@ -6,41 +6,67 @@ A handoff brief. This document explains what this project is, how it was built, 
 
 A static, interactive website that audits Ed Zitron's writing about AI. Zitron runs the newsletter "Where's Your Ed At" (wheresyoured.at) and the Better Offline podcast, and is the internet's most prominent AI-bubble critic. The site scores his claims two ways at once: how correct each one is, and how much rides on it being true. The thesis the site builds and tests is that he is most right where it matters least (company finance) and most wrong where it matters most (whether the technology is real, useful, and improving).
 
-The site lives at `index.html` (the audit) and `methodology.html` (a short method page). It is plain HTML, CSS, and vanilla JS with no build step. Open `index.html` in a browser.
+The site is `index.html` (the audit), `analysts.html` (The Literature, a verified database of what top-tier analysts say about AI plus a lit review), `methodology.html` (the method page), and `hayes.html` (an annotated Chris Hayes transcript). Plain HTML, CSS, and vanilla JS, no build step. Open `index.html` in a browser.
+
+The audit is benchmarked against a standard, not the average commentator: the level of Matt Levine and Adam Tooze, and a wider panel of serious analysts (Bruenig, Mazzucato, Perez, DeLong, Acemoglu). The point the whole site makes is that these analysts share nearly all of Zitron's concerns (bubble, circular financing, concentration, elusive profits, labor harm) and still reach the opposite conclusion, because they keep the technology separate from its finance and its political economy. See the political-economy framework below for the normative spine.
+
+## The political-economy framework (the normative spine)
+
+The audit is not neutral about political economy, and does not pretend to be. It is built on a specific left-institutionalist view of AI, the one held by the People's Policy Project (3P), Matt Bruenig, and Nick Warino's 3P report "The Nordic Model Invents the Goods." The core claims:
+
+- **The technology is real and good.** AI is a labor-saving, general-purpose technology in the lineage of word processing, the assembly line, and fertilizer. It is "the wonder workers made." Treating it as fake is, in Bruenig's words, "the most indefensible type of skepticism."
+- **The problem is ownership and distribution, not the technology.** Billionaire wealth, labor displacement, degraded products are valid critiques of capitalism, not of LLMs. They are "a great case for socialism, but not really a case against any particular labor-saving technology."
+- **The state invents the goods.** Per "The Nordic Model Invents the Goods" and Mazzucato's entrepreneurial-state work, public institutions create and de-risk the foundational technology (the internet, GPS, the transformer); the failure is letting the gains be captured as private "algorithmic rents."
+- **The constructive program is institutional:** a robust welfare state for labor reallocation (Bruenig's Jacobin case), social ownership of capital such as a social wealth fund (the 3P proposal behind the Sanders AI sovereign-wealth-fund bill), antitrust, collective bargaining, and public direction of the technology's path.
+- **The political error of the fraud thesis:** if the gains are not real, there is nothing to redistribute and nothing to govern. A development pause is the cartel move; the way to beat the incumbents is to push the technology forward and socialize the equity. The fraud framing aims the fight at the technology instead of at ownership, the one direction that helps the people Zitron wants to beat.
+
+This frame is why the rating tops out at "Bruenig-level," why the Standard / Bruenig / Ownership sections are central, and why the broken-economy and productive-bubble lenses route through 3P, Bruenig, Mazzucato, Perez, and Acemoglu rather than generic anti-growth declinism.
 
 ## 2. The deliverable, file by file
 
 ```
-index.html              The single audit page. All sections, all render JS.
+index.html              The audit page. All sections, all render JS.
+analysts.html           The Literature: the analyst-claims DB + lit review.
+hayes.html              Annotated Chris Hayes transcript (standalone page).
 methodology.html        Short public method page.
 PROJECT.md              This handoff doc.
 assets/
   styles.css            Shared stylesheet. NYT-ish. Light/dark themes.
-  claims-full.js        window.CLAIMS_FULL: 610 claims from 110 posts, enriched.
-  categories.js         window.CATEGORIES: 12 recurring-claim themes, dated instances, verdicts.
+  claims-full.js        window.CLAIMS_FULL: 610 Zitron claims from 110 posts.
+  categories.js         window.CATEGORIES: 12 recurring-claim themes.
   lenses.js             window.LENSES: 6 adversarially-checked arguments.
-  cheapness.js          window.CHEAPNESS: "is AI getting cheaper" verdict + GPT-4 price timeline.
-  comparisons.js        window.COMPARISONS: what analogies he uses, ranked, with quotes.
-crawl/                  Provenance and intermediate data (see section 6).
+  cheapness.js          window.CHEAPNESS: "is AI getting cheaper" + price timeline.
+  comparisons.js        window.COMPARISONS: his analogies, ranked, with quotes.
+  citations.js          window.CITES: verified inline-citation passages/analysis.
+  analysts.js           window.ANALYSTS: 110 panel-author AI claims, verified.
+  hayes.js              window.HAYES: 21 annotated Chris Hayes podcast claims.
+  bruenig-transcript.js window.BRUENIG_TX: Bruenig podcast, annotated drawer.
+  tooze-transcript.js   window.TOOZE_TX: Tooze, two episodes, annotated drawer.
+transcripts/            Markdown copies of the Hayes/Bruenig/Tooze transcripts.
+crawl/                  Provenance and intermediate data (gitignored).
   md/                   All 110 post .md files (full text + publish dates).
-  *.json                Intermediate extraction/enrichment data.
-  *.js                  The background workflow scripts that built the database.
+  rerate/               Re-rating, dead-link-repair, and lit-swarm agent I/O.
 ```
 
-Old files deleted on request: the original two-document scorecard (`comprehensive.html`, `claims-docs.js`, `claims-comprehensive.js`) is gone. The comprehensive page is now the only page.
+The original two-document scorecard (`comprehensive.html`, `claims-docs.js`, `claims-comprehensive.js`) was deleted on request.
 
 ## 3. The page sections (top to bottom)
 
-1. **Hero + intro.** Frame: "it might be a bubble" is table stakes, conceded by Altman, Bezos, Pichai. His distinctive claims are what get graded.
-2. **The Rating.** Tier scale S to F. He lands at **D as an analyst, B as a reporter**. Billed as an analyst, so the headline is D. Why not F: real reporting, the bubble is a live risk, "enterprise ROI unproven" is fair. Includes "What the foundational errors mean" (the dependency argument: accurate finance bricks sit on a coin-flip foundation).
-3. **The Tell: He Called It Crypto.** The temporal argument. His 2023 crypto/NFT analogy had a clean test; four years ran it; durable mass use is the axis that separates a fraud from a technology, and AI cleared it while crypto never did. He has not updated. His own token-spend scoops refute his "nobody wants it" claim.
-4. **Right Where It Matters Least.** The Stakes x Correctness matrix (computed live from CLAIMS_FULL).
-5. **What He Compares AI To.** Ranked analogy inventory with hover quotes. Corrects the record: he does not use Theranos; he uses crypto/NFT/metaverse, subprime, Uber/WeWork, and on Enron he disclaims accounting fraud while sarcastically insinuating it (the "NVIDIA Isn't Enron" piece is mockery, not a clean concession).
-6. **His Greatest Hits.** 12 recurring-claim dot-timelines. Click to open, hover a dot for the quote, click a dot to open the post. Each theme has a verdict.
-7. **Six Arguments, Stress-Tested.** The lenses.
-8. **Is AI Getting Cheaper?** Verdict (Zitron is mostly wrong) plus a GPT-4-class price chart and a per-metric breakdown.
-9. **How The Argument Moved.** Scope mix by year.
-10. **The Database.** All 610 claims, filterable.
+1. **Hero + intro.** Frame: "it might be a bubble" is table stakes. His distinctive claims get graded.
+2. **The Rating.** Tier scale S to F. **D as an analyst, B as a reporter.** Why not F: real reporting, the bubble is a live risk, unproven ROI is fair. "What the foundational errors mean" (accurate finance bricks on a coin-flip foundation).
+3. **The Tell: He Called It Crypto.** The temporal argument; AI cleared the durable-mass-use bar crypto never did. Points to Perez (railways and the internet crashed and were real).
+4. **Right Where It Matters Least.** The Stakes x Correctness matrix (live from CLAIMS_FULL).
+5. **The Right/Wrong Index.** One composite score per AI claim (accuracy x stakes x originality, -100..+100), a histogram, a Most Wrong / Most Right leaderboard, per-claim drawers with a shareable PNG card and `#rw-<id>` deep links.
+6. **What He Compares AI To.** Ranked analogy inventory with hover quotes and side-drawer timelines.
+7. **His Greatest Hits.** 12 recurring-claim dot-timelines.
+8. **Six Arguments, Stress-Tested.** The lenses, now mapped onto the panel.
+9. **Is AI Getting Cheaper?** Verdict (mostly wrong) + GPT-4-class price chart. Points to DeLong (falling unit cost vs elusive profits).
+10. **The Standard.** The top-tier panel (Tooze, Levine, Bruenig, Mazzucato, Acemoglu, DeLong, Perez), each with a verified verbatim quote: what each takes seriously and what each rejects. Links to The Literature page.
+11. **Evans / Tooze / Bruenig / Ownership.** The measured-analyst deep-dives. Evans deck; Tooze (two episodes, the three-bubbles taxonomy, sidebar); Bruenig (the S-tier benchmark + the LLM book + NLRB Research, built for workers); Ownership (the constructive program, social wealth fund).
+12. **Reliability.** The hallucination deep-dive (bimodal, jagged frontier).
+13. **How The Argument Moved.** Scope mix by year.
+14. **The Database.** All 610 Zitron claims, filterable.
+15. **The Literature (analysts.html).** 110 verified analyst claims + the lit review.
 
 ## 4. Methodology
 
@@ -57,7 +83,11 @@ Old files deleted on request: the original two-document scorecard (`comprehensiv
 
 **Recurring-claim timelines.** A separate regex scan of full text, restricted to AI-era posts (2023+) that have at least one AI-domain claim, required to sit near AI context, deduplicated. Each surviving sentence is one dot.
 
-**The lenses.** Each core argument was researched once, then handed to a second agent told to attack both the research and Zitron and revise the verdict. The published verdict is the adversarial one. The price analysis and the durable-vs-stranded-asset analysis were built the same way.
+**The lenses.** Each core argument was researched once, then handed to a second agent told to attack both the research and Zitron and revise the verdict. The published verdict is the adversarial one. The price analysis and the durable-vs-stranded-asset analysis were built the same way. The broken-economy and productive-bubble lenses were later rewritten to route through the panel (3P/Bruenig/Mazzucato; Perez/Tooze/DeLong).
+
+**The Literature (analyst DB, `analysts.js`).** A seven-author research swarm, one agent per panel author, pulled every verifiable AI claim from Tooze, Levine, Bruenig, Mazzucato, Perez, DeLong, and Acemoglu. Each claim carries a curl-verified live source and a verbatim quote, categorized on the same scope framework (capability / diffusion-utility / finance-markets / political-economy) with political-economy sub-categories (ownership, welfare-state, labor-unions, productivity-growth, market-concentration, public-investment-direction, distribution) and tagged by stance vs Zitron (shares-concern, contradicts, rejects-conclusion, orthogonal).
+
+**Link discipline (important).** A round of hallucinated and dead source links was caught and repaired. Now every URL is curl-verified 200 before it ships; any agent proposing a replacement must verify it live and confirm the quoted passage is verbatim on the page. Authors' quotes keep their original punctuation (em dashes and all); only generated prose is de-em-dashed.
 
 ## 5. Key findings (as of 2026-06-11)
 
